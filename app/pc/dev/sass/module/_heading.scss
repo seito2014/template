@@ -1,0 +1,266 @@
+/*
+#overview
+heading
+
+_heading.scss
+*/
+
+/*
+#styleguide
+```
+<div class="heading heading-a">
+    <p class="heading-jp">編集部おすすめ</p>
+</div>
+
+<div class="heading heading-a-small">
+    <p class="heading-jp">編集部おすすめ</p>
+</div>
+
+<div class="heading heading-a-xsmall">
+    <p class="heading-jp">編集部おすすめ</p>
+</div>
+
+<div class="heading heading-b">
+    <h1 class="heading-jp">新着記事</h1>
+</div>
+
+<div class="heading heading-b-long">
+    <h1 class="heading-jp">「恋愛」の新着記事</h1>
+</div>
+
+<div class="heading heading-c">
+    <h1 class="heading-jp">記事種別</h1>
+</div>
+
+<div class="heading heading-d">
+    <h1 class="heading-jp">専門家紹介</h1>
+</div>
+
+<div class="heading heading-e">
+    <h1 class="heading-jp">ファッションスナップ</h1>
+</div>
+
+<div class="heading heading-f">
+    <h1 class="heading-jp">「恋愛」の連載一覧</h1>
+</div>
+
+<div class="heading heading-g">
+    <h1 class="heading-jp">お役立ち情報</h1>
+</div>
+
+<div class="heading heading-h">
+    <h1 class="heading-jp">パートナーサイト新着記事</h1>
+</div>
+
+<h1 class="heading heading-i">
+    <span class="heading-jp">みんなが読んでる人気記事</span>
+    <span class="heading-sub-jp">「ファッション全般」</span>
+</h1>
+```
+*/
+
+/*
+#styleguide
+```
+<div class="aside-heading aside-heading-a">
+    <p class="aside-heading-jp">人気記事<span></span>ランキング</p>
+</div>
+
+<div class="aside-heading aside-heading-b">
+    <p class="aside-heading-jp">特別企画</p>
+</div>
+
+<div class="aside-heading aside-heading-c">
+    <p class="aside-heading-jp">イベント情報</p>
+</div>
+
+<div class="aside-heading aside-heading-d">
+    <p class="aside-heading-jp">プレゼント<span></span>モニター</p>
+</div>
+```
+*/
+
+//メインカラム見出し
+.heading {
+    height: 105px;
+    text-align: center;
+    position: relative;
+    background-image: url(../image/heading.png);
+    background-repeat: no-repeat;
+
+    &-jp {
+        @include rem(18);
+        display: block;
+        color: $base;
+        letter-spacing: 0;
+        font-weight: bold;
+    }
+
+    //編集部おすすめ
+    &-a {
+        background-position: 0 0;
+        width: 277px;
+        height: 74px;
+        padding: 15px 5px 0 0;
+
+        //編集部おすすめ(小)
+        &-small {
+            background-position: 0 -710px;
+            width: 227px;
+            height: 40px;
+
+            .heading-jp {
+                @include rem(15);
+            }
+        }
+
+        //編集部おすすめ（極小）
+        &-xsmall {
+            background-position: 0 -1454px;
+            width: 206px;
+            height: 44px;
+            padding-top: 17px;
+
+            .heading-jp {
+                @include rem(15);
+            }
+        }
+    }
+
+    //新着記事
+    &-b {
+        background-position: 0 -84px;
+        width: 308px;
+        padding: 25px 12px 0 0;
+
+
+        //新着記事（テキストが長いもの）
+        &-long {
+            background-position: 0 -818px;
+            width: 492px;
+            padding: 25px 23px 0 0;
+        }
+    }
+
+    //記事種別
+    &-c {
+        background-position: 0 -199px;
+        width: 338px;
+        padding: 25px 0 0 24px;
+    }
+
+    //専門家紹介
+    &-d {
+        background-position: 0 -314px;
+        width: 364px;
+        padding: 30px 60px 0 0;
+    }
+
+    //スナップ
+    &-e {
+        background-position: 0 -435px;
+        width: 221px;
+        height: 262px;
+        padding: 137px 27px 0 0;
+    }
+
+    //連載一覧
+    &-f {
+        background-position: 0 -933px;
+        width: 337px;
+        height: 119px;
+        padding: 39px 17px 0 0;
+    }
+
+    //お役立ち情報
+    &-g {
+        background-position: 0 -1178px;
+        width: 243px;
+        padding: 25px 0 0;
+    }
+
+    //パートナーサイト新着記事
+    &-h {
+        background-position: 0 -1063px;
+        width: 426px;
+        padding: 25px 0 0;
+    }
+
+    //パートナーサイト新着記事
+    &-i {
+        background-position: 0 -1293px;
+        width: 552px;
+        height: 151px;
+        padding: 49px 0 0;
+
+        .heading-jp {
+            padding-left: 19px;
+        }
+
+        .heading-sub-jp {
+            @extend .heading-jp;
+            padding-left: 19px;
+            margin-top: 42px;
+        }
+    }
+}
+
+//サイドカラム見出し
+.aside-heading {
+    width: 300px;
+    height: 105px;
+    text-align: center;
+    position: relative;
+    background-image: url(../image/aside-heading.png);
+    background-repeat: no-repeat;
+
+    &-jp {
+        @include rem(18);
+        display: block;
+        color: $base;
+        letter-spacing: 0;
+        font-weight: bold;
+    }
+
+    //人気記事ランキング
+    &-a {
+        background-position: 0 0;
+        padding: 22px 0 0 18px;
+
+        .aside-heading-jp {
+
+            > span {
+                display: inline-block;
+                width: 60px;
+                height: 18px;
+            }
+        }
+    }
+
+    //特別企画
+    &-b {
+        background-position: 0 -115px;
+        padding: 24px 0 0 0;
+    }
+
+    //イベント情報
+    &-c {
+        background-position: 0 -230px;
+        padding: 25px 0 0 0;
+    }
+
+    //プレゼントモニター
+    &-d {
+        background-position: 0 -345px;
+        padding: 22px 20px 0 0;
+
+        .aside-heading-jp {
+
+            > span {
+                display: inline-block;
+                width: 45px;
+                height: 18px;
+            }
+        }
+    }
+}

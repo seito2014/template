@@ -1,0 +1,57 @@
+/*
+* base
+*/
+@import "base/color";
+@import "base/setting";
+@import "base/font";
+@import "base/default/mixin";
+@import "base/default/define";
+@import "base/original-mixin";
+@import "base/original-define";
+@import "base/animation";
+@import "base/default/reset-adsense";
+@import "base/util";
+//@import "base/basic";
+
+/*
+* global 系列サイト共通部分
+*/
+@import "global/footer-global";
+
+/*
+* module
+*/
+.adsense-wrapper {
+    @import "module/heading";
+    @import "module/tag";
+    @import "module/news";
+    @import "module/button";
+    @import "module/arrow";
+    @import "module/media";
+    @import "module/card";
+    @import "module/pr-cards";
+    @import "module/pupular-ranking";
+}
+
+/*
+* layout
+*/
+.adsense-wrapper {
+    @import "layout/header";
+    @import "layout/nav";
+    @import "layout/footer";
+    @import "layout/bread";
+    @import "layout/side";
+}
+@import "layout/contents";
+@import "layout/main";
+
+/*
+* sprite
+*/
+@import "sprite/sprite";
+
+/*
+* page
+*/
+@import "adsense";

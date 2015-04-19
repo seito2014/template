@@ -1,0 +1,17 @@
+.contents {
+    width: 100%;
+    min-width: $size-max;
+    margin: 30px 0 0;
+    background: url(#{$path-image}background_top.png) center top no-repeat,
+    url(#{$path-image}background_bottom.png) center bottom no-repeat,
+    url(#{$path-image}background_bottom_repeat.png) center bottom repeat-x;
+    padding-bottom: 140px;
+}
+
+.contents-inner {
+    @extend %clearfix;
+    width: $size-max;
+    margin: 0 auto;
+    padding: 0 25px;
+    position: relative;
+}

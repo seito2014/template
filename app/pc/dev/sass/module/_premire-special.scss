@@ -1,0 +1,19 @@
+.premire-special {
+    width: 100%;
+
+    &-link {
+        display: block;
+        width: 100%;
+        position: relative;
+
+        &-inner {
+            width: 100%;
+            background: $image-back;
+            text-align: center;
+        }
+    }
+
+    &-cover {
+        @extend %cover;
+    }
+}

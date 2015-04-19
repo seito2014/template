@@ -1,0 +1,105 @@
+/*
+#overview
+arrow
+
+_arrow.scss
+*/
+
+/*
+#styleguide
+```
+<i class="arrow-right"></i>
+<i class="arrow-right sharp"></i>
+<i class="arrow-right white"></i>
+<i class="arrow-right default"></i>
+<i class="arrow-right arrow-right-accent"></i>
+
+<i class="arrow-bottom"></i>
+<button type="button" class="slick-prev"><span class="arrow-button left"><i></i><i></i></span></button>
+<button type="button" class="slick-next"><span class="arrow-button right"><i></i><i></i></span></button>
+```
+*/
+
+//right
+.arrow-right {
+    display: block;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-left-color: $base;
+    position: absolute;
+    transition: border-color $speed, transform $speed;
+
+    &.white {
+        border-left-color: #fff;
+    }
+
+    &.default {
+        border-left-color: $default;
+    }
+
+    &-accent {
+        border-left-color: $accent;
+    }
+
+    &-accent {
+        border-left-color: $accent;
+    }
+
+    &.large {
+        border-width: 6px;
+    }
+}
+
+//bottom
+.arrow-bottom {
+    display: block;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top: 5px solid $base-light;
+    transition: opacity $speed;
+}
+
+//left
+.arrow-left {
+    display: block;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-right-color: $base;
+    position: absolute;
+    transition: border-color $speed, transform $speed;
+
+    &.white {
+        border-right-color: #fff;
+    }
+}
+
+.arrow-button {
+    display: block;
+    border-radius: 50%;
+    background-color: $base-clear;
+    width: 40px;
+    height: 40px;
+
+    > i {
+        display: block;
+        width: 11px;
+        height: 2px;
+        background: #fff;
+
+        &:nth-child(1) {
+            transform: translate(13px, 15px) rotate(-52deg);
+        }
+
+        &:nth-child(2) {
+            transform: translate(13px, 21px) rotate(52deg);
+        }
+    }
+
+    &.right {
+
+        transform: rotate(-180deg);
+    }
+}

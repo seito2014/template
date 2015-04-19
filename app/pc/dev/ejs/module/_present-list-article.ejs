@@ -1,0 +1,61 @@
+                            <article class="scrap scrap-simple">
+                                <div class="article">
+                                    <a href="#" class="article-link">
+                                        <div class="article-image">
+                                            <div class="article-cover"></div>
+                                            <div class="article-image-inner">
+                                                <img class="js-lazy" src="image/dummy.png" data-original="http://placehold.it/178x110" height="110" width="178" alt="">
+                                                <noscript>
+                                                    <img src="http://placehold.it/178x110" height="110" width="178" alt="">
+                                                </noscript>
+                                            </div>
+                                        </div>
+                                        <div class="article-body">
+                                            <h1 class="article-heading"><%= link_title %></h1>
+
+                                            <% if(link_movie){ %>
+                                            <dl class="scrap-notes">
+                                                <dt class="scrap-notes-label">当選数</dt>
+                                                <dd class="scrap-notes-body">100組200名</dd>
+                                            </dl>
+                                            <% } %>
+                                        </div>
+                                        <% if(link_new){ %><i class="sprite new"></i><% } %>
+                                        
+                                        <% if(link_movie){ %>
+                                        <div class="badge badge-<%= link_status %>">
+                                            <span>応募<br><% if(link_status==='ended'){ %> 締切<% }else{ %>受付中<% } %></span>
+                                        </div>
+                                        <% } %>
+                                    </a>
+                                </div>
+                                <% if(link_related){ %>
+                                <div class="scrap-body">
+                                    <p class="scrap-text related">
+                                        <span class="tag tag-accent xlarge">関連記事</span>
+                                        <a href="#">【参加特典アリ】結婚・出産後も働ける”キャリアカウンセラー”ってどんな仕事？ CDA資格の無料説明会でこれからの働き方を考えよう！</a>
+                                    </p>
+                                </div>
+                                <% } %>
+                                <div class="scrap-bottom">
+                                    <dl class="deadline">
+                                        <dt class="deadline-heading">申込締切</dt>
+                                        <dd class="deadline-time">2015年3月18日（月）23:59まで</dd>
+                                    </dl>
+                                    
+                                    <% if(link_blank){ %>
+                                    <a href="#" class="button-block medium left button-blank">
+                                        <span>応募する</span>
+                                        <span class="button-icon">
+                                            <i class="sprite blank normal"></i>
+                                            <i class="sprite blank-black hover"></i>
+                                        </span>
+                                    </a>
+                                    <% }else{ %>
+                                    <a href="#" class="button-block medium left">
+                                        <span>詳細を見る</span>
+                                        <i class="arrow-right white"></i>
+                                    </a>
+                                    <% } %>
+                                </div>
+                            </article>

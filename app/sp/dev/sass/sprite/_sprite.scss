@@ -1,0 +1,27 @@
+/*
+#styleguide
+
+
+```
+<i class="sprite sprite-bikkuri"></i>
+<i class="sprite sprite-blank"></i>
+<i class="sprite sprite-home"></i>
+```
+*/
+$sprite-bikkuri: 62px 0px -62px 0px 10px 32px 72px 32px "sprite.png";
+$sprite-blank: 38px 0px -38px 0px 22px 22px 72px 32px "sprite.png";
+$sprite-home: 0px 0px 0px 0px 36px 32px 72px 32px "sprite.png";
+
+.sprite{
+    display: inline-block;
+
+    &.sprite-bikkuri {
+        @include sprite($sprite-bikkuri);
+    }
+    &.sprite-blank {
+        @include sprite($sprite-blank);
+    }
+    &.sprite-home {
+        @include sprite($sprite-home);
+    }
+}

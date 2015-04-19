@@ -1,0 +1,43 @@
+/*
+#overview
+badge
+
+_badge.scss
+*/
+
+/*
+#styleguide
+```
+<div class="badge badge-now">
+    <span>応募<br>受付中</span>
+</div>
+
+<div class="badge badge-ended">
+    <span>応募<br>締切</span>
+</div>
+
+```
+*/
+
+.badge{
+    @include rem(13);
+    position: relative;
+    width: 64px;
+    height: 64px;
+    color: #fff;
+    line-height: 18px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 32px;
+    span{
+        @include middle;
+        display: block;
+        width: 100%;
+    }
+    &-now{
+        background-color: $sub2;
+    }
+    &-ended{
+        background-color: $grey;
+    }
+}

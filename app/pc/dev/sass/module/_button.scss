@@ -1,0 +1,260 @@
+/*
+#overview
+button
+
+_button.scss
+*/
+
+/*
+#styleguide
+```
+<a href="#" class="button-dashed">
+    <span>マイページ</span>
+    <i class="arrow-right"></i>
+</a>
+<a href="#" class="button-square">
+    <span>ポイント</span>
+    <b>0 pt</b>
+</a>
+<a href="#" class="button-dashed button-dashed-accent">
+    <span>新規会員登録</span>
+    <i class="arrow-right arrow-right-accent"></i>
+</a>
+<a href="#" class="button-dashed">
+    <span>ログイン</span>
+    <i class="arrow-right"></i>
+</a>
+<a href="#" class="button-block">
+    <span>一覧を見る</span>
+    <i class="arrow-right"></i>
+</a>
+<a href="#" class="button-block small">
+    <span>一覧を見る</span>
+    <i class="arrow-right"></i>
+</a>
+<a href="#" class="button-block medium left button-blank">
+    <span>詳細を見る</span>
+    <span class="button-icon">
+        <i class="sprite blank normal"></i>
+        <i class="sprite blank-black hover"></i>
+    </span>
+</a>
+```
+*/
+
+.button {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-dashed {
+    display: inline-block;
+    background-color: #fff;
+    width: 160px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    color: $base;
+    text-align: left;
+    text-decoration: none;
+    border: $border-base-dashed;
+    position: relative;
+    transition: background-color $speed, color $speed;
+
+    &:hover {
+        background: $base-light;
+        color: #fff;
+
+        .arrow-right {
+            border-left-color: #fff;
+            transform: translate3d(3px, 0, 0);
+        }
+    }
+
+    > span {
+        @include rem(12);
+    }
+
+    .arrow-right {
+        top: 8px;
+        right: 4px;
+    }
+
+    &-accent {
+        border-color: $accent;
+        color: $accent;
+
+        &:hover {
+            background: $accent;
+            color: #fff;
+        }
+    }
+}
+
+.button-square {
+    @extend %clearfix;
+    display: inline-block;
+    background-color: $base;
+    width: 160px;
+    height: 26px;
+    padding: 5px 10px;
+    color: #fff;
+    text-align: left;
+    border: 1px solid $base;
+    text-decoration: none;
+    position: relative;
+    transition: background-color $speed, color $speed;
+
+    &:hover {
+        background: #fff;
+        color: $base;
+    }
+
+    > span {
+        @include rem(12);
+        float: left;
+    }
+
+    > b {
+        @include rem(13);
+        float: right;
+    }
+}
+
+.button-block {
+    display: inline-block;
+    background-color: $base-light;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    color: $default;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    transition: background-color $speed;
+
+    &:hover {
+        background: $base-highlight;
+
+        .arrow-right {
+            border-left-color: $default;
+            transform: translate3d(5px, 0, 0);
+        }
+
+        .arrow-left {
+            border-right-color: $default;
+            transform: translate3d(-5px, 0, 0);
+        }
+    }
+
+    > span {
+        font-weight: bold;
+    }
+
+    &.small {
+        height: 40px;
+        line-height: 40px;
+
+        .arrow-right {
+            top: 17px;
+        }
+    }
+
+    &.medium {
+        height: 48px;
+        line-height: 49px;
+
+        .arrow-right {
+            top: 20px;
+        }
+    }
+    &.left{
+        padding-left: 24px;
+        text-align: left;
+    }
+
+    .arrow-right {
+        top: 24px;
+        right: 20px;
+    }
+
+    .arrow-left {
+        top: 24px;
+        left: 20px;
+    }
+
+    .side &{
+        .arrow-right {
+            top: 24px;
+            right: 11px;
+        }
+
+        .arrow-left {
+            top: 24px;
+            left: 11px;
+        }
+    }
+}
+
+.button-blank{
+    .button-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 42px;
+        height: 100%;
+        background-color: $base;
+        transition: all $speed;
+        .sprite{
+            position: absolute;
+            top: 50%;
+            transition: opacity $speed;
+            backface-visibility: hidden;
+
+            &.blank,
+            &.blank-black{
+                left: 13px;
+                margin-top: -9px;
+            }
+            &.blank-small,
+            &.blank-small-black{
+                left: 15px;
+                margin-top: -6px;
+            }
+        }
+        .hover{
+            opacity: 0;
+        }
+    }
+
+    &:hover{
+        .button-icon{
+            background-color: $base-light;
+            .normal{
+                opacity: 0;
+            }
+            .hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.button-shadow{
+    overflow: hidden;
+    height: 64px;
+    line-height: 64px;
+    border-radius: 4px;
+    box-shadow: $shadow;
+
+    &.button-blank{
+        .button-icon{
+            width: 40px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+}

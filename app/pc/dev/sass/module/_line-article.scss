@@ -1,0 +1,124 @@
+/*
+#overview
+line-article
+
+_line-article.scss
+*/
+
+/*
+#styleguide
+```
+<article class="line-article line-article-appenddot">
+    <a href="#" class="line-article-link">
+        <h1 class="line-article-heading">
+            <span class="line-article-heading-inner js-dot-inner">マイク・ザッカーバーグの今年の目標は？フェイスブック上で堂々と公開した彼のフィードには</span>
+        </h1>
+        <span class="tag tag-a large">専門家</span>
+        <i class="arrow-right arrow-right-accent"></i>
+    </a>
+</article>
+
+<article class="line-article simple">
+    <a href="#" class="line-article-link">
+        <p class="line-article-heading">
+            マイク・ザッカーバーグの今年の目標は？フェイスブック上で「読書クラブあああああああああ読書クラブあああああああああ</p>
+        <i class="arrow-right arrow-right-accent"></i>
+    </a>
+</article>
+
+<article class="line-article line-article-time">
+    <a href="#" class="line-article-link">
+        <span class="line-article-heading">第49話　発熱</span>
+        <time datetime="2015-01-22">2015.01.22</time>
+    </a>
+</article>
+```
+*/
+
+.line-article {
+
+    &-link {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: $default;
+        padding: 16px 15px 16px 73px;
+        position: relative;
+        background: #fff;
+        border-bottom: $border;
+        
+        &:hover {
+            text-decoration: underline;
+
+            .line-article-heading {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-heading {
+        @extend %elps;
+        position: relative;
+    }
+
+    .arrow-right {
+        position: absolute;
+        top: 19px;
+        right: 3px;
+    }
+
+    .tag {
+        letter-spacing: 0;
+        width: 64px;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        padding: 0;
+    }
+}
+
+//見出しテキストのみ
+.line-article.simple {
+
+    .line-article-link {
+        padding: 13px 13px 11px 0;
+    }
+
+    .arrow-right {
+        top: 15px;
+        right: 4px;
+    }
+}
+
+//記事種別（小説）ブロックで使用
+.line-article-time {
+
+    .line-article-link {
+        @extend %clearfix;
+        padding: 16px 0 15px;
+    }
+
+    .line-article-heading {
+        float: left;
+        display: inline-block;
+        color: $default-light;
+    }
+
+    time {
+        display: inline-block;
+        float: right;
+        font-family: $font-en;
+        color: $accent;
+    }
+}
+
+//文字省略js(appendDot.js)実装部分
+.line-article-appenddot {
+
+    .line-article-heading {
+        width: 100%;
+        height: 15px;
+        text-overflow: inherit;
+        -ms-text-overflow: inherit;
+    }
+}

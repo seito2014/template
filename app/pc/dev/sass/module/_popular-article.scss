@@ -1,0 +1,57 @@
+/*
+#overview
+popular-article
+
+_popular-article.scss
+*/
+
+/*
+#styleguide
+```
+
+<article class="popular-article">
+    <a href="#" class="popular-article-link">
+        <span class="tag tag-a">トレンド</span>
+        <h1 class="popular-article-heading">
+            モテる“天然GIRL”とモテない“天然GIRL”の違いってなに!?
+        </h1>
+        <i class="popular-article-rank sprite ranking-2"></i>
+    </a>
+</article>
+
+```
+*/
+
+.popular-article{
+    padding: 16px 24px;
+
+    &-link{
+        position: relative;
+        display: block;
+        text-decoration: none;
+
+        .tag{
+            margin-bottom: 7px;
+            padding: 0;
+            width: 65px;
+
+        }
+        &:hover{
+            .popular-article-heading{
+                text-decoration: underline;
+            }
+        }
+    }
+    &-heading{
+            position: relative;
+            color: $default;
+            line-height: 24px;
+            z-index: 2;
+    }
+    &-rank{
+        position: absolute;
+        right: -1px;
+        bottom: 4px;
+        z-index: 1;
+    }
+}

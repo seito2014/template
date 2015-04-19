@@ -1,0 +1,301 @@
+            <!--header ここから-->
+            <header class="header" id="js-header">
+                <!--header　上部 ここから-->
+                <div class="header-inner">
+                    <div class="header-primary">
+                        <% if(page_class === "page-entry" || page_class === "page-entry-outline") { %>
+                        <p class="header-primary-heading">働く女性の恋愛と幸せな人生のガイド</p>
+                        <% } else { %>
+                        <h1 class="header-primary-heading">働く女性の恋愛と幸せな人生のガイド</h1>
+                        <% } %>
+                        <a href="./" class="header-primary-logo">
+                            <i class="sprite logo">マイナビウーマン</i>
+                        </a>
+                    </div>
+
+                    <div class="header-sub" id="header-sub">
+                        <div class="header-sub-buttons">
+                            <!--
+                             ボタンは以下4タイプあります。
+                             使い分けてください。
+                             ・マイページ
+                             ・ポイント
+                             ・新規会員登録
+                             ・ログイン
+                            -->
+
+                            <!--<a href="#" class="button-dashed">-->
+                                <!--<span>マイページ</span>-->
+                                <!--<i class="arrow-right"></i>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="button-square">-->
+                                <!--<span>ポイント</span>-->
+                                <!--<b>0 pt</b>-->
+                            <!--</a>-->
+                            <a href="#" class="button-dashed button-dashed-accent">
+                                <span>新規会員登録</span>
+                                <i class="arrow-right arrow-right-accent"></i>
+                            </a>
+                            <a href="#" class="button-dashed">
+                                <span>ログイン</span>
+                                <i class="arrow-right"></i>
+                            </a>
+                        </div>
+                        <form action="#" class="header-sub-search" id="js-header-search">
+                            <div class="header-sub-search-input">
+                                <input type="search" value="" class="input" placeholder="気になるワードを入力">
+                            </div>
+                            <button type="submit" class="header-sub-search-button">
+                                <i class="sprite search"></i>
+                                <i class="sprite search-white"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!--header　上部 ここまで-->
+
+                <!--nav ここから-->
+                <nav class="nav nav-lower">
+                    <span class="nav-border"></span>
+                    <ul class="nav-inner" id="category-nav">
+                        <li class="nav-item is-current">
+                            <!--大カテゴリ ここから-->
+                            <a href="#">
+                                <span class="nav-text">恋愛</span>
+                                <i class="arrow-bottom"></i>
+                            </a>
+                            <!--大カテゴリ ここまで-->
+                            <!--中カテゴリ ここから-->
+                            <div class="sub-category">
+                                <ul class="sub-category-list">
+                                    <% for(var i=0; i< 12; i++) { %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-normal">恋愛全般</a>
+                                    </li>
+                                    <% } %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-accent-light">夜のラブテク</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--中カテゴリ ここまで-->
+                        </li>
+                        <li class="nav-item">
+                            <!--大カテゴリ ここから-->
+                            <a href="#">
+                                <span class="nav-text">ビューティ</span>
+                                <i class="arrow-bottom"></i>
+                            </a>
+                            <!--大カテゴリ ここまで-->
+                            <!--中カテゴリ ここから-->
+                            <div class="sub-category">
+                                <ul class="sub-category-list">
+                                    <% for(var i=0; i< 6; i++) { %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-normal">美容のイロハ</a>
+                                    </li>
+                                    <% } %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-accent-light">診断</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--中カテゴリ ここまで-->
+                        </li>
+                        <li class="nav-item">
+                            <!--大カテゴリ ここから-->
+                            <a href="#">
+                                <span class="nav-text">ヘルスケア</span>
+                                <i class="arrow-bottom"></i>
+                            </a>
+                            <!--大カテゴリ ここまで-->
+                            <!--中カテゴリ ここから-->
+                            <div class="sub-category">
+                                <ul class="sub-category-list">
+                                    <% for(var i=0; i< 12; i++) { %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-normal">ヘルスケア</a>
+                                    </li>
+                                    <% } %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-accent-light">快眠カフェ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--中カテゴリ ここまで-->
+                        </li>
+                        <li class="nav-item">
+                            <!--大カテゴリ ここから-->
+                            <a href="#">
+                                <span class="nav-text">グルメ</span>
+                                <i class="arrow-bottom"></i>
+                            </a>
+                            <!--大カテゴリ ここまで-->
+                            <!--中カテゴリ ここから-->
+                            <div class="sub-category">
+                                <ul class="sub-category-list">
+                                    <% for(var i=0; i< 7; i++) { %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-normal">おやつ</a>
+                                    </li>
+                                    <% } %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-accent-light">オシャレディナー</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--中カテゴリ ここまで-->
+                        </li>
+                        <li class="nav-item">
+                            <!--大カテゴリ ここから-->
+                            <a href="#">
+                                <span class="nav-text">エンタメ</span>
+                                <i class="arrow-bottom"></i>
+                            </a>
+                            <!--大カテゴリ ここまで-->
+                            <!--中カテゴリ ここから-->
+                            <div class="sub-category">
+                                <ul class="sub-category-list">
+                                    <% for(var i=0; i< 7; i++) { %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-normal">インタビュー</a>
+                                    </li>
+                                    <% } %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-accent-light">映画特集</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--中カテゴリ ここまで-->
+                        </li>
+                        <li class="nav-item">
+                            <!--大カテゴリ ここから-->
+                            <a href="#">
+                                <span class="nav-text">ファッション</span>
+                                <i class="arrow-bottom"></i>
+                            </a>
+                            <!--大カテゴリ ここまで-->
+                            <!--中カテゴリ ここから-->
+                            <div class="sub-category">
+                                <ul class="sub-category-list">
+                                    <% for(var i=0; i< 7; i++) { %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-normal">スナップ</a>
+                                    </li>
+                                    <% } %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-accent-light">ギャラリー</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--中カテゴリ ここまで-->
+                        </li>
+                        <li class="nav-item">
+                            <!--大カテゴリ ここから-->
+                            <a href="#">
+                                <span class="nav-text">おでかけ</span>
+                                <i class="arrow-bottom"></i>
+                            </a>
+                            <!--大カテゴリ ここまで-->
+                            <!--中カテゴリ ここから-->
+                            <div class="sub-category">
+                                <ul class="sub-category-list">
+                                    <% for(var i=0; i< 7; i++) { %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-normal">お散歩コース</a>
+                                    </li>
+                                    <% } %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-accent-light">渋谷特集</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--中カテゴリ ここまで-->
+                        </li>
+                        <li class="nav-item">
+                            <!--大カテゴリ ここから-->
+                            <a href="#">
+                                <span class="nav-text">仕事</span>
+                                <i class="arrow-bottom"></i>
+                            </a>
+                            <!--大カテゴリ ここまで-->
+                            <!--中カテゴリ ここから-->
+                            <div class="sub-category">
+                                <ul class="sub-category-list">
+                                    <% for(var i=0; i< 7; i++) { %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-normal">ライフハック</a>
+                                    </li>
+                                    <% } %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-accent-light">オススメ転職</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--中カテゴリ ここまで-->
+                        </li>
+                        <li class="nav-item">
+                            <!--大カテゴリ ここから-->
+                            <a href="#">
+                                <span class="nav-text">マネー</span>
+                                <i class="arrow-bottom"></i>
+                            </a>
+                            <!--大カテゴリ ここまで-->
+                            <!--中カテゴリ ここから-->
+                            <div class="sub-category">
+                                <ul class="sub-category-list">
+                                    <% for(var i=0; i< 7; i++) { %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-normal">投資</a>
+                                    </li>
+                                    <% } %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-accent-light">FXサービス</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--中カテゴリ ここまで-->
+                        </li>
+                        <li class="nav-item">
+                            <!--大カテゴリ ここから-->
+                            <a href="#">
+                                <span class="nav-text">ライフ</span>
+                                <i class="arrow-bottom"></i>
+                            </a>
+                            <!--大カテゴリ ここまで-->
+                            <!--中カテゴリ ここから-->
+                            <div class="sub-category">
+                                <ul class="sub-category-list">
+                                    <% for(var i=0; i< 7; i++) { %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-normal">快眠グッズ</a>
+                                    </li>
+                                    <% } %>
+                                    <li class="sub-category-item">
+                                        <a href="#" class="tag xlarge tag-accent-light">キッチングッズ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--中カテゴリ ここまで-->
+                        </li>
+                    </ul>
+                </nav>
+                <!--nav ここまで-->
+
+            </header>
+            <!--header ここまで-->
+
+            <!--中カテゴリ ここから-->
+            <div class="sub-category is-visible">
+                <ul class="sub-category-list">
+                    <% for(var i=0; i< 12; i++) { %>
+                    <li class="sub-category-item">
+                        <a href="#" class="tag xlarge tag-normal">恋愛全般</a>
+                    </li>
+                    <% } %>
+                    <li class="sub-category-item">
+                        <a href="#" class="tag xlarge tag-accent-light">夜のラブテク</a>
+                    </li>
+                </ul>
+            </div>
+            <!--中カテゴリ ここまで-->

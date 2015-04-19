@@ -1,0 +1,263 @@
+/*
+#overview
+tag
+
+_tag.scss
+*/
+
+/*
+#styleguide
+```
+<span class="tag tag-accent">PR</span>
+<span class="tag tag-a">PR</span>
+<span class="tag tag-b">トレンド</span>
+<span class="tag tag-c">専門家</span>
+<span class="tag tag-d">本音コラム</span>
+<span class="tag tag-e">雑学</span>
+<span class="tag tag-f">小説</span>
+<span class="tag tag-g">診断</span>
+<span class="tag tag-h">占い</span>
+<span class="tag tag-accent xlarge">PR</span>
+<span class="tag-stripe">胸キュンマンガ</span>
+<span class="tag-circle">フェチ</span>
+<span class="tag-normal">出会い</span>
+<span class="tag-premiere">胸キュンマンガ</span>
+```
+*/
+
+.tag {
+    @include rem(10);
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    background: #000;
+    padding: 0 11px;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+
+    &.xlarge {
+        @include rem(13);
+        height: 24px;
+        line-height: 24px;
+        padding: 0 9px;
+    }
+
+    &-accent {
+        background: $accent;
+    }
+
+    &-accent-light {
+        background: $accent-light;
+        color: $default;
+        border: 1px solid $accent-light;
+        line-height: 13px;
+    }
+
+    &-normal {
+        background: transparent;
+        color: $default;
+        border: 1px solid $default;
+        line-height: 13px;
+
+        &.xlarge {
+            line-height: 23px;
+        }
+    }
+
+    &-a {
+        background: $category-a;
+    }
+
+    &-b {
+        background: $category-b;
+    }
+
+    &-c {
+        background: $category-c;
+    }
+
+    &-d {
+        background: $category-d;
+    }
+
+    &-e {
+        background: $category-e;
+    }
+
+    &-f {
+        background: $category-f;
+    }
+
+    &-g {
+        background: $category-g;
+    }
+
+    &-h {
+        background: $category-h;
+    }
+
+    .windows &{
+        @include rem(11);
+        height: 18px;
+        line-height: 18px;
+
+        &.xlarge {
+            @include rem(13);
+            height: 24px;
+            line-height: 24px;
+        }
+
+        &-accent-light {
+            line-height: 16px;
+        }
+        &-normal {
+            line-height: 16px;
+            &.xlarge {
+                line-height: 23px;
+            }
+        }
+    }
+
+    .ie &{
+        line-height: 1.75em;
+
+        &.xlarge {
+            line-height: 24px;
+        }
+
+        &-accent-light {
+            line-height: 16px;
+        }
+        &-normal {
+            line-height: 16px;
+            &.xlarge {
+                line-height: 23px;
+            }
+        }
+    }
+}
+
+a {
+    &.tag {
+
+        &-accent-light {
+            transition: color $speed, background-color $speed;
+
+            &:hover {
+                color: #fff;
+                background: $default;
+            }
+        }
+
+        &-normal {
+            transition: color $speed, background-color $speed;
+
+            &:hover {
+                color: #fff;
+                background: $default;
+            }
+        }
+
+        &-a,
+        &-b,
+        &-c,
+        &-d,
+        &-e,
+        &-f,
+        &-h {
+            transition: background-color $speed;
+        }
+
+        &-a {
+
+            &:hover {
+                background: lighten($category-a, 10%);
+            }
+        }
+
+        &-b {
+
+            &:hover {
+                background: lighten($category-b, 10%);
+            }
+        }
+
+        &-c {
+
+            &:hover {
+                background: lighten($category-c, 10%);
+            }
+        }
+
+        &-d {
+
+            &:hover {
+                background: lighten($category-d, 10%);
+            }
+        }
+
+        &-e {
+
+            &:hover {
+                background: lighten($category-e, 10%);
+            }
+        }
+
+        &-f {
+
+            &:hover {
+                background: lighten($category-f, 10%);
+            }
+        }
+
+        &-g {
+
+            &:hover {
+                background: lighten($category-g, 10%);
+            }
+        }
+
+        &-h {
+
+            &:hover {
+                background: lighten($category-h, 10%);
+            }
+        }
+    }
+}
+
+//丸いタイプ
+.tag-circle {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    background-color: $accent-light;
+    color: $default;
+    @include rem(13);
+    padding: 0 12px;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background-color $speed;
+
+    &:hover {
+        background: $accent-light2;
+    }
+}
+
+//ストライプ
+.tag-stripe {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 16px;
+    color: $default;
+    background: url(#{$path-image}bg-stripe-sub.png);
+    text-decoration: none;
+    transition: color $speed;
+
+    &:hover {
+        color: $base;
+    }
+}

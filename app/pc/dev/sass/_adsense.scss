@@ -1,0 +1,416 @@
+//ad-wrapper メインコンテンツ内
+#ad-wrapper {
+    background: #fff;
+}
+
+//ADページ全体
+.page-adsense,
+.page-static {
+    font-family: $font;
+    background: $foundation;
+
+    //for-old,for-no-js
+    .for-old,
+    .for-no-js {
+        display: none;
+    }
+
+    //contents
+    .contents {
+        box-sizing: border-box;
+
+        &-inner {
+            box-sizing: border-box;
+
+            input[type="text"] {
+                -webkit-appearance: field;
+            }
+        }
+    }
+
+    //各layout
+    .adsense-wrapper {
+        //header
+        .header {
+
+            * {
+                box-sizing: border-box;
+            }
+
+            input,
+            button,
+            select {
+                vertical-align: middle;
+                border-radius: 0;
+                border: 0;
+                padding: 0;
+                cursor: pointer;
+                -webkit-appearance: none;
+                outline: 0;
+            }
+
+            &-primary-heading {
+                font-size: 13px;
+                line-height: 1;
+            }
+
+            //module
+            @import "module/input";
+            @import "module/button";
+            @import "module/arrow";
+
+            .input {
+
+                &::placeholder {
+                    font-size: 15px;
+                }
+            }
+
+            .button-dashed,
+            .button-square {
+
+                > span {
+                    font-size: 12px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        //sticky-header
+        &.is-visible {
+
+            .sticky-header {
+                transform: translate3d(0, 0, 0);
+
+                .nav-item {
+
+                    &:hover {
+
+                        .sub-category {
+                            display: block;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        //nav
+        .nav {
+            box-sizing: border-box;
+
+            * {
+                box-sizing: border-box;
+            }
+
+            //module
+            @import "module/arrow";
+
+            &-text {
+                font-size: 14px;
+                line-height: 1;
+                text-decoration: none;
+            }
+            
+            a:hover {
+                text-decoration: none;
+            }
+        }
+
+        //sub-category
+        .sub-category {
+
+            * {
+                box-sizing: border-box;
+            }
+
+            //module
+            @import "module/tag";
+
+            .tag {
+
+                &.xlarge {
+                    font-size: 13px;
+                }
+
+                .windows & {
+                    font-size: 11px;
+
+                    &.xlarge {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        //bread
+        .bread {
+            box-sizing: border-box;
+            margin-bottom: 24px;
+
+            * {
+                box-sizing: border-box;
+            }
+
+            &-text {
+                font-size: 18px;
+                vertical-align: top;
+            }
+
+            .home {
+                position: relative;
+                top: -4px;
+            }
+        }
+
+        //footer
+        .footer {
+
+            * {
+                box-sizing: border-box;
+            }
+
+            &-nav-link {
+                font-size: 13px;
+            }
+        }
+
+        //GlobalFooter
+        #FooterServiceCont {
+
+            dl {
+
+                dt {
+
+                    font-size: 12px;
+                }
+
+                dd {
+                    letter-spacing: 0.114em;
+                }
+            }
+        }
+
+        #GlobalFooter {
+            font-size: 11px;
+            line-height: 1;
+
+            .FooterTitle {
+                letter-spacing: .08rem;
+            }
+
+            #FooterServiceHead p.FooterHeadLink {
+
+                a {
+                    font-size: 102%;
+                }
+
+                img {
+
+                    .windows &{
+                        top: 2px;
+                    }
+                }
+            }
+        }
+
+        #FooterCorpLink ul li {
+            font-size: 10px;
+        }
+    }
+
+    .static-aside {
+        padding: 24px;
+        background: #fff;
+    }
+
+    .static-sns {
+        margin-bottom: 19px;
+        
+        &-list {
+            letter-spacing: -.3em;
+            text-align: center;
+        }
+        
+        &-item {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5px;
+        }
+    }
+
+    .static-bottom-pr {
+        overflow: hidden;
+
+        &-link {
+            display: block;
+            position: relative;
+
+            &:nth-child(1) {
+                float: left;
+            }
+
+            &:nth-child(2) {
+                float: right;
+            }
+        }
+
+        &-cover {
+            @extend %cover;
+        }
+
+        &-image {
+            @extend %thumb;
+            width: 300px;
+            height: 250px;
+        }
+    }
+}
+
+.page-static {
+
+    .main {
+        width: 670px;
+    }
+
+    .adsense-wrapper {
+        
+        //side
+        .aside-ranking {
+
+            * {
+                box-sizing: border-box;
+            }
+        }
+
+        .aside-tab-menu > a {
+            font-size: 13px;
+        }
+
+        .aside-heading-jp {
+            line-height: 1;
+            font-size: 18px;
+        }
+        
+        //news
+        .news-text {
+            font-size: 15px;
+        }
+        
+        .news.ranking {
+
+            .rank {
+                font-size: 24px;
+            }
+
+            .news-text {
+                text-decoration: none;
+            }
+
+            .news-count {
+                text-underline: none !important;
+            }
+
+            .news-count-number {
+                font-size: 18px;
+                text-decoration: none !important;
+            }
+        }
+
+        .news.ranking-wide {
+
+            .rank {
+                font-size: 24px;
+            }
+        }
+        
+        
+        //tag
+        .tag {
+            font-size: 10px;
+        }
+        
+        //button
+        .button-block {
+            font-size: 15px;
+        }
+        
+        //card
+        .card-heading {
+            font-size: 15px;
+        }
+
+        .card-text {
+            font-size: 13px;
+        }
+        
+        .card-link:hover {
+
+            .card-inner {
+                text-decoration: none;
+            }
+        }
+
+        //media
+        .media-heading {
+            font-size: 15px;
+        }
+
+        .media-text {
+            font-size: 13px;
+        }
+
+        .media-link:hover {
+
+            .media-inner {
+                text-decoration: none;
+            }
+        }
+
+        //heading
+        .heading-jp {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        //その他モジュール
+        .pr-cards,
+        .pr-media,
+        .pupular-ranking {
+            * {
+                box-sizing: border-box;
+            }
+        }
+
+        .pupular-ranking-header .heading {
+            left: 59px;
+        }
+
+        .pr-cards {
+
+            .pr-cards-item {
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    width: 232px;
+                }
+
+                &:nth-child(3) {
+                    width: 206px;
+                }
+            }
+        }
+    }
+
+    //layout
+    .pr-cards {
+        margin-top: 56px;
+        margin-bottom: 16px;
+    }
+
+    .pr-media {
+        margin-bottom: 40px;
+    }
+}
+
+

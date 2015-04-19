@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    min-height: 100%;
+}
+
+body {
+    @include rem(12);
+    min-width: $size-min;
+    line-height: 1;
+    font-family: $font;
+    background: $foundation;
+    color: $default;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: $font;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.for-old {
+    display: none;
+
+    .lt-ie9 & {
+        display: block;
+    }
+}

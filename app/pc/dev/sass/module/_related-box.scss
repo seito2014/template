@@ -1,0 +1,26 @@
+.related-box {
+    background: url(#{$path-image}bg-stripe.png);
+    padding: 9px 16px;
+
+    &-inner {
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+    }
+
+    &-title {
+        @include rem(13);
+        width: 106px;
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+
+    &-data {
+        display: table-cell;
+    }
+
+    .tag-circle {
+        margin: 3px 0;
+    }
+}

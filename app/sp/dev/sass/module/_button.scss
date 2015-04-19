@@ -1,0 +1,30 @@
+/*
+#overview
+button
+
+_button.scss
+*/
+
+/*
+#styleguide
+```
+<a href="#" class="button">
+    <span>button</span>
+</a>
+```
+*/
+
+.button {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    padding: 0 20px;
+
+    > span {
+        font-weight: bold;
+    }
+}

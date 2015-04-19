@@ -1,0 +1,114 @@
+<% var title = "${記事タイトル}｜",
+    description = "働く女子の恋とシゴトと本音がわかる！働く女性のための総合サイト「マイナビウーマン」の「${記事タイトル}」ページです。",
+    keywords = "${記事タイトル},マイナビウーマン,働く女子,恋愛,仕事,シゴト,本音,ホンネ",
+    type = "article",
+    page_class = "page-entry-special";
+%>
+<% include layout/_head %>
+<% include layout/_header-static %>
+            <!--contents ここから-->
+            <div class="contents">
+                <div class="contents-inner" id="js-contents">
+                    <main class="main js-main" id="js-base">
+                        <!--bread ここから-->
+                        <nav class="bread">
+                            <ol class="bread-inner">
+                                <li class="bread-item">
+                                    <a href="#" class="bread-link">
+                                        <i class="sprite home"></i>
+                                    </a>
+                                </li>
+                                <li class="bread-item">
+                                    <a href="#" class="bread-link">
+                                        <span class="bread-text">ヘルスケア</span>
+                                    </a>
+                                </li>
+                                <li class="bread-item is-current">
+                                    <div class="bread-link">
+                                        <span class="bread-text">ダイエット</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </nav>
+                        <!--bread ここまで-->
+                        <div class="entry-heading">
+                            <div class="entry-heading-image">
+                                <p class="entry-heading-image-inner">
+                                    <img class="js-lazy" src="./image/dummy.png" data-original="http://placehold.it/648x116" width="648" height="116" alt="">
+                                    <noscript>
+                                        <img src="http://placehold.it/648x116" height="648" width="116" alt="">
+                                    </noscript>
+                                </p>
+                            </div>
+                            <div class="entry-heading-description">仕事・恋愛・ライフスタイルなど、「まわりの女子の実態はどうなの？」に迫ったコラムです。働く女子だからこそ気になっているあんなコトやこんなコトを毎日配信中！</div>
+                        </div>
+
+                        <div class="entry-wrap">
+                            <div class="entry-article">
+
+                                <!--記事header ここから-->
+                                <div class="entry-header">
+                                    <span class="tag tag-a">専門家記事</span><span class="tag tag-normal">恋トレ</span>
+                                    <time datetime="2015-03-25">
+                                        <i class="sprite clock"></i>
+                                        2015.03.25
+                                    </time>
+                                    <h1 class="entry-header-heading">人気スタイリストにきく！スタイルアップも叶えてくれるトレンド春コーデ Vol.1</h1>
+                                    <div class="entry-header-author">
+                                        <div class="entry-header-author-image">
+                                            <img class="js-lazy" src="./image/dummy.png" data-original="http://placehold.it/30x30" width="30" height="30" alt="">
+                                            <noscript>
+                                                <img src="http://placehold.it/30x30" height="30" width="30" alt="">
+                                            </noscript>
+                                        </div>
+                                        <div class="entry-header-author-name">
+                                            諏訪敦子
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--記事header ここまで-->
+
+                                <div class="entry-body">
+                                    <!---------------------
+                                    記事コンテンツはここに記述
+                                    ---------------------->
+                                </div>
+                            </div>
+                        </div>
+                        <% include module/_recommend-post %>
+
+                        <% include module/_pr-cards %>
+
+                        <% include module/_pr-media %>
+
+                        <% var infotype = 'entry' %>
+                        <% include module/_information %>
+                        <div class="entry-bottom-pr">
+                            <a href="#">
+                                <div class="entry-bottom-pr-cover"></div>
+                                <div class="entry-bottom-pr-image">
+                                    <img class="js-lazy" src="./image/dummy.png" data-original="http://placehold.it/300x250" width="300" height="250" alt="">
+                                    <noscript>
+                                        <img src="http://placehold.it/300x250" width="300" height="250" alt="">
+                                    </noscript>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="entry-bottom-pr-cover"></div>
+                                <div class="entry-bottom-pr-image">
+                                    <img class="js-lazy" src="./image/dummy.png" data-original="http://placehold.it/300x250" width="300" height="250" alt="">
+                                    <noscript>
+                                        <img src="http://placehold.it/300x250" width="300" height="250" alt="">
+                                    </noscript>
+                                </div>
+                            </a>
+                        </div>
+                    </main>
+                    <% side_id = "js-sticky" %>
+                    <% include layout/_side %>
+                </div>
+            </div>
+            <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>

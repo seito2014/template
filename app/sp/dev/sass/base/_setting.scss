@@ -1,0 +1,21 @@
+/*
+* 変数用scss(カラーコード以外)
+*/
+
+//path
+$path-image: "../image/";
+$path-sprite: "../image/sprite/dest/";
+
+// clum width
+$gutter: 0;
+$size-max: 100%;
+$size-min: 320px;
+
+// scale (sprite生成で使用)
+$default-scale: 1;
+
+//speed
+$speed: 0.35s;
+
+//z-index
+$max-z: 10;

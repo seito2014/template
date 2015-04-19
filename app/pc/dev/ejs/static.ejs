@@ -1,0 +1,71 @@
+<% var title = "ライフスタイル池袋サンシャインシティで過ごす！オトナ楽しい1日｜ライフ｜",
+    description = "「マイナビウーマン」は、（株）マイナビが運営する、女性総合サイトです。同世代の声と役立つノウハウをはじめ、恋愛小説やコラムなどの豊富なコンテンツや便利なサービスで、働く女子を応援します。",
+    keywords = "マイナビウーマン,働く女子,恋愛,仕事,シゴト,本音,ホンネ",
+    type = "article",
+    page_class = "page-static";
+%>
+<% include layout/_head %>
+
+            <div class="adsense-wrapper">
+<% include layout/_header-static %>
+            </div>
+
+            <!--contents ここから-->
+            <div class="contents">
+                <div class="contents-inner" id="js-contents">
+
+                    <main class="main js-main" id="js-base">
+
+                        <!--bread ここから-->
+                        <div class="adsense-wrapper">
+                            <nav class="bread">
+                                <ol class="bread-inner">
+                                    <li class="bread-item">
+                                        <a href="#" class="bread-link">
+                                            <i class="sprite home"></i>
+                                        </a>
+                                    </li>
+                                    <li class="bread-item is-current">
+                                        <div class="bread-link">
+                                            <span class="bread-text">ライフ</span>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <!--bread ここまで-->
+
+                        <div class="contents-adsense">
+                        <!---------------------
+                         広告コンテンツはここに記述
+                         ---------------------->
+                        </div>
+
+                        <% include module/_static-aside %>
+
+                        <div class="adsense-wrapper">
+                            <% include module/_pr-cards %>
+                        </div>
+
+                        <div class="adsense-wrapper">
+                            <% include module/_pr-media %>
+                        </div>
+
+                        <div class="adsense-wrapper">
+                            <% var pr = false; %>
+                            <% include module/_pupular-ranking %>
+                        </div>
+
+                    </main>
+
+                    <div class="adsense-wrapper">
+                        <% include layout/_side-premire %>
+                    </div>
+                </div>
+            </div>
+            <!--contents ここまで-->
+
+            <div class="adsense-wrapper">
+<% include layout/_footer %>
+            </div>
+<% include layout/_script %>

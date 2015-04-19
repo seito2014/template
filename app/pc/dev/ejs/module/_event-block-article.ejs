@@ -1,0 +1,48 @@
+                        <article class="scrap">
+                            <div class="article">
+                                <a href="#" class="article-link">
+                                    <div class="article-image">
+                                        <div class="article-cover"></div>
+                                        <div class="article-image-inner">
+                                            <img class="js-lazy" src="image/dummy.png" data-original="http://placehold.it/178x110" height="110" width="178" alt="">
+                                            <noscript>
+                                                <img src="http://placehold.it/178x110" height="110" width="178" alt="">
+                                            </noscript>
+                                        </div>
+                                    </div>
+                                    <div class="article-body">
+                                        <h1 class="article-heading"><%= event_title %></h1>
+                                        <dl class="scrap-notes">
+                                            <dt class="scrap-notes-label">参加費</dt>
+                                            <dd class="scrap-notes-body">無料ご招待</dd>
+                                        </dl>
+                                    </div>
+                                    <% if(event_new){ %><i class="sprite new"></i><% } %>
+                                </a>
+                            </div>
+                            <div class="scrap-body">
+                                <p class="scrap-text">マイナビウーマンが、この春「異業種交流会イベント」を開催！素敵な男性に出会いたい、女友達を増やしたい、仕事にもかせる出会いがほしい！そんな女子達に喜んでもらえるイベントを用意しました。</p>
+                                <dl class="scrap-detail">
+                                    <dt class="scrap-detail-label">開催日時</dt>
+                                    <dd class="scrap-detail-body">2015年3月20日（金）19:30～21:30 ※会場受付 19:00～</dd>
+                                    <dt class="scrap-detail-label">開催会場</dt>
+                                    <dd class="scrap-detail-body">QEDクラブ</dd>
+                                    <dt class="scrap-detail-label">募集人数</dt>
+                                    <dd class="scrap-detail-body">120名</dd>
+                                </dl>
+                            </div>
+                            <div class="scrap-bottom">
+                                <dl class="deadline">
+                                    <dt class="deadline-heading">申込締切</dt>
+                                    <dd class="deadline-time">2015年3月16日（月）昼12:00まで</dd>
+                                </dl>
+                                <div class="badge badge-<%= event_status %>">
+                                    <span>応募<br><% if(event_status==='ended'){ %> 締切<% }else{ %>受付中<% } %></span>
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="button-block">
+                                <span>詳細を見る</span>
+                                <i class="arrow-right white"></i>
+                            </a>
+                        </article>

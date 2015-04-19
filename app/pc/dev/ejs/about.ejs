@@ -1,0 +1,183 @@
+<% var title = "マイナビウーマンとは｜",
+    description = "働く女子の恋とシゴトと本音がわかる！働く女性のための総合サイト「マイナビウーマン」の「マイナビウーマンとは」ページです。",
+    keywords = "マイナビウーマンとは,マイナビウーマン,働く女子,恋愛,仕事,シゴト,本音,ホンネ",
+    type = "article",
+    page_class = "page-about";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+            <!--contents ここから-->
+            <div class="contents">
+                <div class="contents-inner" id="js-contents">
+                    <main class="main js-main" id="js-sticky">
+
+                        <!--bread ここから-->
+                        <nav class="bread">
+                            <ol class="bread-inner">
+                                <li class="bread-item">
+                                    <a href="#" class="bread-link">
+                                        <i class="sprite home"></i>
+                                    </a>
+                                </li>
+                                <li class="bread-item is-current">
+                                    <div class="bread-link">
+                                        <span class="bread-text">マイナビウーマンとは</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </nav>
+                        <!--bread ここまで-->
+
+                        <!--about-mynavi ここから-->
+                        <section class="about-mynavi">
+                            <h1 class="about-mynavi-heading">
+                                マイナビウーマンは働く女性の変化を助ける<br>
+                                女性のための情報メディアサイトです
+                            </h1>
+                            <div class="about-mynavi-body">
+                                <p>「マイナビウーマン」は、（株）マイナビが運営する、女性総合サイトです。同世代の声と役立つノウハウをはじめ、恋愛小説やコラムなどの豊富なコンテンツや便利なサービスで、働く女子を応援します。</p>
+
+                                <p>2003年の創刊から10年間、これまで「エスカーラカフェ」として、幅広いコンテンツを展開してまいりましたが、10年目の節目となる2012年11月に、「マイナビウーマン」としてリニューアルいたしました。</p>
+
+                                <p>マイナビウーマンでは、「働く女子を応援する」という思いのもと、今まで以上に面白く、役に立つ情報をお届けできるような媒体を目指していきます。</p>
+                            </div>
+                            <ul class="about-mynavi-desires">
+                                <li><img src="image/about-mynavi-desires-1.png" alt="将来への不安を解消したい"></li>
+                                <li><img src="image/about-mynavi-desires-2.png" alt="トレンドを知りたい"></li>
+                                <li><img src="image/about-mynavi-desires-3.png" alt="いつかはママになりたい"></li>
+                                <li><img src="image/about-mynavi-desires-4.png" alt="幸せな結婚がしたい"></li>
+                                <li><img src="image/about-mynavi-desires-5.png" alt="リフレッシュしたい"></li>
+                            </ul>
+                        </section>
+                        <!--about-mynavi ここまで-->
+
+                        <!--about-category ここから-->
+                        <ul class="about-category">
+
+                            <% cat_name = "恋愛", cat_slug = "love",
+                                cat_text = "結婚につながる恋愛がしたい！ 出会い、デート、カップルなど、ステージごとの男子のホンネと専門家コラム。"
+                            %><% include module/_about-category-item %>
+
+                            <% cat_name = "ビューティ", cat_slug = "beauty",
+                                cat_text = "流行のヘアスタイルから、旬のメイク、最新コスメまで、女子なら押さえておきたい美容のキホン♪"
+                            %><% include module/_about-category-item %>
+
+                            <% cat_name = "ヘルスケア", cat_slug = "health",
+                                cat_text = "女性ならきちんと知っておきたい妊娠・出産やダイエットの情報を、専門家がきっちりガイド。"
+                            %><% include module/_about-category-item %>
+
+                            <% cat_name = "グルメ", cat_slug = "gourmet",
+                                cat_text = "友だちに教えたくなる、流行のスイーツや本当においしいお店情報を網羅。レシピはぜひ週末に試してみて！"
+                            %><% include module/_about-category-item %>
+
+                            <% cat_name = "エンタメ", cat_slug = "entertainment",
+                                cat_text = "新しい趣味を見つけるきっかけに！　芸能ネタから、押さえておきたい映画・本・カルチャー情報までお届け。"
+                            %><% include module/_about-category-item %>
+
+                            <% cat_name = "ファッション", cat_slug = "fashion",
+                                cat_text = "明日なに着よう？　毎日をおしゃれして楽しめる、ステキなアイテム紹介やトレンド情報、モテ服調査をチェクして！"
+                            %><% include module/_about-category-item %>
+
+                            <% cat_name = "おでかけ", cat_slug = "outdoor",
+                                cat_text = "直近の平日夜や、週末のプチ旅行など、日常のワクワクを広げるイベントやスポットの情報を満載♪"
+                            %><% include module/_about-category-item %>
+
+                            <% cat_name = "仕事", cat_slug = "work",
+                                cat_text = "「ちょっと困った」から「将来どうしよう」まで。ストレスフリーに働くためのヒントをピックアップ。"
+                            %><% include module/_about-category-item %>
+
+                            <% cat_name = "マネー", cat_slug = "money",
+                                cat_text = "貯められる女子も貯められない女子も。給与や貯金のリアルな話から、具体的なお金の知識まで。"
+                            %><% include module/_about-category-item %>
+
+                            <% cat_name = "ライフ", cat_slug = "life",
+                                cat_text = "暮らしをいろどるインテリアや、かしこく使いたいデジタルもの、家事のスキルまで情報たっぷり。"
+                            %><% include module/_about-category-item %>
+
+                            <li class="about-category-item">
+                                <section class="category-block special">
+                                    <a href="#" class="category-block-link">
+                                        <h1 class="category-block-heading category-block-heading-a">イベント情報</h1>
+                                        <p class="category-block-text">あいうえおかきくけこさしすせとたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんああああ</p>
+                                        <span class="category-block-arrow">
+                                            <i class="arrow-right white"></i>
+                                        </span>
+                                    </a>
+                                </section>
+                            </li>
+
+                            <li class="about-category-item">
+                                <section class="category-block special">
+                                    <a href="#" class="category-block-link">
+                                        <h1 class="category-block-heading category-block-heading-b">プレゼント<span></span>モニター</h1>
+                                        <p class="category-block-text">あいうえおかきくけこさしすせとたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんああああ</p>
+                                        <span class="category-block-arrow">
+                                            <i class="arrow-right white"></i>
+                                        </span>
+                                    </a>
+                                </section>
+                            </li>
+                        </ul>
+                        <!--about-category ここまで-->
+
+                        <!--about-member ここから-->
+                        <section class="about-member">
+                            <h1 class="about-member-heading">マイナビウーマンメンバー特典</h1>
+                            <div class="about-member-text">
+                                <p>「マイナビウーマンメンバー」に登録いただくと下記のような特典を得られます。登録は無料ですので、ぜひこの機会にご登録ください。</p>
+                                <p>（フレッシャーズ・マイナビニュース共通でご利用いただけます）</p>
+                            </div>
+                            <ol class="about-member-features">
+                                <li class="about-member-feature">
+                                    <section class="explain-box">
+                                        <h1 class="explain-box-heading">特典1　現金にも交換できるポイント「マイポ」をプレゼント</h1>
+                                        <div class="explain-box-text">
+                                            <p>メンバーのみなさんは、お小遣いが稼げるポイントサービス「マイポ」が利用できます。アンケートに答えたり、モニターに応募すると、現金やYahoo!ポイント、Suicaなどのポイントと相互利用ができるポイントが貯まります。また、メンバーページの利用回数に応じて、特別にボーナスポイントもプレゼントするお得なサービスも。</p>
+                                        </div>
+                                        <div class="sprite flower-a"></div>
+                                    </section>
+                                </li>
+                                <li class="about-member-feature">
+                                    <section class="explain-box">
+                                        <h1 class="explain-box-heading">特典2　メンバー限定プレゼントや試写会にご招待</h1>
+                                        <div class="explain-box-text">
+                                            <p>編集部が厳選したプレゼントやオススメ映画の試写会に抽選でご招待します。</p>
+                                        </div>
+                                        <div class="sprite flower-b"></div>
+                                        <div class="sprite flower-c"></div>
+                                    </section>
+                                </li>
+                                <li class="about-member-feature">
+                                    <section class="explain-box">
+                                        <h1 class="explain-box-heading">特典3　メンバー限定のイベントを実施</h1>
+                                        <div class="explain-box-text">
+                                            <p>著名人や専門家による会員限定のイベントなどを開催！</p>
+                                        </div>
+                                        <div class="sprite flower-d"></div>
+                                        <div class="sprite flower-e"></div>
+                                    </section>
+                                </li>
+                            </ol>
+                            <div class="about-member-button">
+                                <a href="#" target="_blank" class="button-block button-shadow button-blank">
+                                    <span>マイナビウーマンメンバー登録（無料）</span>
+                                    <span class="button-icon">
+                                        <i class="sprite blank-small normal"></i>
+                                        <i class="sprite blank-small-black hover"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </section>
+                        <!--about-member ここまで-->
+
+                    </main>
+
+                    <% side_id = "js-base" %>
+                    <% include layout/_side %>
+                </div>
+            </div>
+            <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>

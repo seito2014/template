@@ -1,0 +1,68 @@
+.snap {
+    @extend %clearfix;
+    background: #fff;
+    box-shadow: $shadow;
+
+    &-header {
+        float: left;
+        width: 224px;
+        height: 333px;
+        position: relative;
+    }
+
+    .heading {
+        position: absolute;
+        top: -19px;
+        left: 16px;
+    }
+
+    &-body {
+        float: right;
+        padding: 24px;
+        background: url(#{$path-image}bg-stripe.png);
+
+        &-list {
+            display: table;
+            table-layout: fixed;
+            width: 376px;
+        }
+
+        &-item {
+            display: table-cell;
+            width: 50%;
+            vertical-align: top;
+
+            &:nth-child(1) {
+                padding-right: 4px;
+            }
+
+            &:nth-child(2) {
+                padding-left: 4px;
+            }
+        }
+    }
+
+    .button-circle {
+        @include rem(13);
+        display: block;
+        border-radius: 50%;
+        background-color: $accent;
+        width: 80px;
+        height: 80px;
+        border: 1px solid $accent;
+        color: #fff;
+        line-height: 20px;
+        text-align: center;
+        text-decoration: none;
+        padding: 23px 0 0;
+        position: absolute;
+        left: 72px;
+        bottom: 24px;
+        transition: background-color $speed, color $speed;
+
+        &:hover {
+            background: #fff;
+            color: $accent;
+        }
+    }
+}

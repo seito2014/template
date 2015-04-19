@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background: $base-light;
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    min-height: 100%;
+    width: 100%;
+    min-width: $size-max;
+}
+
+body {
+    @include rem(15);
+    line-height: 1;
+    font-family: $font;
+    background: $foundation;
+    color: $default;
+    width: 100%;
+    min-width: $size-max;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: $font;
+}
+
+img {
+    max-height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    min-width: $size-max;
+}
+
+.for-no-js,
+.for-old {
+    text-align: center;
+    width: 100%;
+    background: $base-light;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    z-index: $max-z + 1;
+}
+
+.for-old {
+    display: none;
+
+    .lt-ie9 & {
+        display: block;
+    }
+}
+
+//js無効化の場合
+.no-js {
+
+    .js-lazy {
+        display: none;
+    }
+
+    .popular-area.is-active,
+    .new-articles-area.is-active,
+    .aside-tab-area.is-active,
+    .recommend-area.is-active {
+        position: static;
+    }
+
+    .pickup-wrapper {
+        visibility: visible;
+
+        .pickup-item {
+            display: none;
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+input,
+button,
+select,
+textarea,
+a,
+div,
+aside {
+    &:focus {
+        outline: $outline;
+    }
+}

@@ -1,0 +1,150 @@
+                        <!--new-articles new-articles-listtype ここから-->
+                        <% if(type === 'type-c'){ %>
+                        <div class="new-articles new-articles-listtype">
+                        <% } else { %>
+                        <section class="new-articles new-articles-listtype">
+                        <% } %>
+                            <% if(type === 'type-a'){ %>
+                            <div class="heading heading-b-long">
+                                <h1 class="heading-jp">「恋愛」の新着記事</h1>
+                            </div>
+                            <% } else if(type === 'type-b'){ %>
+                            <div class="heading heading-b-long">
+                                <h1 class="heading-jp">「胸キュンマンガ」の記事一覧</h1>
+                            </div>
+                            <% } %>
+                            <ul class="new-articles-list">
+                                <li class="new-articles-item">
+                                    <article class="article">
+                                        <a href="#" class="article-link">
+                                            <div class="article-image">
+                                                <div class="article-cover"></div>
+                                                <div class="article-image-inner">
+                                                    <img class="js-lazy" src="image/dummy.png" data-original="http://placehold.it/178x110" height="110" width="178" alt="">
+                                                    <noscript>
+                                                        <img src="http://placehold.it/178x110" height="110" width="178" alt="">
+                                                    </noscript>
+                                                </div>
+                                            </div>
+                                            <div class="article-body">
+                                                <div class="article-body-header">
+                                                    <span class="tag tag-a">専門家記事</span><span class="tag tag-normal">恋トレ</span>
+                                                    <time datetime="2015-01-01 00:00">
+                                                        <i class="sprite clock"></i>
+                                                        2015.01.01 00:00
+                                                    </time>
+                                                </div>
+                                                <h1 class="article-heading">
+                                                    急に充電したくなったらココ！おすすめ「電源の使えるカフェ都内40選」
+                                                </h1>
+                                                <% if(type === 'type-c'){ %>
+                                                <div class="article-count">
+                                                    <i class="sprite twitter-base"></i><span>9999</span>
+                                                    <i class="sprite facebook-base"></i><span>9999</span>
+                                                </div>
+                                                <% } %>
+                                            </div>
+                                            <div class="article-bottom">
+                                                <p class="article-text">本命バレンタインチョコの渡し方7選【LIGでもサプライズを準備しました】こんにちは、マチルダです。今日はバレンタインデー。皆様いかがお過ごしでしょうか？</p>
+                                            </div>
+                                            <i class="arrow-right arrow-right-accent"></i>
+                                        </a>
+                                    </article>
+                                </li>
+                                <% for(var i=0; i< 11; i++) { %>
+                                <li class="new-articles-item">
+                                    <article class="article">
+                                        <a href="#" class="article-link">
+                                            <div class="article-image">
+                                                <div class="article-cover"></div>
+                                                <div class="article-image-inner">
+                                                    <img class="js-lazy" src="image/dummy.png" data-original="http://placehold.it/178x110" height="110" width="178" alt="">
+                                                    <noscript>
+                                                        <img src="http://placehold.it/178x110" height="110" width="178" alt="">
+                                                    </noscript>
+                                                </div>
+                                            </div>
+                                            <div class="article-body">
+                                                <div class="article-body-header">
+                                                    <span class="tag tag-a">専門家記事</span><span class="tag tag-accent-light">恋トレ</span>
+                                                    <time datetime="2015-01-01 00:00">
+                                                        <i class="sprite clock"></i>
+                                                        2015.01.01 00:00
+                                                    </time>
+                                                </div>
+                                                <h1 class="article-heading">
+                                                    急に充電したくなったらココ！おすすめ「電源の使えるカフェ都内40選」
+                                                </h1>
+                                                <% if(type === 'type-c'){ %>
+                                                <div class="article-count">
+                                                    <i class="sprite twitter-base"></i><span>9999</span>
+                                                    <i class="sprite facebook-base"></i><span>9999</span>
+                                                </div>
+                                                <% } %>
+                                            </div>
+                                            <div class="article-bottom">
+                                                <p class="article-text">本命バレンタインチョコの渡し方7選【LIGでもサプライズを準備しました】こんにちは、マチルダです。今日はバレンタインデー。皆様いかがお過ごしでしょうか？</p>
+                                            </div>
+                                            <i class="arrow-right arrow-right-accent"></i>
+                                        </a>
+                                    </article>
+                                </li>
+                                <% } %>
+                                <% if(type === 'type-a'){ %>
+                                    <% include _new-articles-item-news %>
+                                <% } %>
+                                <% if(type === 'type-c'){ %>
+                                    <% include _new-articles-item-news %>
+                                <% } %>
+                            </ul>
+                            <% if(type === 'type-a'){ %>
+                            <% include _new-articles-bottom-related-box %>
+                            <div class="new-articles-button">
+                                <a href="#" class="button-block">
+                                    <span>一覧を見る</span>
+                                    <i class="arrow-right white"></i>
+                                </a>
+                            </div>
+                            <% } %>
+                            <% if(type === 'type-b'){ %>
+                            <div class="new-articles-button double">
+                                <div class="new-articles-button-cell left">
+                                    <a href="#" class="button-block">
+                                        <span>新しい記事</span>
+                                        <i class="arrow-left white"></i>
+                                    </a>
+                                </div>
+                                <div class="new-articles-button-cell right">
+                                    <a href="#" class="button-block">
+                                        <span>以前の記事</span>
+                                        <i class="arrow-right white"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <% } %>
+                            <% if(type === 'type-c'){ %>
+                            <% include _new-articles-bottom-related-box %>
+                            <div class="new-articles-button triple">
+                                <div class="new-articles-button-cell left">
+                                    <a href="#" class="button-block">
+                                        <span>新しい記事</span>
+                                        <i class="arrow-left white"></i>
+                                    </a>
+                                </div>
+                                <div class="new-articles-button-cell center">
+                                    <span>9999/9999</span>
+                                </div>
+                                <div class="new-articles-button-cell right">
+                                    <a href="#" class="button-block">
+                                        <span>以前の記事</span>
+                                        <i class="arrow-right white"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <% } %>
+                        <% if(type === 'type-c'){ %>
+                        </div>
+                        <% } else { %>
+                        </section>
+                        <% } %>
+                        <!--new-articles new-articles-listtype ここまで-->

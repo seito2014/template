@@ -1,0 +1,197 @@
+.nav {
+    width: 100%;
+    min-width: $size-max;
+    border-top: $border-base;
+    background: #fff;
+    padding-top: 3px;
+    position: relative;
+    height: 55px;
+
+    &-border {
+        display: block;
+        width: 100%;
+        min-width: $size-max;
+        border-top: $border-base-dashed;
+    }
+
+    &-inner {
+        @extend %clearfix;
+        width: $size-max;
+        margin: 0 auto;
+        padding: 0 25px;
+        margin-top: -4px;
+    }
+
+    &-item {
+        float: left;
+
+        &:nth-child(1) {
+
+            .nav-text {
+                padding: 0 26px;
+            }
+        }
+
+        &:nth-child(3) {
+
+            .nav-text {
+                padding: 0 23px;
+            }
+        }
+
+        &:nth-child(4),
+        &:nth-child(6) {
+
+            .nav-text {
+                padding: 0 24px;
+            }
+        }
+
+        &:nth-child(8) {
+
+            .nav-text {
+                padding: 0 25px;
+            }
+        }
+
+        &:nth-child(9) {
+
+            .nav-text {
+                padding: 0 23px;
+            }
+        }
+
+        &:nth-child(10) {
+
+            .nav-text {
+                padding: 0 20px;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 1px;
+                    height: 8px;
+                    background: $base;
+                    position: absolute;
+                    right: 0;
+                    top: 1px;
+                }
+            }
+        }
+
+        &:hover,
+        &.is-current {
+
+            > a {
+                background: $base-light;
+            }
+
+            .arrow-bottom {
+                opacity: 1;
+            }
+
+            .sub-category {
+                display: block;
+            }
+        }
+
+        > a {
+            display: block;
+            padding: 20px 0;
+            text-decoration: none;
+            position: relative;
+            z-index: $max-z - 1;
+            transition: background-color $speed, color $speed;
+
+            .arrow-bottom {
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                margin-left: -5px;
+                opacity: 0;
+                z-index: 4;
+            }
+        }
+    }
+
+    &-text {
+        @include rem(14);
+        display: block;
+        font-weight: bold;
+        padding: 0 22px;
+        color: $default;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 8px;
+            background: $base;
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+    }
+}
+
+//下層ページスタイル
+.header {
+
+    .nav.nav-lower {
+
+        .nav-item {
+
+            &:hover {
+
+                .arrow-bottom {
+                    opacity: 0;
+                }
+
+                &.is-current {
+
+                    .arrow-bottom {
+                        opacity: 1;
+                    }
+                }
+
+                .sub-category {
+                    display: block;
+                    animation: none;
+                }
+            }
+        }
+    }
+}
+
+//中カテゴリ
+.sub-category {
+    width: 100%;
+    background: #fff;
+    border-top: .1em solid $base-light;
+    position: absolute;
+    left: 0;
+    z-index: $max-z - 2;
+
+    .js & {
+        display: none;
+    }
+
+    &.is-visible {
+        display: block;
+        position: relative;
+    }
+
+    &-list {
+        @extend %clearfix;
+        width: $size-max;
+        margin: 0 auto;
+        padding: 12px 25px 14px;
+    }
+
+    &-item {
+        float: left;
+        margin: 4px 8px 4px 0;
+        list-style-image: url(data:0);
+    }
+}

@@ -1,0 +1,97 @@
+.about-mynavi{
+	padding-top: 17px;
+	background-color: #fff;
+	box-shadow: $shadow;
+
+	&-heading{
+		@include rem(24);
+		margin-bottom: 45px;
+		padding: 40px 24px 0;
+		color: $base;
+		line-height: 38px;
+		text-align: center;
+		background: url(#{$path-image}about-mynavi-heading.png) no-repeat 50% 0;
+	}
+
+	&-body{
+		@include rem(15);
+		margin-bottom: 40px;
+		padding: 0 24px;
+		line-height: 24px;
+		p{
+			margin-bottom: 13px;
+		}
+	}
+	&-desires{
+		padding: 93px 0 0 337px;
+		height: 564px;
+		background: url(#{$path-image}about-mynavi-desires-illust.png) no-repeat 50% 100%;
+		li{
+			margin-bottom: 28px;
+		}
+	}
+}
+
+.about-category{
+	@extend %clearfix;
+	margin-right: -16px;
+	&-item{
+		float: left;
+		margin-right: 16px;
+		width: 316px;
+	}
+}
+
+.about-member{
+	background-color: #fff;
+	box-shadow: $shadow;
+
+	&-heading{
+        @include rem(18);
+        padding: 0 24px;
+        height: 50px;
+        line-height: 50px;
+        font-weight: bold;
+        background: url(#{$path-image}bg-stripe-sub.png) #fff 0 0 repeat;
+	}
+	&-text{
+		@include rem(15);
+		padding: 24px;
+		line-height: 24px;
+		p{
+			margin-bottom: 13px;
+		}
+	}
+	&-features{
+		padding: 0 24px;
+	}
+
+	.explain-box{
+		position: relative;
+		margin-bottom: 10px;
+
+		.sprite{
+			position: absolute;
+			&.flower-a{
+				top: -30px;
+				right: -20px;
+			}
+			&.flower-b{
+				left: 89px;
+				top: -22px;
+			}
+			&.flower-c{
+				top: -22px;
+				right: -21px;
+			}
+			&.flower-d{
+				top: -28px;
+				left: -17px;
+			}
+			&.flower-e{
+				right: -18px;
+				bottom: -26px;
+			}
+		}
+	}
+}

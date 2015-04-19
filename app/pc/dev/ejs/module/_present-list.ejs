@@ -1,0 +1,98 @@
+                        <section class="present-list">
+                            <h1 class="present-list-heading"><%= list_title %></h1>
+							
+							<% if(list_title==="モニター"){ %>
+
+								<% link_new = true, link_movie = false, link_blank = false, link_related = false,
+	                                link_status = "",
+	                                link_title = "【1000名様にプレゼント！】春から始めるキレイ習慣BOX"
+	                            %>
+	                            <% include _present-list-article %>
+
+								<% link_new = false, link_movie = false, link_blank = false, link_related = false,
+	                                link_status = "",
+	                                link_title = "【500名様】マイナビウーマンの記事を読んで豪華プレゼントをゲットしちゃおう♪"
+	                            %>
+	                            <% include _present-list-article %>
+
+								<% link_new = false, link_movie = false, link_blank = false, link_related = false,
+	                                link_status = "",
+	                                link_title = "人気漫画家・浅野いにお先生のグッズをもれなくプレゼント"
+	                            %>
+	                            <% include _present-list-article %>
+
+							<% }else
+
+							if(list_title==="プレゼント"){ %>
+
+								<% link_new = true, link_movie = false, link_blank = false, link_related = false,
+	                                link_status = "",
+	                                link_title = "Organoteのヘアバームとヘアトリートメントオイルのセット【2名様】"
+	                            %>
+	                            <% include _present-list-article %>
+
+								<% link_new = true, link_movie = false, link_blank = false, link_related = false,
+	                                link_status = "",
+	                                link_title = "タイムズ スパ・レスタのスパ＆デザートプラン【1組2名様】"
+	                            %>
+	                            <% include _present-list-article %>
+
+								<% link_new = false, link_movie = false, link_blank = false, link_related = false,
+	                                link_status = "",
+	                                link_title = "ハワイ発のパワーストーン「マルラニハワイ」のブレスレット【2名様】"
+	                            %>
+	                            <% include _present-list-article %>
+
+								<% link_new = false, link_movie = false, link_blank = false, link_related = false,
+	                                link_status = "",
+	                                link_title = "Francfranc ランチボックス＆ステンレスボトルのセット【2名様】"
+	                            %>
+	                            <% include _present-list-article %>
+
+								<% link_new = false, link_movie = false, link_blank = false, link_related = false,
+	                                link_status = "",
+	                                link_title = "横浜ベイシェラトン ホテル＆タワーズ ディナー券【1組2名様】"
+	                            %>
+	                            <% include _present-list-article %>
+
+								<% link_new = false, link_movie = false, link_blank = false, link_related = false,
+	                                link_status = "",
+	                                link_title = "吊るしたままでシワ伸ばし！　パワフル シワ取りスチーマー【2名様】"
+	                            %>
+	                            <% include _present-list-article %>
+
+							<% }else
+							
+							if(list_title==="資料請求"){ %>
+
+								<% link_new = false, link_movie = false, link_blank = true, link_related = true,
+	                                link_status = "",
+	                                link_title = "【資料請求】結婚？出産？仕事？そろそろ考えなくちゃ、未来に備える保険無料相談"
+	                            %>
+	                            <% include _present-list-article %>
+
+								<% link_new = false, link_movie = false, link_blank = true, link_related = true,
+	                                link_status = "",
+	                                link_title = "【資料請求】CDA資格について、詳しく知りたい！（日本マンパワーのキャリアカウンセラー養成講座）"
+	                            %>
+	                            <% include _present-list-article %>
+
+							<% }else
+							
+							if(list_title==="試写会"){ %>
+
+								<% link_new = false, link_movie = true, link_blank = false, link_related = false,
+	                                link_status = "now",
+	                                link_title = "『龍三と七人の子分たち』舞台あいさつ付き特別試写会　10組20名様"
+	                            %>
+	                            <% include _present-list-article %>
+
+								<% link_new = false, link_movie = true, link_blank = false, link_related = false,
+	                                link_status = "ended",
+	                                link_title = "『ナイト ミュージアム/エジプト王の秘密』特別試写会　5組10名様"
+	                            %>
+	                            <% include _present-list-article %>
+
+							<% } %>
+
+                        </section>

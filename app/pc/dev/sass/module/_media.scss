@@ -1,0 +1,182 @@
+/*
+#overview
+media
+
+_media.scss
+*/
+
+/*
+#styleguide
+```
+<article class="media">
+    <a href="#" class="media-link">
+        <div class="media-inner">
+            <div class="media-image">
+                <span class="tag tag-accent large">PR</span>
+                <div class="media-cover"></div>
+                <div class="media-image-inner">
+                    <img class="js-lazy" src="image/dummy.png" data-original="http://placehold.it/206x128" height="128" width="206" alt="">
+                    <noscript>
+                        <img src="http://placehold.it/206x128" height="128" width="206" alt="">
+                    </noscript>
+                </div>
+            </div>
+            <div class="media-body">
+                <p class="media-heading">
+                    急に充電したくなったらココ！おすすめ「電源の使...
+                </p>
+                <p class="media-text">sample text sample text sample text sample text sample text sample text</p>
+            </div>
+        </div>
+    </a>
+</article>
+
+<article class="media media-time">
+    <a href="#" class="media-link">
+        <div class="media-inner">
+            <div class="media-image">
+                <div class="media-cover"></div>
+                <div class="media-image-inner">
+                    <img class="js-lazy" src="image/dummy.png" data-original="http://placehold.it/128x79" height="79" width="128" alt="">
+                    <noscript>
+                        <img src="http://placehold.it/128x79" height="79" width="128" alt="">
+                    </noscript>
+                </div>
+            </div>
+            <div class="media-body">
+                <p class="media-heading">
+                    モチベーションを上げて効率UP
+                </p>
+            </div>
+        </div>
+        <i class="arrow-right arrow-right-accent"></i>
+    </a>
+</article>
+```
+*/
+
+.media {
+    width: 100%;
+    box-shadow: $shadow;
+
+    &-link {
+        display: block;
+        background: #fff;
+        text-decoration: none;
+        
+        &:hover {
+
+            .media-heading {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-image {
+        float: left;
+        display: block;
+        position: relative;
+
+        &-inner {
+            @extend %thumb;
+            width: 206px;
+            height: 128px;
+        }
+    }
+
+    &-cover {
+        @extend %cover;
+    }
+
+    &-inner {
+        @extend %clearfix;
+        position: relative;
+    }
+
+    &-body {
+        padding: 21px 24px 20px;
+        margin-left: 206px;
+    }
+
+    &-heading {
+        color: $base;
+        line-height: 24px;
+        font-weight: bold;
+        margin-bottom: 1px;
+    }
+
+    &-text {
+        @include rem(13);
+        line-height: 21px;
+        color: $default;
+    }
+
+    .tag {
+        position: absolute;
+        top: 6px;
+        left: -4px;
+        z-index: 3;
+    }
+}
+
+
+//time
+.media.media-time {
+    box-shadow: none;
+
+    .media-image-inner {
+        width: 128px;
+        height: 79px;
+    }
+
+    .media-link {
+        position: relative;
+    }
+
+    .media-body {
+        margin-left: 128px;
+        padding: 0;
+    }
+
+    .media-heading {
+        @include rem(15);
+        display: table-cell;
+        vertical-align: middle;
+        height: 79px;
+        padding: 1px 16px 0;
+        color: $default;
+        font-weight: normal;
+    }
+
+    .arrow-right {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -2px;
+    }
+}
+
+//media-recommend
+.media.media-recommend {
+
+    .tag {
+        position: static;
+        margin-bottom: 9px;
+    }
+    
+    .media-heading {
+        color: $default;
+    }
+
+    .media-body {
+        padding: 0 24px;
+
+        &-inner {
+            display: table-cell;
+            width: 100%;
+            height: 128px;
+            vertical-align: middle;
+            padding-bottom: 8px;
+        }
+    }
+}

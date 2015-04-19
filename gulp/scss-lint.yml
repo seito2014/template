@@ -1,0 +1,48 @@
+linters:
+  Comment:
+    enabled: false
+
+  LeadingZero:
+    enabled: false
+
+  MergeableSelector:
+    force_nesting: false
+
+  PlaceholderInExtend:
+    enabled: false
+
+  PropertySortOrder:
+    enabled: false
+
+  SelectorDepth:
+    enabled: true
+    max_depth: 4
+
+  NestingDepth:
+    enabled: true
+    max_depth: 6
+
+  Shorthand:
+    enabled: false
+
+  StringQuotes:
+    style: double_quotes
+
+  Indentation:
+    enabled: false
+    character: tab
+
+  VendorPrefixes:
+    enabled: false
+
+  DuplicateProperty:
+    enabled: false
+
+  SelectorFormat:
+    enabled: true
+
+  DeclarationOrder:
+    enabled: false
+
+  FinalNewline:
+    enabled: false

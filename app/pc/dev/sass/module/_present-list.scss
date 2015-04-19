@@ -1,0 +1,41 @@
+.present-list{
+    margin-bottom: 24px;
+    box-shadow: $shadow;
+
+    &-heading{
+        @include rem(18);
+        padding: 0 24px;
+        height: 50px;
+        line-height: 50px;
+        font-weight: bold;
+        background: url(#{$path-image}bg-stripe-sub.png) #fff 0 0 repeat;
+    }
+
+    .scrap{
+        padding-bottom: 25px;
+        border-bottom: $border;
+        &:last-child{
+            border: none;
+        }
+    }
+
+    .deadline{
+        float: left;
+        width: 376px;
+        &-time{
+            margin-left: 5em;
+        }
+    }
+
+    .button-block{
+        float: right;
+        width: 216px;
+    }
+
+    .badge{
+        position: absolute;
+        left: 16px;
+        bottom: 6px;
+        z-index: 3;
+    }
+}

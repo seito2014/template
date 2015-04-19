@@ -1,0 +1,162 @@
+/*
+#overview
+category-block
+
+_category-block.scss
+*/
+
+/*
+#styleguide
+```
+<section class="category-block">
+    <a href="#" class="category-block-link">
+        <h1 class="category-block-heading">
+            <span class="category-block-icon">
+                <i class="sprite cat-love"></i>
+            </span>
+            恋愛
+        </h1>
+        <p class="category-block-text">結婚につながる恋愛がしたい！ 出会い、デート、カップルなど、ステージごとの男子のホンネと専門家コラム。</p>
+        <span class="category-block-arrow">
+            <i class="arrow-right arrow-right-accent"></i>
+        </span>
+    </a>
+</section>
+
+```
+*/
+
+
+/*
+#styleguide
+```
+
+<section class="category-block special">
+    <a href="#" class="category-block-link">
+        <h1 class="category-block-heading category-block-heading-a">イベント情報</h1>
+        <p class="category-block-text">あいうえおかきくけこさしすせとたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんああああ</p>
+        <span class="category-block-arrow">
+            <i class="arrow-right arrow-right-white"></i>
+        </span>
+    </a>
+</section>
+
+<section class="category-block special">
+    <a href="#" class="category-block-link">
+        <h1 class="category-block-heading category-block-heading-b">プレゼント<span></span>モニター</h1>
+        <p class="category-block-text">あいうえおかきくけこさしすせとたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんああああ</p>
+        <span class="category-block-arrow">
+            <i class="arrow-right arrow-right-white"></i>
+        </span>
+    </a>
+</section>
+
+```
+*/
+
+.category-block{
+    background-color: #fff;
+    box-shadow: $shadow;
+
+    &-link{
+        display: block;
+        position: relative;
+        padding-right: 32px;
+        text-decoration: none;
+    }
+
+    &-heading{
+        position: relative;
+        @include rem(24);
+        color: $base;
+        padding-left: 64px;
+        height: 68px;
+        line-height: 68px;
+    }
+    &-icon{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 2px;
+        width: 62px;
+        height: 68px;
+        .sprite{
+            @include core;
+        }
+    }
+    &-text{
+        @include rem(13);
+        padding: 0 13px 18px 24px;
+        color: $default;
+        line-height: 21px;
+    }
+    &-arrow{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 100%;
+        transition: background-color $speed;
+
+        .arrow-right{
+            position: absolute;
+            top: 50%;
+            left: 14px;
+            margin-top: -4px;
+        }
+    }
+
+    &:hover{
+        .category-block-text{
+            text-decoration: underline;
+        }
+        .arrow-right{
+            transform: translate3d(4px, 0, 0);
+        }
+    }
+}
+
+
+// .category-block.special
+.category-block.special{
+    overflow: hidden;
+    border-radius: 4px;
+
+    .category-block-heading{
+        @include rem(18);
+        padding: 0;
+        height: 80px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 63px;
+        border-bottom: $border;
+        background-image: url(#{$path-image}about-category-heading.png);
+        background-repeat: no-repeat;
+
+        &-a{
+            background-position: 0 0;
+        }
+        &-b{
+            background-position: 0 -100px;
+            span{
+                display: inline-block;
+                width: 40px;
+            }
+
+        }
+    }
+
+    .category-block-text{
+        padding: 13px 24px;
+    }
+
+    .category-block-arrow{
+        background-color: $base-light;
+    }
+
+    &:hover{
+        .category-block-arrow{
+            background-color: $base-highlight;
+        }
+    }
+}

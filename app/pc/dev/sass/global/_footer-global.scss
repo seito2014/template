@@ -1,0 +1,207 @@
+/*
+マイナビ関連サイト共通のfooterスタイル
+*/
+
+/*---------------------*/
+/*	clearfix
+/*---------------------*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+/*=====================*/
+/*	フッター
+/*=====================*/
+
+#GlobalFooter {
+    width:1030px;
+    margin:0 auto;
+    padding-top:42px;
+    font-size: 75%;
+    line-height: 1.5;
+    background: #fff;
+    overflow: hidden;
+}
+
+#FooterLogo {
+    width: 100px;
+    float: left;
+    padding-top: 27px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#FooterService {
+    width: 920px;
+    float: left;
+    margin-left: 10px;
+    display: inline; /* dobble margin bugfix for ie6 */
+}
+
+#FooterServiceHead {
+    margin-bottom: 11px;
+}
+
+#GlobalFooter .FooterTitle {
+    width: 500px;
+    float: left;
+    font-size: 117%;
+    font-weight: bold;
+    color: #333;
+    padding-left: 5px;
+    letter-spacing: 1px;
+}
+
+#GlobalFooter #FooterServiceHead p.FooterHeadLink {
+    text-align: right;
+}
+
+#GlobalFooter #FooterServiceHead p.FooterHeadLink a {
+    float: right;
+    padding-right: 20px;
+    color: #09F !important;
+}
+#GlobalFooter #FooterServiceHead p.FooterHeadLink img {
+    vertical-align: text-top;
+    
+    .windows &{
+        position: relative;
+        top: 1px;
+    }
+}
+#FooterServiceCont {}
+
+#FooterServiceCont dl {
+    padding: 1px 0 0;
+    margin-bottom: 12px;
+
+    &:nth-child(2),
+    &:nth-child(5) {
+
+        dt {
+            height: 20px;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    dt {
+        @include rem(12);
+        height: 41px;
+        width: 106px;
+        float: left;
+        padding: 5px 0 0 6px;
+        margin-right: 15px;
+        color: #666;
+        border-right: 1px dashed $accent;
+    }
+
+    dd {
+        float: left;
+        margin: 0 9px 2px 0;
+        padding: 2px 8px 0 0;
+        border-right: 1px solid $accent;
+        white-space: nowrap;
+        line-height: 1.6;
+        letter-spacing: 1px;
+
+        &.last {
+            border-right: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#FooterCorp {
+    float: left;
+}
+
+#FooterCorpInfo {
+    float: left;
+    width: 940px;
+    margin: 19px 0 0 0;
+    padding-top: 5px;
+    border-top: 1px solid $accent;
+    display: inline; /* dobble margin bugfix for ie6 */
+}
+
+#FooterCorpId {
+    width: 300px;
+    float: left;
+}
+
+#FooterCorpName {
+    width: 105px;
+    float: left;
+    margin-top: 2px;
+    padding-left: 5px;
+}
+
+#copyright {
+    width: 180px;
+    float: left;
+    margin: 3px 0 0 10px;
+    font-size: 81.6%;
+    color: #333;
+    line-height: 1.2;
+}
+
+#FooterCorpLink {
+    float: left;
+}
+
+#FooterCorpLink ul {
+    float: left;
+}
+
+#FooterCorpLink ul li {
+    @include rem(10);
+    float: left;
+    margin: 0px 0 7px 0;
+    padding: 3px 9px 0;
+    border-right: 1px solid $accent;
+    line-height: 1.2;
+}
+
+#FooterCorpLink ul li.last {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+#privacy {
+    width: 75px;
+    float: right;
+    margin: -7px 0 0;
+    display: inline; /* dobble margin bugfix for ie6 */
+}
+
+/*=====================*/
+/*	フォント
+/*=====================*/
+
+#GlobalFooter a {
+    color: #666666;
+    text-decoration: none;
+}
+
+#GlobalFooter a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+

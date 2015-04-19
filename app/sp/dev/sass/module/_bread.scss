@@ -1,0 +1,102 @@
+/*
+#overview
+bread
+
+_bread.scss
+*/
+
+/*
+#styleguide
+```
+<nav class="bread">
+    <ol class="bread-inner">
+        <li class="bread-item">
+            <a href="#" class="bread-link">Home</a>
+        </li>
+        <li class="bread-item is-current">
+            <div class="bread-link">
+                <span class="bread-text">Lower</span>
+            </div>
+        </li>
+    </ol>
+</nav>
+```
+*/
+
+.bread {
+    height: 40px;
+    background: #000;
+
+    &-list {
+        letter-spacing: -.4em;
+    }
+
+    &-item {
+        display: inline-block;
+        letter-spacing: 0;
+        margin-left: 5px;
+        
+        &:first-child {
+            margin-left: 0;
+
+            .bread-link {
+                padding-right: 8px;
+            }
+        }
+
+        &.is-current {
+
+            .bread-link {
+
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+
+            .bread-text {
+                font-weight: bold;
+            }
+        }
+    }
+
+    &-link {
+        @include rem(16);
+        height: 40px;
+        line-height: 40px;
+        padding: 0 12px 0 8px;
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 21px solid transparent;
+        }
+
+        &:before {
+            right: -26px;
+            top: -1px;
+            z-index: 2;
+            border-left: 9px solid #000;
+        }
+
+        &:after {
+            border-left: 9px solid #fff;
+            right: -28px;
+            top: -1px;
+            z-index: 1;
+        }
+    }
+
+    &-text {
+        position: relative;
+        z-index: 3;
+    }
+}

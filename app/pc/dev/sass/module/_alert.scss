@@ -1,0 +1,40 @@
+.alert {
+    display: block;
+    border-radius: 3px;
+    background-color: #f9e2ca;
+    width: 648px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-decoration: none;
+    position: relative;
+    padding: 0 30px 0 16px;
+
+    &:hover {
+
+        > span {
+            text-decoration: underline;
+        }
+
+        .arrow-right {
+            transform: translate3d(5px, 0, 0);
+        }
+    }
+
+    > span,
+    .bikkuri {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    > span {
+        @include rem(13);
+        padding-left: 3px;
+        color: $default;
+    }
+
+    .arrow-right {
+        top: 17px;
+        right: 13px;
+    }
+}

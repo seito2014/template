@@ -1,0 +1,41 @@
+.pupular-ranking {
+    background: #fff;
+    box-shadow: $shadow;
+
+    &-header {
+        width: 100%;
+        height: 126px;
+        position: relative;
+
+        .heading {
+            position: absolute;
+            top: -25px;
+            left: 45px;
+        }
+    }
+
+    &-list {
+        padding-bottom: 9px;
+    }
+
+    &-item {
+        border-top: $border;
+    }
+
+    .news.simple {
+
+        .news-tag .tag {
+            position: relative;
+            top: 2px;
+        }
+        
+        .news-link {
+            padding: 12px 0 11px;
+        }
+
+        .news-text {
+            @include rem(15);
+            line-height: 24px;
+        }
+    }
+}

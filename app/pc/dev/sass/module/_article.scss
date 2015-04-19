@@ -1,0 +1,171 @@
+/*
+#overview
+article
+
+_article.scss
+*/
+
+/*
+#styleguide
+```
+<article class="article">
+    <a href="#" class="article-link">
+        <div class="article-image">
+            <div class="article-cover"></div>
+            <div class="article-image-inner">
+                <img class="js-lazy" src="image/dummy.png" data-original="http://placehold.it/178x110" height="110" width="178" alt="">
+                <noscript>
+                    <img src="http://placehold.it/178x110" height="110" width="178" alt="">
+                </noscript>
+            </div>
+        </div>
+        <div class="article-body">
+            <div class="article-body-header">
+                <span class="tag tag-a">トレンド</span><span class="tag tag-accent">恋トレ</span>
+                <time datetime="2015-01-01 00:00">
+                    <i class="sprite clock"></i>
+                    2015.01.01 00:00
+                </time>
+            </div>
+            <h1 class="article-heading">
+                急に充電したくなったらココ！おすすめ「電源の使えるカフェ都内40選」
+            </h1>
+        </div>
+        <div class="article-bottom">
+            <p class="article-text">本命バレンタインチョコの渡し方7選【LIGでもサプライズを準備しました】こんにちは、マチルダです。今日はバレンタインデー。皆様いかがお過ごしでしょうか？</p>
+        </div>
+    </a>
+</article>
+```
+*/
+
+.article {
+
+    &-link {
+        @extend %clearfix;
+        display: block;
+        text-decoration: none;
+        color: $default;
+        padding: 16px 0 13px;
+        position: relative;
+
+        &:hover {
+            .article-heading {
+                border-bottom: 1px solid $default;
+                margin-top: -10px;
+            }
+        }
+    }
+
+    &-image {
+        float: left;
+        width: 178px;
+        height: 110px;
+        position: relative;
+
+        &-inner {
+            @extend %thumb;
+            width: 178px;
+            height: 110px;
+        }
+    }
+
+    &-cover {
+        @extend %cover;
+    }
+
+    &-body {
+        float: right;
+        width: 405px;
+        padding-right: 15px;
+
+        &-header {
+            @extend %clearfix;
+            margin-bottom: 4px;
+
+            .tag {
+                float: left;
+                padding: 0 6px;
+                margin-right: 8px;
+            }
+
+            > time {
+                @include rem(18);
+                float: right;
+                font-family: $font-en;
+                color: $accent;
+                line-height: 19.5px;
+                position: relative;
+                top: -1px;
+            }
+
+            .sprite.clock {
+                vertical-align: baseline;
+                margin-right: 5px;
+                position: relative;
+                top: 1px;
+            }
+        }
+    }
+
+    &-heading {
+        @include rem(20);
+        display: inline;
+        font-weight: bold;
+        line-height: 30px;
+    }
+
+    &-bottom {
+        float: left;
+        width: 100%;
+        line-height: 1.5;
+        margin-top: 13px;
+    }
+
+    &-text {
+        @include rem(13);
+        line-height: 19.5px;
+    }
+    &-count{
+        @include rem(18);
+        margin-top: 8px;
+        color: $base;
+        font-family: $font-en;
+        i{
+            margin-right: 10px;
+        }
+
+        .facebook-base{
+            margin-left: 14px;
+        }
+    }
+
+    .arrow-right {
+        top: 50%;
+        right: 1px;
+        margin-top: -3px;
+    }
+}
+
+//article-ranking
+.article.article-ranking{
+    .article-link{
+        position: relative;
+        padding: 16px 24px;
+    }
+    .article-rank{
+        @include rem(24);
+        position: absolute;
+        top: 53px;
+        left: 0;
+        color: $accent;
+        font-family: $font-en;
+        font-weight: bold;;
+        line-height: 35px;
+        z-index: 3;
+        span{
+            padding-right: 8px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+/*
+#overview
+input
+
+_input.scss
+*/
+
+/*
+#styleguide
+```
+<input type="search" value="" class="input">
+```
+*/
+
+.input {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid $base;
+}

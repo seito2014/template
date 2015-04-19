@@ -1,0 +1,39 @@
+.ranking-category {
+    overflow: hidden;
+    margin-right: -16px;
+    
+    &-item{
+        border-bottom: $border;
+        &:last-child{
+            border: none;
+        }
+    }
+    &-block{
+        float: left;
+        margin-right: 16px;
+        margin-bottom: 24px;
+        width: 316px;
+        background: #fff;
+        box-shadow: $shadow;
+    }
+    &-heading{
+        @include rem(18);
+        position: relative;
+        padding-left: 56px;
+        height: 52px;
+        font-weight: bold;
+        line-height: 52px;
+        background: url(#{$path-image}bg-stripe-sub.png) 0 0 repeat;
+    }
+    &-icon{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 66px;
+        height: 52px;
+        .sprite{
+            @include core;
+        }
+    }
+}

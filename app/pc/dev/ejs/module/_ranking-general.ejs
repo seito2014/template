@@ -1,0 +1,34 @@
+                        <!--ranking-general ここから -->
+                        <div class="ranking-general" id="js-ranking-general">
+                            <ul class="table-menu primary" id="js-ranking-general-menus">
+                                <li class="table-menu-item is-active">
+                                    <a href="#js-ranking-general-area1">人気記事</a>
+                                    <i class="arrow-bottom"></i>
+                                </li>
+                                <li class="table-menu-item">
+                                    <a href="#js-ranking-general-area2">つぶやき</a>
+                                    <i class="arrow-bottom"></i>
+                                </li>
+                                <li class="table-menu-item">
+                                    <a href="#js-ranking-general-area3">いいね</a>
+                                    <i class="arrow-bottom"></i>
+                                </li>
+                            </ul>
+
+                            <ul class="ranking-general-areas" id="js-ranking-general-areas">
+                                
+                                <!--ranking-general-area1 ここから-->
+                                <% area_num = "1", active = true %>
+                                <% include _ranking-general-area %>
+
+                                <!--ranking-general-area2 ここから-->
+                                <% area_num = "2", active = false %>
+                                <% include _ranking-general-area %>
+
+                                <!--ranking-general-area3 ここから-->
+                                <% area_num = "3", active = false %>
+                                <% include _ranking-general-area %>
+                            </ul>
+
+                        </div>
+                        <!--general-ranking ここまで -->

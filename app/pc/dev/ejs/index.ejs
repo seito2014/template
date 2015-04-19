@@ -1,0 +1,47 @@
+<% var title = "",
+    description = "「マイナビウーマン」は、（株）マイナビが運営する、女性総合サイトです。同世代の声と役立つノウハウをはじめ、恋愛小説やコラムなどの豊富なコンテンツや便利なサービスで、働く女子を応援します。",
+    keywords = "マイナビウーマン,働く女子,恋愛,仕事,シゴト,本音,ホンネ",
+    type = "website",
+    page_class = "page-index";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+            <!--contents ここから-->
+            <div class="contents">
+                <div class="contents-inner" id="js-contents">
+                    <main class="main js-main" id="js-sticky">
+
+                        <a href="#" class="alert">
+                            <i class="sprite bikkuri"></i>
+                            <span>パスワード設定に関するお知らせ</span>
+                            <i class="arrow-right default"></i>
+                        </a>
+
+                        <% include module/_recommend %>
+
+                        <% include module/_pickup %>
+
+                        <% include module/_time-section %>
+
+                        <% include module/_new-articles %>
+
+                        <% include module/_pr-cards %>
+
+                        <% include module/_pr-media %>
+
+                        <% include module/_popular %>
+
+                        <% include module/_professional %>
+
+                        <% include module/_snap %>
+
+                    </main>
+                    <% side_id = "js-base" %>
+                    <% include layout/_side %>
+                </div>
+            </div>
+            <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>

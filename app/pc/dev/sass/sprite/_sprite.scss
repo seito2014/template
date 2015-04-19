@@ -1,0 +1,282 @@
+/*
+#styleguide
+
+
+```
+<i class="sprite bikkuri"></i>
+<i class="sprite blank-black-2"></i>
+<i class="sprite blank-black"></i>
+<i class="sprite blank-small-black"></i>
+<i class="sprite blank-small-green"></i>
+<i class="sprite blank-small"></i>
+<i class="sprite blank-white"></i>
+<i class="sprite blank"></i>
+<i class="sprite cat-beauty"></i>
+<i class="sprite cat-entertainment"></i>
+<i class="sprite cat-fashion"></i>
+<i class="sprite cat-gourmet"></i>
+<i class="sprite cat-health"></i>
+<i class="sprite cat-life"></i>
+<i class="sprite cat-love"></i>
+<i class="sprite cat-money"></i>
+<i class="sprite cat-outdoor"></i>
+<i class="sprite cat-work"></i>
+<i class="sprite clock"></i>
+<i class="sprite facebook-base"></i>
+<i class="sprite facebook-white"></i>
+<i class="sprite flag-b"></i>
+<i class="sprite flag-ranking"></i>
+<i class="sprite flag"></i>
+<i class="sprite flower-a"></i>
+<i class="sprite flower-b"></i>
+<i class="sprite flower-c"></i>
+<i class="sprite flower-d"></i>
+<i class="sprite flower-e"></i>
+<i class="sprite footer-logo"></i>
+<i class="sprite google"></i>
+<i class="sprite home"></i>
+<i class="sprite logo"></i>
+<i class="sprite new"></i>
+<i class="sprite pagetop-hover"></i>
+<i class="sprite pagetop"></i>
+<i class="sprite popular-a"></i>
+<i class="sprite popular-b"></i>
+<i class="sprite post-check-red"></i>
+<i class="sprite post-check-yellow"></i>
+<i class="sprite post-check"></i>
+<i class="sprite post-point"></i>
+<i class="sprite post_blockquote"></i>
+<i class="sprite post_point_link"></i>
+<i class="sprite post_simillar_check"></i>
+<i class="sprite post_simillar_check_hover"></i>
+<i class="sprite ranking-1"></i>
+<i class="sprite ranking-2"></i>
+<i class="sprite ranking-3"></i>
+<i class="sprite ribbon"></i>
+<i class="sprite search-white"></i>
+<i class="sprite search"></i>
+<i class="sprite twitter-base"></i>
+<i class="sprite twitter-white"></i>
+```
+*/
+$bikkuri: 461px 390px -461px -390px 5px 16px 483px 443px "sprite.png";
+$blank-black-2: 461px 209px -461px -209px 17px 17px 483px 443px "sprite.png";
+$blank-black: 461px 152px -461px -152px 18px 17px 483px 443px "sprite.png";
+$blank-small-black: 461px 377px -461px -377px 11px 11px 483px 443px "sprite.png";
+$blank-small-green: 461px 364px -461px -364px 11px 11px 483px 443px "sprite.png";
+$blank-small: 461px 351px -461px -351px 11px 11px 483px 443px "sprite.png";
+$blank-white: 461px 190px -461px -190px 17px 17px 483px 443px "sprite.png";
+$blank: 461px 171px -461px -171px 18px 17px 483px 443px "sprite.png";
+$cat-beauty: 0px 403px 0px -403px 25px 40px 483px 443px "sprite.png";
+$cat-entertainment: 229px 296px -229px -296px 30px 35px 483px 443px "sprite.png";
+$cat-fashion: 82px 359px -82px -359px 30px 37px 483px 443px "sprite.png";
+$cat-gourmet: 157px 296px -157px -296px 35px 36px 483px 443px "sprite.png";
+$cat-health: 461px 46px -461px -46px 22px 40px 483px 443px "sprite.png";
+$cat-life: 114px 359px -114px -359px 25px 37px 483px 443px "sprite.png";
+$cat-love: 357px 115px -357px -115px 37px 35px 483px 443px "sprite.png";
+$cat-money: 312px 235px -312px -235px 26px 30px 483px 443px "sprite.png";
+$cat-outdoor: 357px 83px -357px -83px 45px 30px 483px 443px "sprite.png";
+$cat-work: 280px 235px -280px -235px 30px 30px 483px 443px "sprite.png";
+$clock: 461px 262px -461px -262px 14px 14px 483px 443px "sprite.png";
+$facebook-base: 473px 278px -473px -278px 7px 14px 483px 443px "sprite.png";
+$facebook-white: 461px 278px -461px -278px 10px 18px 483px 443px "sprite.png";
+$flag-b: 318px 201px -318px -201px 40px 28px 483px 443px "sprite.png";
+$flag-ranking: 406px 363px -406px -363px 39px 35px 483px 443px "sprite.png";
+$flag: 194px 296px -194px -296px 33px 35px 483px 443px "sprite.png";
+$flower-a: 141px 142px -141px -142px 89px 53px 483px 443px "sprite.png";
+$flower-b: 0px 359px 0px -359px 80px 42px 483px 443px "sprite.png";
+$flower-c: 406px 159px -406px -159px 47px 52px 483px 443px "sprite.png";
+$flower-d: 72px 296px -72px -296px 83px 41px 483px 443px "sprite.png";
+$flower-e: 248px 0px -248px 0px 156px 81px 483px 443px "sprite.png";
+$footer-logo: 0px 296px 0px -296px 70px 61px 483px 443px "sprite.png";
+$google: 461px 132px -461px -132px 18px 18px 483px 443px "sprite.png";
+$home: 461px 228px -461px -228px 18px 16px 483px 443px "sprite.png";
+$logo: 109px 201px -109px -201px 207px 32px 483px 443px "sprite.png";
+$new: 109px 235px -109px -235px 89px 39px 483px 443px "sprite.png";
+$pagetop-hover: 248px 83px -248px -83px 107px 93px 483px 443px "sprite.png";
+$pagetop: 0px 201px 0px -201px 107px 93px 483px 443px "sprite.png";
+$popular-a: 0px 0px 0px 0px 139px 199px 483px 443px "sprite.png";
+$popular-b: 141px 0px -141px 0px 105px 140px 483px 443px "sprite.png";
+$post-check-red: 406px 53px -406px -53px 53px 51px 483px 443px "sprite.png";
+$post-check-yellow: 406px 0px -406px 0px 53px 51px 483px 443px "sprite.png";
+$post-check: 406px 106px -406px -106px 53px 51px 483px 443px "sprite.png";
+$post-point: 406px 213px -406px -213px 38px 56px 483px 443px "sprite.png";
+$post_blockquote: 357px 152px -357px -152px 23px 17px 483px 443px "sprite.png";
+$post_point_link: 461px 312px -461px -312px 12px 13px 483px 443px "sprite.png";
+$post_simillar_check: 461px 327px -461px -327px 13px 10px 483px 443px "sprite.png";
+$post_simillar_check_hover: 461px 339px -461px -339px 13px 10px 483px 443px "sprite.png";
+$ranking-1: 461px 0px -461px 0px 22px 44px 483px 443px "sprite.png";
+$ranking-2: 406px 271px -406px -271px 34px 44px 483px 443px "sprite.png";
+$ranking-3: 406px 317px -406px -317px 33px 44px 483px 443px "sprite.png";
+$ribbon: 200px 235px -200px -235px 78px 33px 483px 443px "sprite.png";
+$search-white: 461px 110px -461px -110px 20px 20px 483px 443px "sprite.png";
+$search: 461px 88px -461px -88px 20px 20px 483px 443px "sprite.png";
+$twitter-base: 461px 298px -461px -298px 14px 12px 483px 443px "sprite.png";
+$twitter-white: 461px 246px -461px -246px 18px 14px 483px 443px "sprite.png";
+
+.sprite{
+    display: inline-block;
+
+    &.bikkuri {
+        @include sprite($bikkuri);
+    }
+    &.blank-black-2 {
+        @include sprite($blank-black-2);
+    }
+    &.blank-black {
+        @include sprite($blank-black);
+    }
+    &.blank-small-black {
+        @include sprite($blank-small-black);
+    }
+    &.blank-small-green {
+        @include sprite($blank-small-green);
+    }
+    &.blank-small {
+        @include sprite($blank-small);
+    }
+    &.blank-white {
+        @include sprite($blank-white);
+    }
+    &.blank {
+        @include sprite($blank);
+    }
+    &.cat-beauty {
+        @include sprite($cat-beauty);
+    }
+    &.cat-entertainment {
+        @include sprite($cat-entertainment);
+    }
+    &.cat-fashion {
+        @include sprite($cat-fashion);
+    }
+    &.cat-gourmet {
+        @include sprite($cat-gourmet);
+    }
+    &.cat-health {
+        @include sprite($cat-health);
+    }
+    &.cat-life {
+        @include sprite($cat-life);
+    }
+    &.cat-love {
+        @include sprite($cat-love);
+    }
+    &.cat-money {
+        @include sprite($cat-money);
+    }
+    &.cat-outdoor {
+        @include sprite($cat-outdoor);
+    }
+    &.cat-work {
+        @include sprite($cat-work);
+    }
+    &.clock {
+        @include sprite($clock);
+    }
+    &.facebook-base {
+        @include sprite($facebook-base);
+    }
+    &.facebook-white {
+        @include sprite($facebook-white);
+    }
+    &.flag-b {
+        @include sprite($flag-b);
+    }
+    &.flag-ranking {
+        @include sprite($flag-ranking);
+    }
+    &.flag {
+        @include sprite($flag);
+    }
+    &.flower-a {
+        @include sprite($flower-a);
+    }
+    &.flower-b {
+        @include sprite($flower-b);
+    }
+    &.flower-c {
+        @include sprite($flower-c);
+    }
+    &.flower-d {
+        @include sprite($flower-d);
+    }
+    &.flower-e {
+        @include sprite($flower-e);
+    }
+    &.footer-logo {
+        @include sprite($footer-logo);
+    }
+    &.google {
+        @include sprite($google);
+    }
+    &.home {
+        @include sprite($home);
+    }
+    &.logo {
+        @include sprite($logo);
+    }
+    &.new {
+        @include sprite($new);
+    }
+    &.pagetop-hover {
+        @include sprite($pagetop-hover);
+    }
+    &.pagetop {
+        @include sprite($pagetop);
+    }
+    &.popular-a {
+        @include sprite($popular-a);
+    }
+    &.popular-b {
+        @include sprite($popular-b);
+    }
+    &.post-check-red {
+        @include sprite($post-check-red);
+    }
+    &.post-check-yellow {
+        @include sprite($post-check-yellow);
+    }
+    &.post-check {
+        @include sprite($post-check);
+    }
+    &.post-point {
+        @include sprite($post-point);
+    }
+    &.post_blockquote {
+        @include sprite($post_blockquote);
+    }
+    &.post_point_link {
+        @include sprite($post_point_link);
+    }
+    &.post_simillar_check {
+        @include sprite($post_simillar_check);
+    }
+    &.post_simillar_check_hover {
+        @include sprite($post_simillar_check_hover);
+    }
+    &.ranking-1 {
+        @include sprite($ranking-1);
+    }
+    &.ranking-2 {
+        @include sprite($ranking-2);
+    }
+    &.ranking-3 {
+        @include sprite($ranking-3);
+    }
+    &.ribbon {
+        @include sprite($ribbon);
+    }
+    &.search-white {
+        @include sprite($search-white);
+    }
+    &.search {
+        @include sprite($search);
+    }
+    &.twitter-base {
+        @include sprite($twitter-base);
+    }
+    &.twitter-white {
+        @include sprite($twitter-white);
+    }
+}

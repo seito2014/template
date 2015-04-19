@@ -1,0 +1,35 @@
+/*
+#overview
+explain-box
+
+_explain-box.scss
+*/
+
+/*
+#styleguide
+```
+
+<section class="explain-box">
+    <h1 class="explain-box-heading">特典1　現金にも交換できるポイント「マイポ」をプレゼント</h1>
+    <div class="explain-box-text">
+        <p>メンバーのみなさんは、お小遣いが稼げるポイントサービス「マイポ」が利用できます。アンケートに答えたり、モニターに応募すると、現金やYahoo!ポイント、Suicaなどのポイントと相互利用ができるポイントが貯まります。また、メンバーページの利用回数に応じて、特別にボーナスポイントもプレゼントするお得なサービスも。</p>
+    </div>
+</section>
+
+```
+*/
+
+.explain-box{
+    padding: 32px 22px 30px;
+    border: 1px solid $base;
+
+    &-heading{
+        @include rem(20);
+        margin-bottom: 20px;
+        color: $base;
+    }
+    &-text{
+        @include rem(15);
+        line-height: 24px;
+    }
+}

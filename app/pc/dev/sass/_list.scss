@@ -1,0 +1,47 @@
+.page-list {
+
+    .bread {
+        margin-bottom: 20px;
+    }
+
+    .new-articles{
+        margin-bottom: 40px;
+    }
+
+    .new-articles.new-articles-listtype .new-articles-item:first-child{
+        border-top: none;
+    }
+
+    .new-articles.new-articles-listtype .new-articles-item:last-child{
+        border-bottom: none;
+    }
+
+    .list-mynavi{
+        margin-bottom: 40px;
+    }
+
+    .list-category{
+        margin-bottom: 24px;
+    }
+
+    .list-member{
+        &-features{
+            margin-bottom: 32px;
+        }
+        &-button{
+            padding: 0 24px 40px;
+        }
+    }
+
+
+    .pr-cards{
+        margin-bottom: 15px
+    }
+
+    .pr-media{
+        margin-bottom: 40px
+    }
+    .category-block{
+        margin-bottom: 16px;
+    }
+}

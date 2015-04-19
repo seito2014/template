@@ -1,0 +1,51 @@
+/*
+#overview
+tag
+
+_tag.scss
+*/
+
+/*
+#styleguide
+```
+<span class="tag tag-a">tag-a</span>
+<span class="tag tag-b small">tag-b</span>
+<span class="tag tag-c large">tag-c</span>
+```
+*/
+
+.tag {
+    @include rem(12);
+    display: inline-block;
+    min-width: 30px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    background: #000;
+    text-align: center;
+    padding: 0 5px;
+
+    &-a {
+        background: $category-a;
+    }
+
+    &-b {
+        background: $category-b;
+    }
+
+    &-c {
+        background: $category-c;
+    }
+
+    &.small {
+        height: 15px;
+        line-height: 15px;
+        @include rem(10);
+    }
+
+    &.large{
+        height: 25px;
+        line-height: 25px;
+        @include rem(14);
+    }
+}

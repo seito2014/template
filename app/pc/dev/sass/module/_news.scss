@@ -1,0 +1,260 @@
+/*
+#overview
+news
+
+_news.scss
+*/
+
+/*
+#styleguide
+```
+<article class="news">
+    <a href="#" class="news-link">
+        <div class="news-tag">
+            <span class="tag tag-accent">PR</span>
+        </div>
+        <p class="news-text">晴れた日は、自然にパワーをもらおう！ 近所の公園で簡単アウトドア♪</p>
+    </a>
+</article>
+```
+*/
+/*
+#styleguide
+```
+<article class="news primary">
+    <a href="#" class="news-link">
+        <div class="news-image">
+            <div class="news-cover"></div>
+            <div class="news-image-inner">
+                <img class="js-lazy" src="image/dummy.png" data-original="http://placehold.it/80x40" height="40" width="80" alt="">
+                <noscript>
+                    <img src="http://placehold.it/80x40" height="40" width="80" alt="">
+                </noscript>
+            </div>
+        </div>
+        <p class="news-text">あぁ、ガッカリ！　男性が「俺のことぜんぜんわかってくれてねぇ！」と女子に幻滅した瞬間8</p>
+    </a>
+</article>
+```
+*/
+/*
+#styleguide
+```
+<article class="news simple">
+    <a href="#" class="news-link">
+        <p class="news-text">【ぶっちゃけ本音】こんな彼女と付き合いたい！　男性が思う「理想の彼女」の条件3つ</p>
+    </a>
+</article>
+```
+*/
+/*
+#styleguide
+```
+<article class="news ranking">
+    <a href="#" target="_blank" class="news-link">
+        <p class="rank">
+            <span class="sprite flag">1</span>
+        </p>
+        <p class="news-text">晴れた日は、自然にパワーをもらおう！ 近所の公園で簡単アウトドア♪</p>
+    </a>
+</article>
+```
+*/
+
+.news {
+
+    &-link {
+        display: table;
+        text-decoration: none;
+        background: #fff;
+        color: $default;
+        padding: 21px 18px 19px 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &-tag,
+    &-text {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &-tag {
+        padding: 0 13px 5px 0;
+    }
+
+    &-text {
+        color: $default;
+        @include rem(15);
+        line-height: 24px;
+    }
+}
+
+//ranking
+.news.ranking {
+
+    .news-link {
+        padding: 12px 18px 15px 0;
+
+        &:hover {
+            text-decoration: none;
+            
+            .news-text p {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .rank {
+        display: table-cell;
+        font-family: $font-en;
+        color: $accent;
+        @include rem(24);
+        line-height: 35px;
+        vertical-align: middle;
+        padding: 9px 10px 4px 0;
+
+        .sprite {
+            padding-left: 7px;
+        }
+    }
+
+    .news-count {
+
+        &-number {
+            @include rem(18);
+            vertical-align: middle;
+            font-family: $font-en;
+            color: $base;
+            padding-left: 3px;
+            position: relative;
+            top: 1px;
+        }
+
+        .sprite {
+            vertical-align: middle;
+            position: relative;
+            top: 1px;
+        }
+    }
+}
+
+//ranking-wide
+.news.ranking-wide {
+    overflow: hidden;
+
+    .news-link {
+        display: table;
+        display: block;
+        padding: 10px 0 9px;
+    }
+
+    .rank {
+        display: table-cell;
+        font-family: $font-en;
+        color: $accent;
+        @include rem(24);
+        line-height: 28px;
+        vertical-align: middle;
+        padding-right: 12px;
+
+        .sprite {
+            padding-left: 13px;
+            position: relative;
+            left: -4px;
+        }
+    }
+    
+    .news-text {
+        padding-top: 4px;
+    }
+}
+
+//simple
+.news.simple {
+
+    .news-link,
+    .news-tag,
+    .news-text {
+        display: block;
+    }
+
+    .news-text {
+        @include rem(13);
+        line-height: 20px;
+    }
+
+    .news-link {
+        @extend %clearfix;
+        padding: 14px 0 12px;
+        position: relative;
+    }
+
+    .news-tag {
+        float: left;
+
+        .tag {
+            position: relative;
+            top: 1px;
+        }
+    }
+
+    .arrow-right {
+        @include middle;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.news.simple-b {
+    @extend .news.simple;
+
+    .news-text {
+        @include rem(15);
+        line-height: 24px;
+    }
+    
+    .news-link {
+        padding: 11px 0;
+    }
+}
+
+//primary
+.news.primary {
+
+    .news-link {
+        @extend %clearfix;
+        padding: 11px 0 16px;
+        vertical-align: middle;
+
+        &:hover {
+
+            .news-cover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .news-cover {
+        @extend %cover;
+    }
+
+    .news-image {
+        overflow: hidden;
+        float: left;
+        position: relative;
+
+        &-inner {
+            width: 80px;
+            height: 48px;
+            @extend %thumb;
+        }
+    }
+
+    .news-text {
+        display: block;
+        margin-left: 96px;
+    }
+}

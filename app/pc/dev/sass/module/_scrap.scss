@@ -1,0 +1,194 @@
+/*
+#overview
+scrap
+
+_scrap.scss
+*/
+
+/*
+#styleguide
+```
+<article class="scrap">
+    <div class="article">
+        <a href="#" class="article-link">
+            <div class="article-image">
+                <div class="article-cover"></div>
+                <div class="article-image-inner">
+                    <img class="js-lazy" src="image/dummy.png" data-original="http://placehold.it/178x110" height="110" width="178" alt="">
+                    <noscript>
+                        <img src="http://placehold.it/178x110" height="110" width="178" alt="">
+                    </noscript>
+                </div>
+            </div>
+            <div class="article-body">
+                <h1 class="article-heading"><%= event_title %></h1>
+                <dl class="scrap-price">
+                    <dt class="scrap-price-label">参加費</dt>
+                    <dd class="scrap-price-body">無料ご招待</dd>
+                </dl>
+            </div>
+            <i class="sprite new"></i>
+        </a>
+    </div>
+    <div class="scrap-body">
+        <p class="scrap-text">マイナビウーマンが、この春「異業種交流会イベント」を開催！素敵な男性に出会いたい、女友達を増やしたい、仕事にもかせる出会いがほしい！そんな女子達に喜んでもらえるイベントを用意しました。</p>
+        <dl class="scrap-detail">
+            <dt class="scrap-detail-label">開催日時</dt>
+            <dd class="scrap-detail-body">2015年3月20日（金）19:30～21:30 ※会場受付 19:00～</dd>
+            <dt class="scrap-detail-label">開催会場</dt>
+            <dd class="scrap-detail-body">QEDクラブ</dd>
+            <dt class="scrap-detail-label">募集人数</dt>
+            <dd class="scrap-detail-body">120名</dd>
+        </dl>
+    </div>
+    <div class="scrap-bottom">
+        <dl class="deadline">
+            <dt class="deadline-heading">申込締切</dt>
+            <dd class="deadline-time">2015年3月16日（月）昼12:00まで</dd>
+        </dl>
+        <div class="badge badge-now">
+            <span>応募<br>受付中</span>
+        </div>
+    </div>
+    
+    <a href="#" class="button-block">
+        <span>詳細を見る</span>
+        <i class="arrow-right white"></i>
+    </a>
+</article>
+
+```
+*/
+
+.scrap{
+    background: #fff;
+    box-shadow: $shadow;
+
+    .article{
+        position: relative;
+
+        &-link{
+            padding: 18px 24px 15px;
+        }
+        &-image{
+            margin-top: 6px;
+        }
+        &-body{
+            padding-right: 0;
+        }
+    }
+    .sprite.new{
+        position: absolute;
+        top: 17px;
+        left: 3px;
+        z-index: 3;
+    }
+    &-notes{
+        @extend %clearfix;
+        margin-top: 6px;
+
+        &-label,
+        &-body{
+            float: left;
+            height: 20px;
+            line-height: 21px;
+        }
+        &-label{
+            @include rem(13);
+            margin-right: 16px;
+            padding: 0 17px;
+            color: #fff;
+            background-color: $accent;
+        }
+        &-body{
+            @include rem(15);
+            color: $accent;
+        }
+    }
+
+    &-body{
+        padding: 0 24px;
+    }
+    &-text{
+        @include rem(13);
+        margin-bottom: 20px;
+        line-height: 21px;
+
+        &.related{
+            @include rem(15);
+            position: relative;
+            padding-left: 90px;
+            line-height: 24px;
+            span{
+                @include middle;
+                left: 0;
+            }
+            a{
+                color: $default;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &-detail{
+        @extend %clearfix;
+        margin-bottom: 24px;
+        &-label,
+        &-body{
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        &-label{
+            float: left;
+            clear: both;
+            padding-right: 16px;
+            font-weight: bold;
+        }
+        &-body{
+            position: relative;
+            margin-left: 5.1em;
+            padding-left: 16px;
+            &:before{
+                @extend %icon;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1px;
+                height: 92%;
+                background-color: $base;
+            }
+        }
+    }
+    &-bottom{
+        position: relative;
+        margin: 0 24px 24px;
+    
+        .badge{
+            @include middle;
+            right: 20px;
+        }
+    }
+}
+
+//scrap-simple
+
+.scrap.scrap-simple{
+    box-shadow: none;
+
+    .article-link{
+        padding: 20px 24px 16px;
+    }
+
+    .scrap-bottom{
+        @extend %clearfix;
+        margin: 0 24px;
+
+        .deadline{
+            padding: 0 23px;
+            height: 48px;
+            line-height: 48px;
+        }
+    }
+}

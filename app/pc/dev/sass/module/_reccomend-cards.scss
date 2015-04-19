@@ -1,0 +1,26 @@
+.reccomend-cards {
+
+    &-list {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    &-item {
+        display: table-cell;
+        vertical-align: top;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            width: 221px;
+        }
+    }
+
+    .tag {
+        width: 64px;
+
+        .windows &{
+            width: 68px;
+        }
+    }
+}

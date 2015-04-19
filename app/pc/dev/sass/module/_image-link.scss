@@ -1,0 +1,73 @@
+/*
+#overview
+image-link
+
+_image-link.scss
+*/
+
+/*
+#styleguide
+```
+<a href="" class="image-link">
+    <figure class="image-link-inner">
+        <div class="image-link-image">
+            <div class="image-link-cover"></div>
+            <div class="image-link-image-inner">
+                <img class="js-lazy" src="image/dummy.png" data-original="http://placehold.it/102x102" height="102" width="102" alt="">
+                <noscript>
+                    <img src="http://placehold.it/102x102" height="102" width="102" alt="">
+                </noscript>
+            </div>
+        </div>
+        <figcaption class="image-link-caption">岩崎真理子</figcaption>
+    </figure>
+</a>
+```
+*/
+
+.image-link {
+    width: 104px;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+
+        .image-link-image {
+            border-color: $base-light;
+        }
+
+        .image-link-caption {
+            color: $base;
+        }
+    }
+
+    &-image {
+        border: 1px solid $accent;
+        position: relative;
+        transition: border-color $speed;
+
+        &-inner {
+            @extend %thumb;
+            width: 102px;
+            height: 102px;
+        }
+
+        > img {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &-cover {
+        @extend %cover;
+    }
+
+    &-caption {
+        color: $default;
+        text-align: center;
+        margin-top: 12px;
+        font-weight: bold;
+        line-height: 1.6;
+        transition: color $speed;
+    }
+}

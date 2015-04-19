@@ -1,0 +1,191 @@
+/*
+#overview
+table-menu
+
+_table-menu.scss
+*/
+
+/*
+#styleguide
+```
+<ul class="table-menu primary" id="js-recommend-menus">
+    <li class="table-menu-item is-active">
+        <a href="#js-recommend-area1">すべての記事</a>
+        <i class="arrow-bottom"></i>
+    </li>
+    <li class="table-menu-item">
+        <a href="#js-recommend-area2">専門家記事</a>
+        <i class="arrow-bottom"></i>
+    </li>
+    <li class="table-menu-item">
+        <a href="#js-recommend-area3">トレンド</a>
+        <i class="arrow-bottom"></i>
+    </li>
+</ul>
+
+<ul class="table-menu" id="js-new-menus">
+    <li class="table-menu-item primary is-active">
+        <a href="#new-articles-area1">総合</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#new-articles-area2">恋愛</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#new-articles-area3">ビューティ</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#new-articles-area4">ヘルスケア</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#new-articles-area5">グルメ</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#new-articles-area6">エンタメ</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#new-articles-area7">ファッション</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#new-articles-area8">おでかけ</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#new-articles-area9">仕事</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#new-articles-area10">マネー</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#new-articles-area11">ライフ</a>
+    </li>
+</ul>
+
+<ul class="table-menu large" id="js-popular-menus">
+    <li class="table-menu-item is-active">
+        <a href="#popular-area1">本音コラム</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#popular-area2">著者コラム</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#popular-area3">小説</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#popular-area4">診断</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#popular-area5">占い</a>
+    </li>
+    <li class="table-menu-item">
+        <a href="#popular-area6">雑学</a>
+    </li>
+</ul>
+```
+*/
+
+.table-menu {
+    @extend %clearfix;
+    width: 100%;
+    border-top: $base-light 1px solid;
+    margin-bottom: 5px;
+
+    &-item {
+        float: left;
+        width: 16.66667%;
+        border-right: $base-light 1px solid;
+        border-bottom: $base-light 1px solid;
+
+        &:nth-child(6),
+        &:last-child {
+            border-right: 0;
+        }
+
+        &.primary {
+
+            > a {
+                height: 63px;
+                line-height: 63px;
+            }
+        }
+
+        &.is-active {
+
+            > a {
+                color: $default;
+                background: $base-light;
+
+                &:hover {
+                    color: $default;
+                }
+            }
+        }
+
+        > a {
+            display: block;
+            @include rem(13);
+            width: 100%;
+            height: 31px;
+            line-height: 31px;
+            background: #fff;
+            text-align: center;
+            text-decoration: none;
+            color: $base;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+            transition: color $speed, background-color $speed;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                color: #fff;
+                background: $base-light;
+            }
+        }
+    }
+
+    &.large {
+
+        .table-menu-item {
+
+            > a {
+                height: 46px;
+                line-height: 46px;
+            }
+        }
+    }
+
+    &.primary {
+        border-top: 0;
+        margin-bottom: 0;
+
+        .table-menu-item {
+            width: 33.33%;
+            position: relative;
+
+            > a {
+                @include rem(15);
+                height: 39px;
+                line-height: 39px;
+                position: relative;
+            }
+
+            &.is-active {
+
+                .arrow-bottom {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .arrow-bottom {
+            opacity: 0;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            bottom: -11px;
+            margin-left: -5px;
+        }
+    }
+}

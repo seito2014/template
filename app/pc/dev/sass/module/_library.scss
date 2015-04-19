@@ -1,0 +1,50 @@
+.library {
+    background: #fff;
+    box-shadow: $shadow;
+
+    &-header {
+        width: 100%;
+        height: 100px;
+        position: relative;
+    }
+
+    .heading {
+        position: absolute;
+        top: -14px;
+        margin-left: 164px;
+    }
+
+    //    &-contents {}
+
+    &-list {
+        letter-spacing: -.4em;
+        padding: 0 20px 19px;
+
+        &.primary {
+            padding: 0 16px 7px;
+
+            .library-item {
+                margin: 5px 8px;
+            }
+
+            .library-link {
+                display: block;
+                background: #000;
+
+                &:hover img {
+                    opacity: $opacity;
+                }
+
+                img {
+                    transition: opacity $speed;
+                }
+            }
+        }
+    }
+
+    &-item {
+        display: inline-block;
+        letter-spacing: 0;
+        margin: 5px;
+    }
+}

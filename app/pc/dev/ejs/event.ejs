@@ -1,0 +1,48 @@
+<% var title = "イベント情報｜",
+    description = "働く女子の恋とシゴトと本音がわかる！働く女性のための総合サイト「マイナビウーマン」の「イベント情報」ページです。",
+    keywords = "イベント情報,マイナビウーマン,働く女子,恋愛,仕事,シゴト,本音,ホンネ",
+    type = "article",
+    page_class = "page-event";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+            <!--contents ここから-->
+            <div class="contents">
+                <div class="contents-inner" id="js-contents">
+                    <main class="main js-main" id="js-sticky">
+
+                        <!--bread ここから-->
+                        <nav class="bread">
+                            <ol class="bread-inner">
+                                <li class="bread-item">
+                                    <a href="#" class="bread-link">
+                                        <i class="sprite home"></i>
+                                    </a>
+                                </li>
+                                <li class="bread-item is-current">
+                                    <div class="bread-link">
+                                        <span class="bread-text">イベント情報</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </nav>
+                        <!--bread ここまで-->
+
+                        <% include module/_event-block %>
+
+                        <% include module/_pr-cards %>
+
+                        <% include module/_pr-media %>
+                        <% var infotype = 'normal' %>
+                        <% include module/_information %>
+
+                    </main>
+                    <% side_id = "js-base" %>
+                    <% include layout/_side-event %>
+                </div>
+            </div>
+            <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>
