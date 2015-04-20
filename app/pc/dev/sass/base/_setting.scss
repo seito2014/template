@@ -8,7 +8,7 @@ $path-sprite: "../image/sprite/dest/";
 
 // clum width
 $gutter: 0;
-$size-max: 1030px;
+$size-max: 100%;
 $size-min: 320px;
 
 // scale (sprite生成で使用)
@@ -16,20 +16,6 @@ $default-scale: 1;
 
 //speed
 $speed: 0.35s;
-$speed-low: 0.5s;
-
-//style
-$shadow: 0 4px 0 0 rgba(173, 145, 86, 0.16);
-$shadow-green: 0 4px 0 0 #d5f4f0;
-$border: 1px dashed $accent;
-$border-base: 1px solid $base-light;
-$border-base-dashed: 1px dashed $base-light;
-
-//opacity
-$opacity:0.5;
 
 //z-index
 $max-z: 10;
-
-//outline
-$outline: none;

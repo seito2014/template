@@ -5,4 +5,4 @@ require('./module/config');
 require('./plugin/hack');
 
 //その他js
-//require('./module/hoge');
+require('./module/hoge');

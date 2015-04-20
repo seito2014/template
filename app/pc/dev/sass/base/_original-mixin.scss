@@ -1,34 +1,14 @@
+//要素を上下中央に
 @mixin middle {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(0, -50%);
 }
 
+//要素を上下左右中心に
 @mixin core {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-@mixin arrow($width, $height, $border-width, $border-color, $top, $right, $aim) {
-    display: block;
-    content: "";
-    width: $width + px;
-    height: $height + px;
-    border-top: ($border-width + px) solid $border-color;
-    border-right: ($border-width + px) solid $border-color;
-    position: absolute;
-    top: $top + px;
-    right: $right + px;
-
-    @if $aim == "top" {
-        transform: rotate(-45deg);
-    } @else if $aim == "right" {
-        transform: rotate(45deg);
-    } @else if $aim == "bottom" {
-        transform: rotate(135deg);
-    } @else if $aim == "left" {
-        transform: rotate(-135deg);
-    }
 }

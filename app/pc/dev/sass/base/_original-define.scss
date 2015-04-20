@@ -1,22 +1,6 @@
-%thumb {
-    display: table-cell;
-    vertical-align: middle;
-    background: $image-back;
-    text-align: center;
-}
-
-%cover {
-    opacity: 0;
-    background-color: $cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    transition: opacity $speed;
-    
-    a:hover & {
-        opacity: 1;
-    }
-}
+//%thumb {
+//    display: table-cell;
+//    vertical-align: middle;
+//    background: $image-back;
+//    text-align: center;
+//}

@@ -3,22 +3,13 @@
 */
 
 
-$font: "Hiragino Kaku Gothic ProN", Verdana, Meiryo, sans-serif;
-$font-en: "misolight";
-$font-art: 'Sacramento', cursive;
+$font: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$font-en: "Miso";
 
 @font-face {
-    font-family: "misolight";
-    src: url("../font/miso-light/miso-light-webfont.eot");
-    src: url("../font/miso-light/miso-light-webfont.eot?#iefix") format("embedded-opentype"),
-    url("../font/miso-light/miso-light-webfont.woff") format("woff"),
-    url("../font/miso-light/miso-light-webfont.ttf") format("truetype"),
-    url("../font/miso-light/miso-light-webfont.svg#misolight") format("svg");
-}
-
-@font-face {
-    font-family: "Sacramento";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Sacramento"), local("Sacramento-Regular"), url(//fonts.gstatic.com/s/sacramento/v4/WFDkXpubrEwopJnSlHV6CL3hpw3pgy2gAi-Ip7WPMi0.woff) format("woff");
+    font-family: "Miso";
+    src: url("../font/miso/miso-regular-webfont.eot") format("eot"),
+    url("../font/miso/miso-regular-webfont.woff") format("woff"),
+    url("../font/miso/miso-regular-webfont.ttf") format("truetype"),
+    url("../font/miso/miso-regular-webfont.svg");
 }

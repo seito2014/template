@@ -14,20 +14,13 @@
 @import "base/basic";
 
 /*
-* global 系列サイト共通部分
-*/
-@import "global/footer-global";
-
-/*
 * layout
 */
 @import "layout/header";
-@import "layout/nav";
 @import "layout/contents";
 @import "layout/main";
 @import "layout/side";
 @import "layout/footer";
-@import "layout/bread";
 
 /*
 * sprite
@@ -38,19 +31,5 @@
 * page
 */
 @import "index";
-@import "primary-category";
-@import "sub-category";
-@import "sub-category-premire";
-@import "event";
-@import "ranking";
-@import "present";
-@import "about";
-@import "list";
-@import "entry";
-@import "entry-outline";
-@import "entry-special";
-
-/*
-* module
-*/
-@import "module/entry";
+@import "lower";
+@import "single";

@@ -23,53 +23,43 @@
                 height: 100%;
             }
         }
-        
-        p {
-            margin-bottom: 12px;
+
+        p,
+        div:not([class]) {
             line-height: 1.7;
+            margin-bottom: 12px;
         }
 
         h2 {
             @extend .heading-a;
+            margin-bottom: 20px;
         }
 
         h3 {
             @extend .heading-b;
+            margin-bottom: 10px;
         }
 
         h4 {
             @extend .heading-c;
+            margin-bottom: 10px;
         }
 
         ul {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
 
             li {
-                list-style-type: none;
-                line-height: 1.8;
-                position: relative;
-                padding-left: 12px;
-
-                &:before {
-                    position: absolute;
-                    top: 8px;
-                    left: 2px;
-                    display: inline-block;
-                    width: 6px;
-                    height: 6px;
-                    margin-right: 5px;
-                    border-radius: 50%;
-                    background: $base;
-                    content: "";
-                }
+                list-style: disc;
+                margin: 0 0 10px 20px;
             }
         }
 
         ol {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
 
             li {
                 list-style-type: decimal;
+                margin: 0 0 10px 20px;
             }
         }
 
