@@ -28,22 +28,28 @@
             margin-bottom: 12px;
             line-height: 1.7;
         }
+
         h2 {
             @extend .heading-a;
         }
+
         h3 {
             @extend .heading-b;
         }
+
         h4 {
             @extend .heading-c;
         }
+
         ul {
             margin-bottom: 8px;
+
             li {
                 list-style-type: none;
                 line-height: 1.8;
                 position: relative;
                 padding-left: 12px;
+
                 &:before {
                     position: absolute;
                     top: 8px;
@@ -58,28 +64,32 @@
                 }
             }
         }
+
         ol {
             margin-bottom: 20px;
+
             li {
                 list-style-type: decimal;
             }
         }
+
         a {
             color: $base;
         }
+
         blockquote {
             position: relative;
             margin-bottom: 20px;
             padding: 34px 10px;
-            p {}
+
             a {
                 display: block;
-                margin-top: -15px;
                 color: base;
                 text-align: right;
                 @include rem(12);
             }
         }
+
         dl {
             position: relative;
             margin-bottom: 20px;
@@ -91,9 +101,11 @@
                 font-weight: bold;
             }
         }
+
         strong {
             font-weight: bold;
         }
+
         .alignleft {
             float: left;
             margin-right: 20px;
