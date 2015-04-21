@@ -28,7 +28,7 @@
     "gulp-changed": "^1.1.1",
     "gulp-ejs": "^1.0.0",
     "gulp-filter": "^2.0.0",
-    "gulp-frontnote": "^1.0.0",
+    "gulp-frontnote": "^0.1.0",
     "gulp-htmlhint": "0.0.9",
     "gulp-if": "^1.2.5",
     "gulp-ignore": "^1.2.1",
