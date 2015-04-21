@@ -47,7 +47,8 @@ module.exports = {
         },
         iconfont: {
             src: DEV_PC + '/font/iconfont/src/*.svg',
-            dest: DEV_PC + '/font/iconfont/dest'
+            dest: DEV_PC + '/font/iconfont/dest',
+            destStyle: DEV_PC + '/sass/iconfont'
         },
         frontnoteAsset: {
             out: './style-guide/pc',
@@ -71,7 +72,6 @@ module.exports = {
                 DEV_SP + '/ejs/**/*.ejs',
                 '!' + DEV_SP + '/ejs/**/_*.ejs'
             ],
-            //src: DEV_SP + '/ejs/**/*.ejs',
             dest: PUBLIC_SP,
             hint: PUBLIC_SP + '/*.html'
         },
@@ -106,7 +106,8 @@ module.exports = {
         },
         iconfont: {
             src: DEV_SP + '/font/iconfont/src/*.svg',
-            dest: DEV_SP + '/font/iconfont/dest'
+            dest: DEV_SP + '/font/iconfont/dest',
+            destStyle: DEV_SP + '/sass/iconfont'
         },
         frontnoteAsset: {
             out: './style-guide/sp',
