@@ -9,7 +9,7 @@ webpackJsonp([0],[
 	__webpack_require__(2);
 
 	//その他js
-	//require('./module/hoge');
+	__webpack_require__(3);
 
 /***/ },
 /* 1 */
@@ -66,6 +66,18 @@ webpackJsonp([0],[
 
 	})();
 
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var hackJs = (function () {
+
+	    'use strict';
+
+	})();
+
+	module.exports = hackJs;
 
 /***/ }
 ]);
