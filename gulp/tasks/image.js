@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     notify = require("gulp-notify"),
     gulpif = require('gulp-if');
-var configPath = require('../config-path');
+var configPath = require('../config-path'),
+    configSetting = require('../config-setting');
 var browser = require("browser-sync");
 var argv = require('yargs').argv;
 
@@ -14,7 +15,7 @@ function taskImage(pathSrc,pathDest) {
         .pipe(plumber())
         .pipe(notify("Found file: <%= file.relative %>!"))
         .pipe(gulpif(min,imagemin({
-            optimizationLevel: 7
+            optimizationLevel: configSetting.image.optimizationLevel
         })))
         .pipe(gulp.dest(pathDest))
         .pipe(browser.reload({stream: true}));

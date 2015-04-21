@@ -2,17 +2,18 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     notify = require("gulp-notify"),
     spritesmith = require("gulp.spritesmith");
-var configPath = require('../config-path');
+var configPath = require('../config-path'),
+    configSetting = require('../config-setting');
 
 function taskSprite(pathSrc,pathImageDest,pathStyleDest) {
     var spriteData = gulp.src(pathSrc)
         .pipe(plumber())
         .pipe(notify("Found file: <%= file.relative %>!"))
         .pipe(spritesmith({
-            imgName: 'sprite.png',
-            cssName: '_sprite.scss',
+            imgName: configSetting.sprite.imgName,
+            cssName: configSetting.sprite.cssName,
             cssFormat: 'scss',
-            padding: 2,
+            padding: configSetting.sprite.padding,
             cssTemplate: configPath.spriteTemplate
         }));
     spriteData.img.pipe(gulp.dest(pathImageDest));

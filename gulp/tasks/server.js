@@ -1,5 +1,6 @@
 var gulp = require('gulp');
-var configPath = require('../config-path');
+var configPath = require('../config-path'),
+    configSetting = require('../config-setting');
 var browser = require("browser-sync");
 
 function taskServer(pathDest,portNum) {
@@ -14,13 +15,13 @@ function taskServer(pathDest,portNum) {
 gulp.task('server-pc', function () {
     taskServer(
         configPath.pc.public,
-        5000
+        configSetting.server.portPC
     );
 });
 
 gulp.task('server-sp', function () {
     taskServer(
         configPath.sp.public,
-        5001
+        configSetting.server.portSP
     );
 });

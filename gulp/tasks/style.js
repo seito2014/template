@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     frontnote = require("gulp-frontnote"),
     gulpif = require('gulp-if'),
     changed  = require('gulp-changed');
-var configPath = require('../config-path');
+var configPath = require('../config-path'),
+    configSetting = require('../config-setting');
 var browser = require("browser-sync");
 var argv = require('yargs').argv;
 
@@ -26,12 +27,10 @@ function taskStyle(pathSrc,pathDest,pathExcluding,outPath,cssPath,scriptPath) {
             clean: true
         }))
         .pipe(sass({
-            style:'nested',
-            compass : true,
             "sourcemap=none": true
         }))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions','ie 9', 'Android >= 4.1'],
+            browsers: configSetting.style.autoprefixer,
             cascade: false
         }))
         .pipe(gulpif(min,minifyCSS()))
