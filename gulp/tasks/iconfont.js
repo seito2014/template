@@ -9,7 +9,7 @@ var configPath = require('../config-path'),
 var fontName = configSetting.iconfont.name;
 
 function taskIconfont(pathSrc, pathFont, pathStyleDest, pathDest) {
-    return gulp.src([pathSrc])
+    gulp.src([pathSrc])
         .pipe(plumber())
         .pipe(notify("Found file: <%= file.relative %>!"))
         .pipe(iconfont({
@@ -17,7 +17,7 @@ function taskIconfont(pathSrc, pathFont, pathStyleDest, pathDest) {
             appendCodepoints: true // コードポイントを付与するかどうか（trueで付与する）
         }))
         .on('codepoints', function (codepoints, options) {
-            gulp.src('../iconfont-template.css')
+            gulp.src('./gulp/iconfont.scss')
                 .pipe(consolidate('underscore', {
                     glyphs: codepoints,
                     fontName: fontName,
