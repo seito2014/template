@@ -96,10 +96,6 @@ htmlhint(htmlのバリデート)を作動
 
 + sprite ... gulpタスクで自動生成するスプライト画像に関わるスタイル
 
-+ _common.scss ... moduleと呼んでいいのか、layoutと呼んでいいのか曖昧で、サイト全体で使いまわす大きな要素のまとまりに関わるスタイル
-
-+ _hoge.scss ... 各ページにおける、モジュール間のmarginのみを記述するスタイル。
-
 + style1.scss ... module/以外のscssをimportするファイル
 
 + style2.scss ... module/のscssをimportするファイル
