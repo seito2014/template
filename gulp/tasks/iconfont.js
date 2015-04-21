@@ -34,17 +34,17 @@ function taskIconfont(pathSrc, pathFont, pathStyleDest, pathDest) {
 gulp.task('iconfont-pc', function () {
     taskIconfont(
         configPath.pc.iconfont.src,
-        configPath.pc.iconfont.dest,
         configPath.pc.dev + '/font/' + configSetting.iconfont.name + '/dest',
-        configPath.pc.iconfont.destStyle
+        configPath.pc.iconfont.destStyle,
+        configPath.pc.iconfont.dest
     );
 });
 
 gulp.task('iconfont-sp', function () {
     taskIconfont(
         configPath.sp.iconfont.src,
-        configPath.sp.iconfont.dest,
         configPath.sp.dev + '/font/' + configSetting.iconfont.name + '/dest',
-        configPath.sp.iconfont.destStyle
+        configPath.sp.iconfont.destStyle,
+        configPath.sp.iconfont.dest
     );
 });
