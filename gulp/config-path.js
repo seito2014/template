@@ -45,6 +45,10 @@ module.exports = {
             src: DEV_PC + '/font/**/*',
             dest: PUBLIC_PC + '/font'
         },
+        iconfont: {
+            src: DEV_PC + '/font/iconfont/src/*.svg',
+            dest: DEV_PC + '/font/iconfont/dest'
+        },
         frontnoteAsset: {
             out: './style-guide/pc',
             css: [
@@ -99,6 +103,10 @@ module.exports = {
         font: {
             src: DEV_SP + '/font/**/*',
             dest: PUBLIC_SP + '/font'
+        },
+        iconfont: {
+            src: DEV_SP + '/font/iconfont/src/*.svg',
+            dest: DEV_SP + '/font/iconfont/dest'
         },
         frontnoteAsset: {
             out: './style-guide/sp',

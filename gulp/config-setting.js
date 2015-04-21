@@ -10,6 +10,9 @@ module.exports = {
     image: {
         optimizationLevel: 7 //圧縮のレベル
     },
+    iconfont: {
+        name: 'iconfont'
+    },
     server: {
         portPC: 3000, //port番号（PC）
         portSP: 3001 //port番号（SP）
