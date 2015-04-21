@@ -1,15 +1,27 @@
+/*
+#styleguide
+<%= fontName %>
+
+_<%= fontName %>.scss
+
+```
+<% _.each ( glyphs, function( glyph ) { %><i class="<%= prefix %> <%= prefix %>-<%= glyph.name %>"></i>
+<% } ); %>
+```
+*/
+
 @font-face {
     font-family: "<%= fontName %>";
-    src: url('<%= fontPath %><%= fontName %>.eot');
-    src: url('<%= fontPath %><%= fontName %>.eot?#iefix') format('embedded-opentype'),
-    url('<%= fontPath %><%= fontName %>.woff') format('woff'),
-    url('<%= fontPath %><%= fontName %>.ttf') format('truetype'),
-    url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
+    src: url('<%= styleFontPath %><%= fontName %>.eot');
+    src: url('<%= styleFontPath %><%= fontName %>.eot?#iefix') format('embedded-opentype'),
+    url('<%= styleFontPath %><%= fontName %>.woff') format('woff'),
+    url('<%= styleFontPath %><%= fontName %>.ttf') format('truetype'),
+    url('<%= styleFontPath %><%= fontName %>.svg#<%= fontName %>') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-[class^="<%= prefix %>-"], [class*=" <%= prefix %>-"] {
+.<%= prefix %> {
     font-family: "<%= fontName %>";
     speak: none;
     font-style: normal;

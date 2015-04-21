@@ -17,12 +17,13 @@ function taskIconfont(pathSrc, pathFont, pathStyleDest, pathDest) {
             appendCodepoints: true // コードポイントを付与するかどうか（trueで付与する）
         }))
         .on('codepoints', function (codepoints, options) {
-            gulp.src('./gulp/iconfont.scss')
+            gulp.src('./gulp/_iconfont.scss')
                 .pipe(consolidate('underscore', {
                     glyphs: codepoints,
                     fontName: fontName,
                     fontPath: pathFont,
-                    prefix: 'icon'
+                    styleFontPath: '../../font/iconfont/dest/',
+                    prefix: fontName
                 }))
                 .pipe(gulp.dest(pathStyleDest));
         })
