@@ -1,17 +1,17 @@
 module.exports = {
     style: {
-        autoprefixer: ['last 2 versions','ie 9', 'Android >= 4.1']
+        autoprefixer: ['last 2 versions','ie 9', 'Android >= 4.1'] //prefixの対応度
     },
     sprite: {
         imgName: 'sprite.png',
         cssName: '_sprite.scss',
-        padding: 2
+        padding: 2 //画像同士の間隔
     },
     image: {
-        optimizationLevel: 7
+        optimizationLevel: 7 //圧縮のレベル
     },
     server: {
-        portPC: 3000,
-        portSP: 3001
+        portPC: 3000, //port番号（PC）
+        portSP: 3001 //port番号（SP）
     }
 };
