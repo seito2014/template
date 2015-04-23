@@ -17,7 +17,7 @@ gulp.task('watch-pc', function () {
     gulp.watch(configPath.pc.image.src,['image-pc']);
 });
 
-gulp.task('default', ['server-pc','watch-pc'], function() {});
+gulp.task('default', ['build-pc','server-pc','watch-pc'], function() {});
 
 //watch sp
 gulp.task('build-sp', function(callback) {
@@ -31,4 +31,4 @@ gulp.task('watch-sp', function () {
     gulp.watch(configPath.sp.image.src,['image-sp']);
 });
 
-gulp.task('sp', ['server-sp','watch-sp'], function() {});
+gulp.task('sp', ['build-sp','server-sp','watch-sp'], function() {});
