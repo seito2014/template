@@ -22,7 +22,7 @@ function taskIconfont(pathSrc, pathFont, pathStyleDest, pathDest) {
                     glyphs: codepoints,
                     fontName: fontName,
                     fontPath: pathFont,
-                    styleFontPath: '../../font/iconfont/dest/',
+                    styleFontPath: '../font/iconfont/dest/',
                     prefix: fontName
                 }))
                 .pipe(gulp.dest(pathStyleDest));
