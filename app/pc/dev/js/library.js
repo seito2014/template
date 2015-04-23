@@ -1,2 +1,2 @@
 //外部jsファイルを読み込み
-require('jquery');
+window.jQuery = window.$ = require('jquery');
