@@ -52,6 +52,17 @@ htmlhint(htmlのバリデート)を作動
 2./sass/sprite/　に、1で出力したsprite.pngに対応したsprite.scssを出力  
 ※このタスクではスプライト画像は1つしか生成できません（sprite.png）。これ以外にも用意したい場合は手動で用意する必要があります。
 
++ gulp iconfont-pc/gulp iconfont-sp
+Web fontを生成する。具体的には以下の内容を行います。  
+1./iconfont/src　にあるSVG画像をフォント化して、 /iconfont/dist　に各種fontデータとして出力  
+2./sass/iconfont/　に、1で出力したフォントデータに対応したiconfont.scssを出力
+※このタスクではデフォルトではフォントデータは1つしか生成できません。複数用意したい場合はカスタマイズする必要があります。
+
++ gulp style-pc --min/ gulp style-sp --min
++ gulp script-pc --min/ gulp script-sp --min
++ gulp image-pc --min/ gulp image-sp --min
+各種データを圧縮して出力する
+
 ##コーディングルール
 作業完了前に、scsslint-pc/gulp scsslint-sp　を実行してscsslintにかけるようお願いします。  
 主なルールは以下のとおりです。
@@ -79,12 +90,6 @@ htmlhint(htmlのバリデート)を作動
 【SP】
 .category-icon.png/_category-icon.scss ... デザインデータの作り方上、spriteSsmithを受け付けないため。
 
-##使用フォント
-
-+ Miso ... http://www.fontsquirrel.com/fonts/miso
-
-+ Sacramento ... http://www.google.com/fonts/specimen/Sacramento
-
 ##scss
 
 + base ... サイト全体に関わる、土台的なスタイル
@@ -92,8 +97,6 @@ htmlhint(htmlのバリデート)を作動
 + layout ... header,footer,mainなど、レイアウトに関わるスタイル
 
 + module ... サイト全体で使いまわすパーツや要素のまとまりに関わるスタイル
-
-+ global ... グループ会社の関連サイト全体で共通のスタイル
 
 + sprite ... gulpタスクで自動生成するスプライト画像に関わるスタイル
 
@@ -105,10 +108,12 @@ htmlhint(htmlのバリデート)を作動
 
 ##git運用
 
-+ HTML-master ... 納品用ブランチ。プライム様にお渡しするデータ
++ hotfix ... 緊急修正用ブランチ。リリース後に発生してしまった不具合は個々で解消する 
 
-+ HTML-release ... 納品準備ブランチ。納品に含めないデータの削除、データの圧縮などはここで行う
++ master ... 納品用ブランチ。プライム様にお渡しするデータ
 
-+ HTML-develop ... 作業者全員の静的データの開発ブランチ
++ release ... 納品準備ブランチ。納品に含めないデータの削除、データの圧縮などはここで行う
+
++ develop ... 作業者全員の静的データの開発ブランチ
 
 + feature/ ... 各機能、部分ごとに作業者が開発を行うブランチ

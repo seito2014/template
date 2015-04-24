@@ -75,6 +75,7 @@
 /******/ 			script.type = 'text/javascript';
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
+
 /******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + ({"0":"app"}[chunkId]||chunkId) + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
@@ -98,7 +99,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	//外部jsファイルを読み込み
-	__webpack_require__(4);
+	window.jQuery = window.$ = __webpack_require__(4);
 
 /***/ },
 /* 1 */,
