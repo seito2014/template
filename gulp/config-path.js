@@ -1,7 +1,9 @@
 var DEV_PC = './app/pc/dev',
     PUBLIC_PC = './app/pc/public',
+    RELEASE_PC = './app/pc/release',
     DEV_SP = './app/sp/dev',
-    PUBLIC_SP = './app/sp/public';
+    PUBLIC_SP = './app/sp/public',
+    RELEASE_SP = './app/sp/release';
 
 module.exports = {
     pc: {
@@ -19,6 +21,7 @@ module.exports = {
         style: {
             src: DEV_PC + '/sass/**/*.scss',
             dest: PUBLIC_PC + '/css',
+            release: RELEASE_PC + '/css',
             lintExcluding: [
                 '!' + DEV_PC + '/sass/sprite/*.scss',
                 '!' + DEV_PC + '/sass/global/*.scss'
@@ -26,7 +29,8 @@ module.exports = {
         },
         image: {
             src: DEV_PC + '/image/**/*',
-            dest: PUBLIC_PC + '/image'
+            dest: PUBLIC_PC + '/image',
+            release: RELEASE_PC + '/image'
         },
         sprite: {
             src: DEV_PC + '/image/sprite/src/**/*.png',
@@ -35,7 +39,8 @@ module.exports = {
         },
         script: {
             src: DEV_PC + '/js/**/*',
-            dest: PUBLIC_PC + '/js'
+            dest: PUBLIC_PC + '/js',
+            release: RELEASE_PC + '/js'
         },
         lib: {
             src: DEV_PC + '/lib/**/*',
@@ -78,6 +83,7 @@ module.exports = {
         style: {
             src: DEV_SP + '/sass/**/*.scss',
             dest: PUBLIC_SP + '/css',
+            release: RELEASE_SP + '/css',
             lintExcluding: [
                 '!' + DEV_SP + '/sass/sprite/*.scss',
                 '!' + DEV_SP + '/sass/lib/*.scss'
@@ -85,7 +91,8 @@ module.exports = {
         },
         image: {
             src: DEV_SP + '/image/**/*',
-            dest: PUBLIC_SP + '/image'
+            dest: PUBLIC_SP + '/image',
+            release: RELEASE_SP + '/image'
         },
         sprite: {
             src: DEV_SP + '/image/sprite/src/**/*',
@@ -94,7 +101,8 @@ module.exports = {
         },
         script: {
             src: DEV_SP + '/js/**/*.js',
-            dest: PUBLIC_SP + '/js'
+            dest: PUBLIC_SP + '/js',
+            release: RELEASE_SP + '/js'
         },
         lib: {
             src: DEV_SP + '/lib/**/*',
