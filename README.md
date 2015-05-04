@@ -25,14 +25,8 @@ htmlコンパイル
 + gulp style-pc/gulp style-sp  
 cssコンパイル
 
-+ gulp style-pc --min/gulp style-sp --min  
-cssをmin化してコンパイル
-
 + gulp script-pc/gulp script-sp  
 webpack,jsコンパイル
-
-+ gulp script-pc --min/gulp script-sp --min  
-webpack,jsをmin化してコンパイル
 
 + gulp copy-pc/gulp copy-sp  
 lib/,font/内にあるデータをdivからpublicへ移動＆jslint(jsのバリデート)を作動
@@ -58,10 +52,13 @@ Web fontを生成する。具体的には以下の内容を行います。
 2./sass/iconfont/　に、1で出力したフォントデータに対応したiconfont.scssを出力
 ※このタスクではデフォルトではフォントデータは1つしか生成できません。複数用意したい場合はカスタマイズする必要があります。
 
-+ gulp style-pc --min/ gulp style-sp --min
-+ gulp script-pc --min/ gulp script-sp --min
-+ gulp image-pc --min/ gulp image-sp --min
-各種データを圧縮して出力する
++ gulp style-min-pc/ gulp style-min-sp
++ gulp script-min-pc/ gulp script-min-sp
++ gulp image-min-pc/ gulp image-min-sp
+css,js,画像を圧縮してrelease/に出力する
+
++ gulp release/ gulp release-sp
+css,js,画像圧縮を一括で行い、release/に出力する
 
 ##コーディングルール
 作業完了前に、scsslint-pc/gulp scsslint-sp　を実行してscsslintにかけるようお願いします。  
@@ -99,6 +96,8 @@ Web fontを生成する。具体的には以下の内容を行います。
 + module ... サイト全体で使いまわすパーツや要素のまとまりに関わるスタイル
 
 + sprite ... gulpタスクで自動生成するスプライト画像に関わるスタイル
+
++ library ... プラグイン、CSSフレームワークなど外部のスタイルを導入する際はここに収納
 
 + style1.scss ... module/以外のscssをimportするファイル
 
