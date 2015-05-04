@@ -2,19 +2,14 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     notify = require("gulp-notify"),
     sass = require("gulp-sass"),
-    minifyCSS = require('gulp-minify-css'),
     autoprefixer = require('gulp-autoprefixer'),
     frontnote = require("gulp-frontnote"),
-    gulpif = require('gulp-if'),
-    changed  = require('gulp-changed');
+    changed = require('gulp-changed');
 var configPath = require('../config-path'),
     configSetting = require('../config-setting');
 var browser = require("browser-sync");
-var argv = require('yargs').argv;
 
-var min = !!(argv.min);
-
-function taskStyle(pathSrc,pathDest,pathExcluding,outPath,cssPath,scriptPath) {
+function taskStyle(pathSrc, pathDest, pathExcluding, outPath, cssPath, scriptPath) {
     return gulp.src(pathSrc)
         .pipe(changed(pathExcluding))
         .pipe(plumber())
@@ -33,7 +28,6 @@ function taskStyle(pathSrc,pathDest,pathExcluding,outPath,cssPath,scriptPath) {
             browsers: configSetting.style.autoprefixer,
             cascade: false
         }))
-        .pipe(gulpif(min,minifyCSS()))
         .pipe(gulp.dest(pathDest))
         .pipe(browser.reload({stream: true}));
 }

@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     changed  = require('gulp-changed');
 var webpack = require("webpack");
 var configPath = require('../config-path');
-var browser = require("browser-sync");
 var through = require('through2');
 var path = require('path');
 
@@ -45,20 +44,20 @@ function taskScripts(pathSrc,pathDest){
                 })
             ]
         }))
-        .pipe(gulp.dest(pathDest))
-        .pipe(browser.reload({stream:true}));
+        .pipe(uglify())
+        .pipe(gulp.dest(pathDest));
 }
 
-gulp.task('script-pc', function () {
+gulp.task('script-min-pc', function () {
     taskScripts(
         configPath.pc.dev,
-        configPath.pc.script.dest
+        configPath.pc.script.release
     );
 });
 
-gulp.task('script-sp', function () {
+gulp.task('script-min-sp', function () {
     taskScripts(
         configPath.sp.dev,
-        configPath.sp.script.dest
+        configPath.sp.script.release
     );
 });

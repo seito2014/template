@@ -19,6 +19,10 @@ gulp.task('watch-pc', function () {
 
 gulp.task('default', ['build-pc','server-pc','watch-pc'], function() {});
 
+gulp.task('release', function() {
+    return runSequence('style-min-pc','script-min-pc','image-min-pc');
+});
+
 //watch sp
 gulp.task('build-sp', function(callback) {
     return runSequence(['ejs-sp','style-sp','script-sp','image-sp','copy-sp'], callback);
@@ -32,3 +36,7 @@ gulp.task('watch-sp', function () {
 });
 
 gulp.task('sp', ['build-sp','server-sp','watch-sp'], function() {});
+
+gulp.task('release-sp', function() {
+    return runSequence('style-min-sp','script-min-sp','image-min-sp');
+});
