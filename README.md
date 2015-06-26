@@ -96,7 +96,8 @@ css,js,画像圧縮を一括で行い、release/に出力する
 ####@extend
 @extendは依存関係がややこしくなるため、使わないようお願いします。
 
-####クラス名は、親クラスの名前を中に含める「継承クラス」を用いて命名していただきたく思います。
+####継承クラス
+クラス名は、親クラスの名前を中に含める「継承クラス」を用いて命名していただきたく思います。
 ```ex
 <aside class="card">
 	<div class="card-thumbnail">
@@ -107,6 +108,40 @@ css,js,画像圧縮を一括で行い、release/に出力する
 ```
 これはクラスのバッティングを防ぐのと、HTML構造を明確にするためです。
 
+また、バリエーション違いをつくるためのクラス（Modifier,スキン, サブモジュールに該当するもの）にもこのルールは適応してください。
+```ex
+<aside class="card card-type-a">...</aside>
+<aside class="card card-type-b">...</aside>
+```
+
+####ステート
+ステートはJavaScriptの操作によって見た目が変わるスタイルのことを指します。
+タブボタンのアクティブ状態のときのクラスや、エラー状態のinputなどに用います。
+
+```ex
+<ul class="tab">
+	<li class="tab-item is-active">
+		<a class="tab-link" href="">Tab1</a>
+	</li>
+	<li class="tab-item">
+		<a class="tab-link" href="">Tab2</a>
+	</li>
+	<li class="tab-item">
+		<a class="tab-link" href="">Tab3</a>
+	</li>
+</ul>
+```
+```ex
+<input class="input is-error" type="text">
+```
+
+このクラスを以下の点に注意して使用してください。
+#####クラス名にはプレフィックス`.is-`を用いる
+#####!importantを使用してもOK
+#####単独では使わず、複数クラスでのみ用いる
+◯ `.tab-link.is-active {...}`
+☓ `..is-active {...}`
+
 ####セレクタの指定
 子孫セレクタの指定は使わないようお願いします。
 （スタイルのバッティングを防ぐため）
@@ -114,6 +149,10 @@ css,js,画像圧縮を一括で行い、release/に出力する
 ☓`.card-thumbnail img`
 ◯`.card-thumbnail > img`
 
+####JSのフック
+JavaScriptのフックにはid,またはプレフィックス`.js-`を含むクラスを用いてください。
+また、これらのid,クラスはJSのフックにのみ用いてください。
+役割を明確に分けるため、スタイルはあてないでください。
 
 ###CSSのカテゴライズ
 
@@ -176,6 +215,8 @@ reset.css,normlize.cssのほか、デフォルトのリンクカラーやフォ�
 もし外部のCSSを使う場合（プラグインに含まれるCSS,bootstrap,グリッドシステムなど）はこちらへ入れてください。
 
 ###ディレクトリ構成
+
+ディレクトリ構成はSMACSSやITCSS(https://speakerdeck.com/dafed/managing-css-projects-with-itcss)に影響を受けています。
 
 ```
 +-1-tool/
