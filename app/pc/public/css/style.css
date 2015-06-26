@@ -160,7 +160,7 @@ input:focus, button:focus, select:focus, textarea:focus, a:focus, div:focus, asi
 * layout
 */
 /*
-* sprite
+* module
 */
 /*
 #styleguide
@@ -196,9 +196,6 @@ input:focus, button:focus, select:focus, textarea:focus, a:focus, div:focus, asi
     height: 16px;
     background-size: 38px 16px; }
 
-/*
-* module
-*/
 /*
 #styleguide
 iconfont
