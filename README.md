@@ -60,26 +60,6 @@ css,js,画像を圧縮してrelease/に出力する
 + gulp release/ gulp release-sp
 css,js,画像圧縮を一括で行い、release/に出力する
 
-##コーディングルール
-作業完了前に、scsslint-pc/gulp scsslint-sp　を実行してscsslintにかけるようお願いします。  
-主なルールは以下のとおりです。
-
-+ scssネスト階層：4（やむを得ない場合は除く）
-
-+ クラス名：チェインケースのみ
-
-+ body：各ページにそれそれ「.page-xxx」クラス名をつける
-
-+ id：スタイルをつける目的での使用→☓、jsによる使用→○
- 
-+ class：jsを利用する目的で使う場合のみ、他の作業者にわかるよう「.js-」プレフィックスをお付けください。
-
-+ インデント：TAB
-
-+ SMACSS,OOCSSに沿ったコーディング
-
-それ以外のルールはscsslint実行時にチェックしてください。
-
 ##アイコン、スプライトについて
 なるべくsprite.png,_sprite.scssにまとめるのが好ましいですが、1枚にまとめるのは限界もあるので、必要があれば別ファイルで用意するようお願いします。  
 ちなみに、以下のデータは分割して運用することが決定しています。  
@@ -116,3 +96,161 @@ css,js,画像圧縮を一括で行い、release/に出力する
 + develop ... 作業者全員の静的データの開発ブランチ
 
 + feature/ ... 各機能、部分ごとに作業者が開発を行うブランチ
+
+#基本
++ ネストはなるべく避ける
++ インデントは決まりはないが、プロジェクト内で一貫して揃える
++ シングルではなく、マルチクラスコーディングする前提考える
++ SMACSS,OOCSSに基づく
++ 各ページのbodyにそれそれ「.page-xxx」クラス名をつける
+
+#クラス名
+
+##基本ルール
++ 単語の区切はハイフン（クラス名は統一したい）
++ 大文字、アンダーバー禁止（クラス名は統一したい）
++ id禁止（jsのフックとしてのみ使う）
++ 略称禁止（意味がわからなくなるため）
+
+##@extend
+@extendは依存関係がややこしくなるため、使わないようお願いします。
+
+##クラス名は、親クラスの名前を中に含める「継承クラス」を用いて命名していただきたく思います。
+```ex
+<aside class="card">
+	<div class="card-thumbnail">
+		<img class="card-thumbnail-image" src="" alt="">
+	</div>
+	<h1 class="card-heading">Card heading</h1>
+</aside>
+```
+これはクラスのバッティングを防ぐのと、HTML構造を明確にするためです。
+
+##セレクタの指定
+子孫セレクタの指定は使わないようお願いします。
+（スタイルのバッティングを防ぐため）
+小セレクタなどの使用はOKです。
+☓`.card-thumbnail img`
+◯`.card-thumbnail > img`
+
+
+#CSSのカテゴライズ
+
+##mixin
+mixinを設定します。
+
+##setting
+変数を設定するCSSです。
+color,font-family,その他数字などを設定します。
+
+##base
+Webサイト全体の基本となるCSS。
+reset.css,normlize.cssのほか、デフォルトのリンクカラーやフォントサイズ、行間などがふくまれます。
+
+##page
+モジュール同士の間のmarginをページ単位で指定したい場合はここで指定を行います。
+その際、bodyにクラス`.page-foo(ページ名)`を付与してそれに依存する形でスタイルを指定してください。
+
+例）
+```_index.scss
+.page-index {
+	.slider {margin-bottom: 30px;}
+	.navigation {margin-bottom: 20px;}
+	.article-list {margin-bottom: 30px;}
+	.news-list {margin-bottom: 30px;}
+}
+```
+
+##layout
+ヘッダー、フッター、メインカラム、サイドバーなど、レイアウトを決定する「枠」を設定します。
+これに該当するCSSは、プレフィックス `.l-`つけてください。
+
+例）
+```layout/_header.scss
+.l-header {...}
+```
+```layout/_main.scss
+.l-main {...}
+```
+```layout/_sidebar.scss
+.l-sidebar {...}
+```
+
+##module
+その他、サイトを構成する部品となる要素全て。
+
+##utility
+汎用性があり、使いまわせるCSSおよびクラス。
+ただし、このクラスにはそれとわかるようプレフィックス`.u-`をつけてください。
+また、このutilityのみ、略称OKとします。
+
+例）
+```
+.u-mb10 {margin-bottom: 10px;}
+.u-clearfix {/*clearfixの記述は長いので省略*/}
+```
+
+##library
+もし外部のCSSを使う場合（プラグインに含まれるCSS,bootstrap,グリッドシステムなど）はこちらへ入れてください。
+
+#ディレクトリ構成
+
+```
++-mixin/
+ |-_mixin.scss
++-setting/
+ |-_color.scss
+ |-_font.scss
+ |-_config.scss
++-base/
+ |-_reset.scss
+ |-_generic.scss
++-page/
+ |-_index.scss
+ |-_about.scss
+ |-_contact.scss
++-layout/
+ |-_header.scss
+ |-_footer.scss
++-module/
+ |-_button.scss
+ |-_card.scss
+ |-_container.scss
+ |-_gallery.scss
+ |-...etc
++-utility
+ |-_utility.scss
++-library
+ |-_grid.scss
+ |-_bxslider.scss
+
+main.scss
+```
+
+もしIE9以下の4095問題が発生した場合は、main.scssをmain1.scss,main2.scssの2つに分割してください。
+
+#その他
+
+##margin
+module自体にmarginは付けないでください。
+moduleを他のページでも使いまわそうとした際にmarginが設定されていると意図しない間隔ができてしまいます。
+module同士の間隔を開けるためのmarginは「utility」または「page」を使ってください
+
+##数字
+line-height,font-size,widthなどはなるべく相対値を使うといいです。
+相対値であれば、異なるシーンでも柔軟に設定され、指定が楽になります。
+（※これは推奨項目であり、絶対ではありません）
+
+```
+.card {
+	line-height: 1.6;
+	font-size: 1.6rem;
+	width: 100%;
+}
+```
+
+
+
+
+
+
