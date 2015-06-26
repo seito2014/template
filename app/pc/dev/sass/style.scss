@@ -39,13 +39,9 @@
 @import "sprite/sprite";
 
 /*
-* iconfont
-*/
-@import "iconfont/iconfont";
-
-/*
 * module
 */
+@import "module/iconfont/iconfont"; //iconfont
 @import "module/bread";
 @import "module/heading";
 @import "module/button";

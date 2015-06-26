@@ -23,8 +23,8 @@ module.exports = {
             dest: PUBLIC_PC + '/css',
             release: RELEASE_PC + '/css',
             lintExcluding: [
-                '!' + DEV_PC + '/sass/sprite/*.scss',
-                '!' + DEV_PC + '/sass/global/*.scss'
+                '!' + DEV_PC + '/sass/module/sprite/*.scss',
+                '!' + DEV_PC + '/sass/library/*.scss'
             ]
         },
         image: {
@@ -53,7 +53,7 @@ module.exports = {
         iconfont: {
             src: DEV_PC + '/font/iconfont/src/*.svg',
             dest: DEV_PC + '/font/iconfont/dest',
-            destStyle: DEV_PC + '/sass/iconfont'
+            destStyle: DEV_PC + '/sass/module/iconfont'
         },
         frontnoteAsset: {
             out: './style-guide/pc',
@@ -85,8 +85,8 @@ module.exports = {
             dest: PUBLIC_SP + '/css',
             release: RELEASE_SP + '/css',
             lintExcluding: [
-                '!' + DEV_SP + '/sass/sprite/*.scss',
-                '!' + DEV_SP + '/sass/lib/*.scss'
+                '!' + DEV_SP + '/sass/module/sprite/*.scss',
+                '!' + DEV_SP + '/sass/library/*.scss'
             ]
         },
         image: {
@@ -115,7 +115,7 @@ module.exports = {
         iconfont: {
             src: DEV_SP + '/font/iconfont/src/*.svg',
             dest: DEV_SP + '/font/iconfont/dest',
-            destStyle: DEV_SP + '/sass/iconfont'
+            destStyle: DEV_SP + '/sass/module/iconfont'
         },
         frontnoteAsset: {
             out: './style-guide/sp',
