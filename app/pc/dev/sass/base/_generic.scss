@@ -16,10 +16,10 @@ html {
 
 body {
     @include rem(15);
-    line-height: 1;
-    font-family: $font;
-    background: $foundation;
-    color: $default;
+    line-height: 1.6;
+    font-family: $font-jp;
+    background: $color-foundation;
+    color: $color-default;
     width: 100%;
     min-width: $size-max;
 }
@@ -28,7 +28,7 @@ input,
 button,
 select,
 textarea {
-    font-family: $font;
+    font-family: $font-jp;
 }
 
 input,
