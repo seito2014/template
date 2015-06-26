@@ -117,8 +117,9 @@ css,js,画像圧縮を一括で行い、release/に出力する
 
 ###CSSのカテゴライズ
 
-####mixin
-mixinを設定します。
+####tool
+関数を設定します。
+mixin,animationの@keyframesなど。
 
 ####setting
 変数を設定するCSSです。
@@ -177,8 +178,9 @@ reset.css,normlize.cssのほか、デフォルトのリンクカラーやフォ�
 ###ディレクトリ構成
 
 ```
-+-mixin/
++-tool/
  |-_mixin.scss
+ |-_animation.scss
 +-setting/
  |-_color.scss
  |-_font.scss
