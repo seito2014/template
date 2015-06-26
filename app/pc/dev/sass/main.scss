@@ -14,6 +14,13 @@
 @import "base/basic";
 
 /*
+* page
+*/
+@import "index";
+@import "lower";
+@import "single";
+
+/*
 * layout
 */
 @import "layout/header";
@@ -33,8 +40,10 @@
 @import "iconfont/iconfont";
 
 /*
-* page
+* module
 */
-@import "index";
-@import "lower";
-@import "single";
+@import "module/bread";
+@import "module/heading";
+@import "module/button";
+@import "module/tag";
+@import "module/article-style";
