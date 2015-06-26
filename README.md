@@ -14,6 +14,17 @@ bower
 
 ##フォルダ構成（全体）
 
+```
++-app/ ... 開発データ
++-style-guide/ ... スタイルガイドジェネレーターfrontnoteを使って生成されるhtmlや関連データの出力先
++-gulp/ ... gulpタスクとその関連データ
++-bower_components/ ... bowserでインストールしたJSプラグインの保存先
++-node_modules/
+```
+
+###app/
+
+```
 +-pc/
  |-dev/ ...開発用ディレクトリ。ejsやsass、分割されたjsなど、ここで編集する。
   |-ejs/ ...ejsを収納
@@ -27,6 +38,7 @@ bower
  |-public/ ...コンパイル後の出力先。変換されたhtml,css,結合されたjsなどを出力。
  |-release/ ...データ圧縮後の出力先。gulp releaseタスクでCSS,JSのmin化、画像圧縮などが行われたデータを出力。
 +-sp/
+```
 
 ##gulpコマンド(pc/sp)
 
