@@ -178,39 +178,39 @@ reset.css,normlize.cssのほか、デフォルトのリンクカラーやフォ�
 ###ディレクトリ構成
 
 ```
-+-tool/
++-1-tool/
  |-_mixin.scss
  |-_animation.scss
-+-setting/
++-2-setting/
  |-_color.scss
  |-_font.scss
  |-_config.scss
-+-base/
++-3-base/
  |-_reset.scss
  |-_generic.scss
-+-page/
++-4-page/
  |-_index.scss
  |-_about.scss
  |-_contact.scss
-+-layout/
++-5-layout/
  |-_header.scss
  |-_footer.scss
-+-module/
++-6-module/
  |-_button.scss
  |-_card.scss
  |-_container.scss
  |-_gallery.scss
  |-...etc
-+-utility
++-7-utility
  |-_utility.scss
-+-library
++-8-library
  |-_grid.scss
  |-_bxslider.scss
 
-main.scss
+style.scss
 ```
 
-もしIE9以下の4095問題が発生した場合は、main.scssをmain1.scss,main2.scssの2つに分割してください。
+もしIE9以下の4095問題が発生した場合は、style.scssをstyle1.scss,style2.scssの2つに分割してください。
 
 ###その他
 

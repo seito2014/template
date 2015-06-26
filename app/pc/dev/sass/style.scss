@@ -1,50 +1,50 @@
 /*
 * tool
 */
-@import "tool/mixin";
-@import "tool/animation";
+@import "1-tool/mixin";
+@import "1-tool/animation";
 
 /*
 * setting
 */
-@import "setting/color";
-@import "setting/setting";
-@import "setting/font";
+@import "2-setting/color";
+@import "2-setting/setting";
+@import "2-setting/font";
 
 /*
 * base
 */
-@import "base/reset";
-@import "base/generic";
+@import "3-base/reset";
+@import "3-base/generic";
 
 /*
 * page
 */
-@import "page/index";
-@import "page/lower";
-@import "page/single";
+@import "4-page/index";
+@import "4-page/lower";
+@import "4-page/single";
 
 /*
 * layout
 */
-@import "layout/header";
-@import "layout/contents";
-@import "layout/main";
-@import "layout/sidebar";
-@import "layout/footer";
+@import "5-layout/header";
+@import "5-layout/contents";
+@import "5-layout/main";
+@import "5-layout/sidebar";
+@import "5-layout/footer";
 
 /*
 * module
 */
-@import "module/sprite/sprite"; //sprite
-@import "module/iconfont/iconfont"; //iconfont
-@import "module/bread";
-@import "module/heading";
-@import "module/button";
-@import "module/tag";
-@import "module/article-style";
+@import "6-module/sprite/sprite"; //sprite
+@import "6-module/iconfont/iconfont"; //iconfont
+@import "6-module/bread";
+@import "6-module/heading";
+@import "6-module/button";
+@import "6-module/tag";
+@import "6-module/article-style";
 
 /*
 * utility
 */
-@import "utility/utility";
+@import "7-utility/utility";
