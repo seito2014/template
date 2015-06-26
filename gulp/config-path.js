@@ -14,7 +14,6 @@ module.exports = {
                 DEV_PC + '/ejs/**/*.ejs',
                 '!' + DEV_PC + '/ejs/**/_*.ejs'
             ],
-            //src: DEV_PC + '/ejs/**/*.ejs',
             dest: PUBLIC_PC,
             hint: PUBLIC_PC + '/*.html'
         },
@@ -35,7 +34,7 @@ module.exports = {
         sprite: {
             src: DEV_PC + '/image/sprite/src/**/*.png',
             destImage: DEV_PC + '/image/sprite/dest',
-            destStyle: DEV_PC + '/sass/sprite'
+            destStyle: DEV_PC + '/sass/module/sprite'
         },
         script: {
             src: DEV_PC + '/js/**/*',
@@ -97,7 +96,7 @@ module.exports = {
         sprite: {
             src: DEV_SP + '/image/sprite/src/**/*',
             destImage: DEV_SP + '/image/sprite/dest',
-            destStyle: DEV_SP + '/sass/sprite'
+            destStyle: DEV_SP + '/sass/module/sprite'
         },
         script: {
             src: DEV_SP + '/js/**/*.js',

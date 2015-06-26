@@ -34,13 +34,9 @@
 @import "layout/footer";
 
 /*
-* sprite
-*/
-@import "sprite/sprite";
-
-/*
 * module
 */
+@import "module/sprite/sprite"; //sprite
 @import "module/iconfont/iconfont"; //iconfont
 @import "module/bread";
 @import "module/heading";
