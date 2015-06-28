@@ -22,7 +22,7 @@ module.exports = {
             dest: PUBLIC_PC + '/css',
             release: RELEASE_PC + '/css',
             lintExcluding: [
-                '!' + DEV_PC + '/sass/module/sprite/*.scss',
+                '!' + DEV_PC + '/sass/6-module/sprite/*.scss',
                 '!' + DEV_PC + '/sass/library/*.scss'
             ]
         },
@@ -34,7 +34,7 @@ module.exports = {
         sprite: {
             src: DEV_PC + '/image/sprite/src/**/*.png',
             destImage: DEV_PC + '/image/sprite/dest',
-            destStyle: DEV_PC + '/sass/module/sprite'
+            destStyle: DEV_PC + '/sass/6-module/sprite'
         },
         script: {
             src: DEV_PC + '/js/**/*',
@@ -52,7 +52,7 @@ module.exports = {
         iconfont: {
             src: DEV_PC + '/font/iconfont/src/*.svg',
             dest: DEV_PC + '/font/iconfont/dest',
-            destStyle: DEV_PC + '/sass/module/iconfont'
+            destStyle: DEV_PC + '/sass/6-module/iconfont'
         },
         frontnoteAsset: {
             out: './style-guide/pc',
@@ -84,7 +84,7 @@ module.exports = {
             dest: PUBLIC_SP + '/css',
             release: RELEASE_SP + '/css',
             lintExcluding: [
-                '!' + DEV_SP + '/sass/module/sprite/*.scss',
+                '!' + DEV_SP + '/sass/6-module/sprite/*.scss',
                 '!' + DEV_SP + '/sass/library/*.scss'
             ]
         },
@@ -96,7 +96,7 @@ module.exports = {
         sprite: {
             src: DEV_SP + '/image/sprite/src/**/*',
             destImage: DEV_SP + '/image/sprite/dest',
-            destStyle: DEV_SP + '/sass/module/sprite'
+            destStyle: DEV_SP + '/sass/6-module/sprite'
         },
         script: {
             src: DEV_SP + '/js/**/*.js',
@@ -114,7 +114,7 @@ module.exports = {
         iconfont: {
             src: DEV_SP + '/font/iconfont/src/*.svg',
             dest: DEV_SP + '/font/iconfont/dest',
-            destStyle: DEV_SP + '/sass/module/iconfont'
+            destStyle: DEV_SP + '/sass/6-module/iconfont'
         },
         frontnoteAsset: {
             out: './style-guide/sp',

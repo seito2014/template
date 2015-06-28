@@ -13,18 +13,18 @@ webpackJsonp([0],[
 
 /***/ },
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	// サイト全体で使う定数
 	module.exports = {
-	    BASE_URL:document.getElementById('base_url').value,
+	    BASE_URL:document.getElementById('base-url').value,
 	    SPEED_NORMAL:350
 	};
 
 
 /***/ },
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	(function(){
 
@@ -69,7 +69,7 @@ webpackJsonp([0],[
 
 /***/ },
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	var hackJs = (function () {
 

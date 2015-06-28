@@ -1,0 +1,52 @@
+//utilityクラス utility(marginの間隔, 初期値, クラスの最大数)
+@include utility(5,0,14);
+
+//テキストをぶっ飛ばす
+.u-blow {
+  overflow: hidden;
+  text-indent: 120%;
+  white-space: nowrap;
+}
+
+//clearfix
+.u-clear {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//一行のテキスト限定で、文字を省略し、後ろに...をつける
+.u-elps {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
+//タップ時ハイライト出さない
+.u-notap {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+//要素を上下中央に
+.u-middle {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+//要素を上下左右中心に
+.u-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

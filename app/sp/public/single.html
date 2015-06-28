@@ -41,18 +41,21 @@
     </head>
 
     <body class="page-single">
-        <!--jsでパスの値が必要な場合に使うタグ-->
-        <input type="hidden" value="./" id="base_url">
+        <div id="fb-root"></div>
 
+        <!--jsでパスの値が必要な場合に使うタグ-->
+        <input type="hidden" value="./" id="base-url">
+
+        <!--wrapper ここから-->
+        <div class="wrapper">
     <!--header ここから-->
-    <header class="header">header</header>
+    <header class="l-header">header</header>
     <!--header ここまで-->
 
-    <!--wrapper ここから-->
-    <div class="wrapper" id="js-wrapper">
+
 
             <!--contents ここから-->
-            <main class="contents">
+            <main class="l-contents">
 
                                 <!--bread ここから-->
                 <nav class="bread">
@@ -83,7 +86,7 @@
                             <img src="http://placehold.it/320x100" width="320" height="100" alt="">
                         </div>
 
-                        <!--記事本文header ここから-->
+                        <!--記事本文 ここから-->
                         <div class="single-body">
                             <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
 
@@ -137,18 +140,18 @@
                                 <iframe width="500" height="281" src="https://www.youtube.com/embed/WuS80BsFjr4?feature=oembed" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
-                        <!--記事本文header ここまで-->
+                        <!--記事本文 ここまで-->
                     </div>
                 </div>
             </main>
             <!--contents ここまで-->
 
             <!--footer ここから-->
-            <footer class="footer">
-                <div class="footer-inner">footer</div>
+            <footer class="l-footer">
                 <small>Copyright &copy;</small>
             </footer>
             <!--footer ここまで-->
+
         </div>
         <!--wrapper ここまで-->
         <!--javascript ここから-->

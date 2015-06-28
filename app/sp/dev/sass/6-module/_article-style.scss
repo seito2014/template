@@ -64,7 +64,7 @@
         }
 
         a {
-            color: $base;
+            color: $color-base;
         }
 
         blockquote {
@@ -74,7 +74,7 @@
 
             a {
                 display: block;
-                color: base;
+                color: $color-base;
                 text-align: right;
                 @include rem(12);
             }
@@ -87,7 +87,7 @@
 
             dt {
                 margin-bottom: 10px;
-                color: $base;
+                color: $color-base;
                 font-weight: bold;
             }
         }

@@ -14,11 +14,11 @@ _iconfont.scss
 
 @font-face {
     font-family: "iconfont";
-    src: url('../../font/iconfont/dest/iconfont.eot');
-    src: url('../../font/iconfont/dest/iconfont.eot?#iefix') format('embedded-opentype'),
-    url('../../font/iconfont/dest/iconfont.woff') format('woff'),
-    url('../../font/iconfont/dest/iconfont.ttf') format('truetype'),
-    url('../../font/iconfont/dest/iconfont.svg#iconfont') format('svg');
+    src: url('../font/iconfont/dest/iconfont.eot');
+    src: url('../font/iconfont/dest/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/iconfont/dest/iconfont.woff') format('woff'),
+    url('../font/iconfont/dest/iconfont.ttf') format('truetype'),
+    url('../font/iconfont/dest/iconfont.svg#iconfont') format('svg');
     font-weight: normal;
     font-style: normal;
 }
