@@ -1,15 +1,15 @@
 /*
-* tool
-*/
-@import "1-tool/mixin";
-@import "1-tool/animation";
-
-/*
 * setting
 */
-@import "2-setting/color";
-@import "2-setting/setting";
-@import "2-setting/font";
+@import "1-setting/color";
+@import "1-setting/setting";
+@import "1-setting/font";
+
+/*
+* tool
+*/
+@import "2-tool/mixin";
+@import "2-tool/animation";
 
 /*
 * base
