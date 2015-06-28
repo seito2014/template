@@ -78,7 +78,7 @@
 
             a {
                 display: block;
-                color: base;
+                color: $color-base;
                 text-align: right;
                 @include rem(12);
             }
