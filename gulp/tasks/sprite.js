@@ -7,8 +7,9 @@ var configPath = require('../config-path'),
 
 function taskSprite(pathSrc,pathImageDest,pathStyleDest) {
     var spriteData = gulp.src(pathSrc)
-        .pipe(plumber())
-        .pipe(notify("Found file: <%= file.relative %>!"))
+        .pipe(plumber({
+            errorHandler: notify.onError('<%= error.message %>')
+        }))
         .pipe(spritesmith({
             imgName: configSetting.sprite.imgName,
             cssName: configSetting.sprite.cssName,

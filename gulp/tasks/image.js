@@ -7,8 +7,9 @@ var browser = require("browser-sync");
 
 function taskImage(pathSrc,pathDest) {
     return gulp.src(pathSrc)
-        .pipe(plumber())
-        .pipe(notify("Found file: <%= file.relative %>!"))
+        .pipe(plumber({
+            errorHandler: notify.onError('<%= error.message %>')
+        }))
         .pipe(gulp.dest(pathDest))
         .pipe(browser.reload({stream: true}));
 }
