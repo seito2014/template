@@ -24,17 +24,17 @@
 }
 
 //sprite smith(gulp)のタスクで使用
-@mixin sprite-width($sprite, $scale: 1) {
+@mixin sprite-width($sprite, $scale: 0.5) {
     width: nth($sprite, 5) * $scale;
 }
 
 //sprite smith(gulp)のタスクで使用
-@mixin sprite-height($sprite, $scale: 1) {
+@mixin sprite-height($sprite, $scale: 0.5) {
     height: nth($sprite, 6) * $scale;
 }
 
 //sprite smith(gulp)のタスクで使用
-@mixin sprite-position($sprite, $scale: 1) {
+@mixin sprite-position($sprite, $scale: 0.5) {
     $sprite-offset-x: nth($sprite, 3) * $scale;
     $sprite-offset-y: nth($sprite, 4) * $scale;
     background-position: $sprite-offset-x $sprite-offset-y;
@@ -48,12 +48,12 @@
 }
 
 //sprite smith(gulp)のタスクで使用
-@mixin sprite-size($sprite, $scale: 1) {
+@mixin sprite-size($sprite, $scale: 0.5) {
     background-size: nth($sprite, 7)*$scale nth($sprite, 8)*$scale;
 }
 
 //sprite smith(gulp)のタスクで使用
-@mixin sprite($sprite, $scale: 1) {
+@mixin sprite($sprite, $scale: 0.5) {
     @include sprite-image($sprite);
     @include sprite-position($sprite, $scale);
     @include sprite-width($sprite, $scale);
@@ -63,37 +63,37 @@
 
 //utilityクラスを生成
 @mixin utility($nth: 5, $start: 0, $end: 14) {
-  @for $i from $start through $end {
-    .u-mt#{$i * $nth} {
-      margin-top: ($nth * $i)+px !important;
-    }
+    @for $i from $start through $end {
+        .u-mt#{$i * $nth} {
+            margin-top: ($nth * $i)+px !important;
+        }
 
-    .u-mr#{$i * $nth} {
-      margin-right: ($nth * $i)+px !important;
-    }
+        .u-mr#{$i * $nth} {
+            margin-right: ($nth * $i)+px !important;
+        }
 
-    .u-mb#{$i * $nth} {
-      margin-bottom: ($nth * $i)+px !important;
-    }
+        .u-mb#{$i * $nth} {
+            margin-bottom: ($nth * $i)+px !important;
+        }
 
-    .u-ml#{$i * $nth} {
-      margin-left: ($nth * $i)+px !important;
-    }
+        .u-ml#{$i * $nth} {
+            margin-left: ($nth * $i)+px !important;
+        }
 
-    .u-pt#{$i * $nth} {
-      padding-top: ($nth * $i)+px !important;
-    }
+        .u-pt#{$i * $nth} {
+            padding-top: ($nth * $i)+px !important;
+        }
 
-    .u-pr#{$i * $nth} {
-      padding-right: ($nth * $i)+px !important;
-    }
+        .u-pr#{$i * $nth} {
+            padding-right: ($nth * $i)+px !important;
+        }
 
-    .u-pb#{$i * $nth} {
-      padding-bottom: ($nth * $i)+px !important;
-    }
+        .u-pb#{$i * $nth} {
+            padding-bottom: ($nth * $i)+px !important;
+        }
 
-    .u-pl#{$i * $nth} {
-      padding-left: ($nth * $i)+px !important;
+        .u-pl#{$i * $nth} {
+            padding-left: ($nth * $i)+px !important;
+        }
     }
-  }
 }
