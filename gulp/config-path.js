@@ -129,5 +129,6 @@ module.exports = {
     },
     scsslintYml: './gulp/scss-lint.yml',
     spriteTemplate: './gulp/sprite-template.mustache',
-    jshintrc: './gulp/js-hint.jshintrc'
+    jshintrc: './gulp/js-hint.jshintrc',
+    htmlhintrc: './gulp/htmlhintrc.json'
 };
