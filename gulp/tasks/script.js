@@ -11,17 +11,18 @@ var browser = require("browser-sync");
 var through = require('through2');
 var path = require('path');
 
-function taskScripts(pathSrc,pathDest){
-    return gulp.src(configPath.pc.script.src)
+function taskScripts(pathSrc,pathDest,pathEntry){
+    return gulp.src(pathSrc)
+        .pipe(plumber({
+            errorHandler: notify.onError('<%= error.message %>')
+        }))
         .pipe(changed(pathDest))
-        .pipe(plumber())
         .pipe(jshint(configPath.jshintrc))
         .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(notify("Found file: <%= file.relative %>!"))
         .pipe(gulpWebpack({
             entry: {
-                app: pathSrc + '/js/app.js',
-                library: pathSrc + '/js/library.js'
+                app: pathEntry + '/js/app.js',
+                library: pathEntry + '/js/library.js'
             },
             output: {
                 filename: '[name].js'
@@ -32,7 +33,8 @@ function taskScripts(pathSrc,pathDest){
                 alias: {
                     bower: 'bower_components',
                     jquery: __dirname + '/../../bower_components/jquery/dist/jquery.js',
-                    lazyload: __dirname + '/../../bower_components/jquery.lazyload/jquery.lazyload.js'
+                    slick: __dirname + '/../../bower_components/slick.js/slick/slick.js',
+                    gsap : __dirname + '/../../bower_components/gsap/src/minified/TweenMax.min.js'
                 }
             },
             plugins: [
@@ -51,14 +53,17 @@ function taskScripts(pathSrc,pathDest){
 
 gulp.task('script-pc', function () {
     taskScripts(
-        configPath.pc.dev,
-        configPath.pc.script.dest
+        configPath.pc.script.src,
+
+        configPath.pc.script.dest,
+        configPath.pc.dev
     );
 });
 
 gulp.task('script-sp', function () {
     taskScripts(
-        configPath.sp.dev,
-        configPath.sp.script.dest
+        configPath.sp.script.src,
+        configPath.sp.script.dest,
+        configPath.sp.dev
     );
 });

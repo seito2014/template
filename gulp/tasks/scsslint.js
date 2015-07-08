@@ -7,9 +7,10 @@ var browser = require("browser-sync");
 
 function taskScsslint(pathSrc) {
     return gulp.src(pathSrc)
-        .pipe(plumber())
+        .pipe(plumber({
+            errorHandler: notify.onError('<%= error.message %>')
+        }))
         .pipe(scsslint({'config': configPath.scsslintYml}))
-        .pipe(notify("Found file: <%= file.relative %>!"))
         .pipe(browser.reload({stream: true}));
 }
 

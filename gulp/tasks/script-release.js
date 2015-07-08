@@ -13,10 +13,11 @@ var path = require('path');
 function taskScripts(pathSrc,pathDest){
     return gulp.src(configPath.pc.script.src)
         .pipe(changed(pathDest))
-        .pipe(plumber())
+        .pipe(plumber({
+            errorHandler: notify.onError('<%= error.message %>')
+        }))
         .pipe(jshint(configPath.jshintrc))
         .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(notify("Found file: <%= file.relative %>!"))
         .pipe(gulpWebpack({
             entry: {
                 app: pathSrc + '/js/app.js',

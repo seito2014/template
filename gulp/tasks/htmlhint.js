@@ -7,7 +7,7 @@ var browser = require('browser-sync');
 
 function taskHtmlhint(pathSrc) {
     return gulp.src(pathSrc)
-        .pipe(htmlhint())
+        .pipe(htmlhint(configPath.htmlhintrc))
         .pipe(htmlhint.reporter());
 }
 

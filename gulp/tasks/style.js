@@ -12,8 +12,9 @@ var browser = require("browser-sync");
 function taskStyle(pathSrc, pathDest, pathExcluding, outPath, cssPath, scriptPath) {
     return gulp.src(pathSrc)
         .pipe(changed(pathExcluding))
-        .pipe(plumber())
-        .pipe(notify("Found file: <%= file.relative %>!"))
+        .pipe(plumber({
+            errorHandler: notify.onError('<%= error.message %>')
+        }))
         .pipe(frontnote({
             overview: './README.md',
             out: outPath,

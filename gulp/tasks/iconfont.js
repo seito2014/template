@@ -10,8 +10,9 @@ var fontName = configSetting.iconfont.name;
 
 function taskIconfont(pathSrc, pathFont, pathStyleDest, pathDest) {
     gulp.src([pathSrc])
-        .pipe(plumber())
-        .pipe(notify("Found file: <%= file.relative %>!"))
+        .pipe(plumber({
+            errorHandler: notify.onError('<%= error.message %>')
+        }))
         .pipe(iconfont({
             fontName: fontName, // 生成するフォントファイルの名前を指定する
             appendCodepoints: true // コードポイントを付与するかどうか（trueで付与する）

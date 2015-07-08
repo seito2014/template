@@ -11,8 +11,9 @@ var configPath = require('../config-path'),
 function taskStyleRelease(pathSrc, pathDest, pathExcluding) {
     return gulp.src(pathSrc)
         .pipe(changed(pathExcluding))
-        .pipe(plumber())
-        .pipe(notify("Found file: <%= file.relative %>!"))
+        .pipe(plumber({
+            errorHandler: notify.onError('<%= error.message %>')
+        }))
         .pipe(sass({
             "sourcemap=none": true
         }))
