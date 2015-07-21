@@ -5,10 +5,10 @@ webpackJsonp([0],[
 	//サイト共通変数
 	__webpack_require__(1);
 
-	//自作プラグイン
+	//UA判定
 	__webpack_require__(2);
 
-	//その他js
+	//サンプルのJS。（削除してOK）
 	__webpack_require__(3);
 
 /***/ },
@@ -45,7 +45,7 @@ webpackJsonp([0],[
 	    var SPACE = ' ';
 
 	    //OSを判定してhtmlタグにクラスをつける
-	    for (var i = 0, len = osList.length; i < len; i++) {
+	    for (var i = 0, len = osList.length; i < len; i+=1) {
 
 	        if (userAgent.indexOf(osList[i]) !== -1) {
 	            htmlTag.className += SPACE + osList[i];

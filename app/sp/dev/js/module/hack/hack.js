@@ -17,7 +17,7 @@
     var SPACE = ' ';
 
     //OSを判定してhtmlタグにクラスをつける
-    for (var i = 0, len = osList.length; i < len; i++) {
+    for (var i = 0, len = osList.length; i < len; i+=1) {
 
         if (userAgent.indexOf(osList[i]) !== -1) {
             htmlTag.className += SPACE + osList[i];

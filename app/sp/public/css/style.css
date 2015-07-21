@@ -140,9 +140,6 @@ input:focus, button:focus, select:focus, textarea:focus, a:focus, div:focus, asi
   min-width: 100%; }
 
 /*
-* page
-*/
-/*
 * layout
 */
 /*
@@ -163,24 +160,24 @@ input:focus, button:focus, select:focus, textarea:focus, a:focus, div:focus, asi
   .sprite.sprite-bikkuri {
     background-image: url(../image/sprite/dest/sprite.png);
     background-repeat: no-repeat;
-    background-position: -62px 0px;
-    width: 10px;
-    height: 32px;
-    background-size: 72px 32px; }
+    background-position: -31px 0px;
+    width: 5px;
+    height: 16px;
+    background-size: 36px 16px; }
   .sprite.sprite-blank {
     background-image: url(../image/sprite/dest/sprite.png);
     background-repeat: no-repeat;
-    background-position: -38px 0px;
-    width: 22px;
-    height: 22px;
-    background-size: 72px 32px; }
+    background-position: -19px 0px;
+    width: 11px;
+    height: 11px;
+    background-size: 36px 16px; }
   .sprite.sprite-home {
     background-image: url(../image/sprite/dest/sprite.png);
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    width: 36px;
-    height: 32px;
-    background-size: 72px 32px; }
+    width: 18px;
+    height: 16px;
+    background-size: 36px 16px; }
 
 /*
 #styleguide
