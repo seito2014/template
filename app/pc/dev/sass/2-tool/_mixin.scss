@@ -18,7 +18,7 @@
 }
 
 @mixin query($size) {
-    @media all and (max-width: $size + px) {
+    @media all and (max-width: $size) {
         @content;
     }
 }
