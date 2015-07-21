@@ -1,16 +1,18 @@
 #Template
-自作のフロントコーディングテンプレ
-
-##使用ツール
-EJS
-gulp
-webpack
-Sass
-bower
+自作のフロントコーディングテンプレ。  
+使用するにはNode.js(v0.10.25推奨)が必要です。  
 
 ##まず最初にすること
 1. "npm i"でgulpが動くようにする
 2. "bower i"でjsライブラリをインストールする
+
+##使用ツール
+
++ EJS
++ gulp
++ webpack
++ Sass
++ bower
 
 ##フォルダ構成（全体）
 
@@ -115,7 +117,6 @@ css,js,画像圧縮を一括で行い、release/に出力する
 + インデントは決まりはないが、プロジェクト内で一貫して揃える
 + シングルではなく、マルチクラスコーディングする前提考える
 + SMACSS,OOCSSに基づく
-+ 各ページのbodyにそれそれ「.page-xxx」クラス名をつける
 
 ###クラス名
 
@@ -125,8 +126,8 @@ css,js,画像圧縮を一括で行い、release/に出力する
 + id禁止（jsのフックとしてのみ使う）
 + 略称禁止（意味がわからなくなるため）
 
-####@extend
-@extendは依存関係がややこしくなるため、使わないようお願いします。
+####extend
+Sassのextendは依存関係がややこしくなるため、使わないようお願いします。
 
 ####継承クラス
 クラス名は、親クラスの名前を中に含める「継承クラス」を用いて命名していただきたく思います。
@@ -171,14 +172,14 @@ css,js,画像圧縮を一括で行い、release/に出力する
 #####クラス名にはプレフィックス`.is-`を用いる
 #####!importantを使用してもOK
 #####単独では使わず、複数クラスでのみ用いる
-◯ `.tab-link.is-active {...}`
+◯ `.tab-link.is-active {...}`  
 ☓ `..is-active {...}`
 
 ####セレクタの指定
 子孫セレクタの指定は使わないようお願いします。
 （スタイルのバッティングを防ぐため）
 小セレクタなどの使用はOKです。
-☓`.card-thumbnail img`
+☓`.card-thumbnail img`  
 ◯`.card-thumbnail > img`
 
 ####JSのフック
@@ -200,32 +201,26 @@ color,font-family,その他数字などを設定します。
 Webサイト全体の基本となるCSS。
 reset.css,normlize.cssのほか、デフォルトのリンクカラーやフォントサイズ、行間などがふくまれます。
 
-####page
-モジュール同士の間のmarginをページ単位で指定したい場合はここで指定を行います。
-その際、bodyにクラス`.page-foo(ページ名)`を付与してそれに依存する形でスタイルを指定してください。
-
-例）
-```_index.scss
-.page-index {
-	.slider {margin-bottom: 30px;}
-	.navigation {margin-bottom: 20px;}
-	.article-list {margin-bottom: 30px;}
-	.news-list {margin-bottom: 30px;}
-}
-```
-
 ####layout
 ヘッダー、フッター、メインカラム、サイドバーなど、レイアウトを決定する「枠」を設定します。
 これに該当するCSSは、プレフィックス `.l-`つけてください。
 
-例）
-```layout/_header.scss
+例）  
+layout/_header.scss  
+
+```
 .l-header {...}
 ```
-```layout/_main.scss
+
+layout/_main.scss  
+
+```
 .l-main {...}
 ```
-```layout/_sidebar.scss
+
+layout/_sidebar.scss  
+
+```
 .l-sidebar {...}
 ```
 
@@ -238,6 +233,7 @@ reset.css,normlize.cssのほか、デフォルトのリンクカラーやフォ�
 また、このutilityのみ、略称OKとします。
 
 例）
+
 ```
 .u-mb10 {margin-bottom: 10px;}
 .u-clearfix {/*clearfixの記述は長いので省略*/}
@@ -251,35 +247,31 @@ reset.css,normlize.cssのほか、デフォルトのリンクカラーやフォ�
 ディレクトリ構成はSMACSSやITCSS(https://speakerdeck.com/dafed/managing-css-projects-with-itcss)に影響を受けています。
 
 ```
-+-1-tool/
- |-_mixin.scss
- |-_animation.scss
-+-2-setting/
- |-_color.scss
- |-_font.scss
- |-_config.scss
-+-3-base/
- |-_reset.scss
- |-_generic.scss
-+-4-page/
- |-_index.scss
- |-_about.scss
- |-_contact.scss
-+-5-layout/
- |-_header.scss
- |-_footer.scss
-+-6-module/
- |-_button.scss
- |-_card.scss
- |-_container.scss
- |-_gallery.scss
- |-...etc
-+-7-utility
- |-_utility.scss
-+-8-library
- |-_grid.scss
- |-_bxslider.scss
-
++-1-tool/  
+ |-_mixin.scss  
+ |-_animation.scss  
++-2-setting/  
+ |-_color.scss  
+ |-_font.scss  
+ |-_config.scss  
++-3-base/  
+ |-_reset.scss  
+ |-_generic.scss  
++-4-layout/  
+ |-_header.scss  
+ |-_footer.scss  
++-5-module/  
+ |-_button.scss  
+ |-_card.scss  
+ |-_container.scss  
+ |-_gallery.scss  
+ |-...etc  
++-6-utility  
+ |-_utility.scss  
++-7-library  
+ |-_grid.scss  
+ |-_bxslider.scss  
+  
 style.scss
 ```
 
@@ -288,9 +280,56 @@ style.scss
 ###その他
 
 ####margin
-module自体にmarginは付けないでください。
-moduleを他のページでも使いまわそうとした際にmarginが設定されていると意図しない間隔ができてしまいます。
-module同士の間隔を開けるためのmarginは「utility」または「page」を使ってください
+module自体にmarginは付けないでください。  
+moduleを他のページでも使いまわそうとした際にmarginが設定されていると意図しない間隔ができてしまいます。  
+module同士の間隔を開けるためのmarginは「utility」またはOOCSSライクな書き方で指定してください。  
+(utilityはキリの良い数字の場合、OOCSSライクな書き方はキリの悪い数字、と分けるといいです。）
+
+#####例）
+
+```
+<div class="main-slider main-slider-layout">  
+	...  
+</div>
+  
+<section class="section section-layout">  
+    ...  
+</section>  
+  
+<footer class="footer u-mt50">  
+    ...  
+</footer>
+```
+
+_main-slider.scss
+
+```
+.main-slider {
+
+	&.main-slider-layout {
+		margin-bottom: 22px;	
+	}
+}
+```
+
+_section.scss
+
+```
+.section {
+	
+	&.section-layout {
+		margin-bottom: 53px;
+	}
+}
+```
+
+_utility.scss
+
+```
+.u-mt50 {
+	margin-top: 50px;
+}
+```
 
 ####数字
 line-height,font-size,widthなどはなるべく相対値を使うといいです。
@@ -304,9 +343,3 @@ line-height,font-size,widthなどはなるべく相対値を使うといいで�
 	width: 100%;
 }
 ```
-
-
-
-
-
-
