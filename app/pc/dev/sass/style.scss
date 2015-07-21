@@ -18,33 +18,26 @@
 @import "3-base/generic";
 
 /*
-* page
-*/
-@import "4-page/index";
-@import "4-page/lower";
-@import "4-page/single";
-
-/*
 * layout
 */
-@import "5-layout/header";
-@import "5-layout/contents";
-@import "5-layout/main";
-@import "5-layout/sidebar";
-@import "5-layout/footer";
+@import "4-layout/header";
+@import "4-layout/contents";
+@import "4-layout/main";
+@import "4-layout/sidebar";
+@import "4-layout/footer";
 
 /*
 * module
 */
-@import "6-module/sprite/sprite"; //sprite
-@import "6-module/iconfont/iconfont"; //iconfont
-@import "6-module/bread";
-@import "6-module/heading";
-@import "6-module/button";
-@import "6-module/tag";
-@import "6-module/article-style";
+@import "5-module/sprite/sprite"; //sprite
+@import "5-module/iconfont/iconfont"; //iconfont
+@import "5-module/bread";
+@import "5-module/heading";
+@import "5-module/button";
+@import "5-module/tag";
+@import "5-module/article-style";
 
 /*
 * utility
 */
-@import "7-utility/utility";
+@import "6-utility/utility";
