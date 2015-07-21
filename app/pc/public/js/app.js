@@ -5,10 +5,10 @@ webpackJsonp([0],[
 	//サイト共通変数
 	__webpack_require__(1);
 
-	//自作プラグイン
+	//UA判定
 	__webpack_require__(2);
 
-	//その他js
+	//サンプルのJS。（削除してOK）
 	__webpack_require__(3);
 
 /***/ },
