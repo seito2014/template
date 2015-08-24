@@ -52,7 +52,7 @@ module.exports = {
         iconfont: {
             src: DEV_PC + '/font/iconfont/src/*.svg',
             dest: DEV_PC + '/font/iconfont/dest',
-            destStyle: DEV_PC + '/sass/6-module/iconfont'
+            destStyle: DEV_PC + '/sass/5-module/iconfont'
         },
         frontnoteAsset: {
             out: './style-guide/pc',
@@ -114,7 +114,7 @@ module.exports = {
         iconfont: {
             src: DEV_SP + '/font/iconfont/src/*.svg',
             dest: DEV_SP + '/font/iconfont/dest',
-            destStyle: DEV_SP + '/sass/6-module/iconfont'
+            destStyle: DEV_SP + '/sass/5-module/iconfont'
         },
         frontnoteAsset: {
             out: './style-guide/sp',
