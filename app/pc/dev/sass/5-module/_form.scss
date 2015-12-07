@@ -1,0 +1,80 @@
+.form {
+    .form-table-inner {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        border: 1px solid $color-border;
+        border-bottom: 0;
+
+        &.form-table-inner-last {
+            border-bottom: 1px solid $color-border;
+        }
+
+        //error
+        &.form-table-inner-error {
+            border: 1px solid $color-error;
+            border-bottom: 0;
+            &+.form-table-inner {
+                border-top: 0;
+            }
+            .form-table-error-text {
+                font-size: 14px;
+                color: $color-error;
+                margin-bottom: 6px;
+            }
+
+            //最後の列
+            &.form-table-inner-error {
+                border-bottom: 1px solid $color-error;
+            }
+        }
+    }
+    .form-table-row {
+        display: table-row;
+    }
+    .form-table-th,
+    .form-table-td {
+        display: table-cell;
+        text-align: left;
+        font-weight: 400;
+        vertical-align: middle;
+    }
+    .form-table-th {
+        width: 290px;
+        padding: 26px 23px 25px 25px;
+        background-color: $color-foundation;
+        &.form-table-th-top {
+            vertical-align: top;
+        }
+    }
+    .form-table-text {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        > span {
+            float: right;
+            display: inline-block;
+            padding: 4px 0 3px;
+            color: $color-error;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+    .form-table-td {
+        padding: 26px 30px 25px;
+        background-color: #fff;
+        line-height: 2;
+    }
+    .form-button {
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+        > .button:nth-child(2){
+            margin-top: 12px;
+        }
+        //margin
+        &.form-button-margin {
+            margin-top: 100px;
+        }
+    }
+}

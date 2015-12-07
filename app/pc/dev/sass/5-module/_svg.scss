@@ -1,0 +1,32 @@
+/*
+#overview
+svg
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.svg {
+    display: inline-block;
+    &.svg-main-arrow {
+        width: 670px;
+        height: 1374px;
+    }
+    &.svg-logo {
+        width: 125px;
+        height: 20px;
+    }
+    &.svg-facebook {
+        width: 10px;
+        height: 19px;
+    }
+    &.svg-twitter {
+        width: 22px;
+        height: 18px;
+    }
+}

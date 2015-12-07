@@ -1,9 +1,10 @@
 * {
     box-sizing: border-box;
+    font-size: $base-font-size + px;
 }
 
 ::selection {
-    background: #000;
+    background: $color-main;
     color: #fff;
 }
 
@@ -15,8 +16,7 @@ html {
 }
 
 body {
-    @include rem(15);
-    line-height: 1.6;
+    font-size: $base-font-size + px;
     font-family: $font-jp;
     background: $color-foundation;
     color: $color-default;
@@ -43,9 +43,17 @@ aside {
     }
 }
 
+a {
+    color: $color-main;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 .wrapper {
     width: 100%;
-    min-width: $size-max;
+    min-width: $size-max + 80;
 }
 
 .for-no-js,

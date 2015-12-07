@@ -1,1 +1,7 @@
 //@keyframesを使ったanimationに関する記述はここに
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

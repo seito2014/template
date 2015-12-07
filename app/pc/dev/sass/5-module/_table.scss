@@ -1,0 +1,150 @@
+/*
+#overview
+table
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.table {
+    transform: translate3d(0, 0, 0); //safariでチカチカするバグのハック
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-top: 1px solid $color-border;
+    border-left: 1px solid $color-border;
+
+    .table-th,
+    .table-td {
+        display: table-cell;
+        text-align: left;
+        font-weight: 400;
+        border-bottom: 1px solid $color-border;
+    }
+
+    .table-th {
+        width: 138px;
+        padding: 14px 20px 14px 22px;
+        background-color: $color-foundation;
+
+        //見た目
+        &.table-th-primary {
+            background-color: $color-border;
+            color: #fff;
+        }
+
+        //size
+        &.table-th-large {
+            width: 202px;
+        }
+        &.table-th-middle {
+            width: 160px;
+            padding-right: 0;
+        }
+        &.table-th-small {
+            width: 115px;
+            padding-right: 0;
+        }
+
+        //border
+        &.table-th-border-right {
+            border-right: 1px solid $color-border;
+        }
+    }
+    .table-td {
+        border-right: 1px solid $color-border;
+        padding: 14px 24px;
+        background-color: #fff;
+        line-height: 2;
+    }
+    .table-expanding-text {
+        line-height: 2;
+        > li {
+            line-height: 2;
+        }
+    }
+    .table-narrow-text {
+        margin-right: -5px;
+    }
+
+    //お問い合わせフォームでのtable
+    &.table-form {
+        .table-th,
+        .table-td {
+            padding-top: 26px;
+            padding-bottom: 25px;
+        }
+        .table-th {
+            width: 290px;
+            padding-right: 23px;
+            padding-left: 25px;
+            &.table-th-top {
+                vertical-align: top;
+            }
+        }
+        .table-th-text {
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            > span {
+                float: right;
+                display: inline-block;
+                padding: 4px 0 3px;
+                color: $color-error;
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    //flexible
+    &.table-flexible {
+        table-layout: auto;
+        .table-th {
+            width: auto;
+            border-right: 1px solid $color-border;
+            text-align: center;
+
+            //見た目
+            &.table-th-primary {
+                padding-left: 0;
+                padding-right: 0;
+                width: 108px;
+                text-align: center;
+            }
+        }
+        .table-td {
+            padding-right: 0;
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+
+    //real-estate.htmlの東京テーブル
+    &.table-real-estate-tokyo {
+        .table-th {
+            border-right: 1px solid $color-border;
+        }
+        .table-th.table-th-primary {
+            border-right: 1px solid #fff;
+            &:nth-child(1) {
+                width: 162px;
+            }
+            &:nth-child(2) {
+                width: 216px;
+            }
+            &:nth-child(3) {
+                width: 170px;
+            }
+            &:nth-child(4) {
+                width: auto;
+                border-right: 0;
+            }
+        }
+    }
+}

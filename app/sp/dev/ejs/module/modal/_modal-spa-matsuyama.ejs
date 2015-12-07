@@ -1,0 +1,64 @@
+<% var modalData = [
+    {
+        title: "大浴",
+        description: "愛媛最深、1,700mの掛け流し源泉が目玉。富士山の壁絵が、開放的なムードを演出してくれます。"
+    },
+    {
+        title: "ジェットバス",
+        description: "体のコリをほぐす、ジェット系浴槽が充実しています。寝て良し、座ってよし、立ったままでもよし。様々な姿勢でお楽しみいただけます。"
+    },
+    {
+        title: "露天炭酸泉",
+        description: "季節を感じることができる露天風呂には、キスケのゆ自慢の高濃度炭酸泉。じっくりとお楽しみください。"
+    },
+    {
+        title: "脱衣所",
+        description: "広々とした空間と行き届いた清掃で安心して気持ちよくご利用いただけます。女性脱衣所には、充実のパウダールームが常設されています。"
+    },
+    {
+        title: "休憩コーナー",
+        description: "広々と開放的な空間でくつろげる休憩コーナーです。無料のマッサージ機を完備しています。"
+    },
+    {
+        title: "無料マッサージ機",
+        description: "まるで無重力空間の揉みほぐしマシーン「あんま王」。なんと無料でご利用いただけます。"
+    },
+    {
+        title: "軽食コーナー",
+        description: "お好みのおつまみでお風呂上りのビールがお楽しみいただけます。名店「かめやうどん」のうどんから定食まで充実のラインナップでお待ちしております。"
+    },
+    {
+        title: "イベント",
+        description: "こちらは父の日イベントの手作り石鹸教室の様子です。心のこもったプレゼントで、体も心もあたたかくなっていただくのが私たちのモットーです。"
+    }
+]; %>
+
+<!--modal ここから-->
+<div class="modal modal-figure modal-scrolable" id="js-modal-spa-matsuyama">
+    <div class="modal-inner">
+        <div class="modal-list-wrapper">
+            <ul class="modal-list">
+                <% for(var i=0; i< modalData.length; i++) { %>
+                <li class="modal-item">
+                    <figure class="spa-figure">
+                        <img class="spa-figure-image" src="image/service/service-spa/matsuyama/view/spa<%= [i + 1] %>.jpg" alt=""/>
+                        <figcaption class="spa-figure-body">
+                            <p class="spa-figure-title"><%= modalData[i].title %></p>
+                            <div class="spa-figure-description"><%= modalData[i].description %></div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <a class="modal-navigation modal-navigation-prev" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge arrow-reverse"></i>
+        </a>
+        <a class="modal-navigation modal-navigation-next" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge"></i>
+        </a>
+        <a class="modal-close" href="javascript:void(0);"></a>
+    </div>
+    <div class="modal-back"></div>
+</div>
+<!--modal ここまで-->

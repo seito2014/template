@@ -1,0 +1,87 @@
+/*
+#overview
+headline
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.headline {
+    transform: translate3d(0, 0, 0); //safariでチカチカするバグのハック
+    position: relative;
+    text-align: center;
+    > h1 {
+        line-height: 1.55;
+        font-size: 21px;
+        font-weight: bold;
+        letter-spacing: .05em;
+        > span {
+            display: inline-block;
+            font-weight: bold;
+            line-height: 1.55;
+        }
+    }
+    .headline-line {
+        display: inline-block;
+        width: 30px;
+        height: 1px;
+        background-color: $color-main;
+        position: relative;
+        top: -5px;
+    }
+
+    //english
+    &.headline-en {
+        > h1 {
+            font-size: 17px;
+            letter-spacing: 0.04em;
+            font-family: $font-en;
+        }
+        .headline-line {
+            width: 15px;
+        }
+    }
+
+    //size
+    &.headline-small {
+        > h1 {
+            font-size: 17px;
+            line-height: 1.25;
+            > span {
+                line-height: 1.25;
+            }
+        }
+        .headline-line {
+            width: 15px;
+            top: -2px;
+        }
+    }
+    &.headline-xsmall {
+        > h1 {
+            font-size: 15px;
+            line-height: 1.25;
+            > span {
+                line-height: 1.25;
+            }
+        }
+        .headline-line {
+            width: 15px;
+            top: -2px;
+        }
+    }
+
+    //狭いver
+    &.headline-narrow {
+        > h1 {
+            line-height: 1.42;
+        }
+        .headline-line {
+            top: -3px;
+        }
+    }
+}

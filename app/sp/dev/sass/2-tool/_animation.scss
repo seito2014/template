@@ -1,1 +1,60 @@
 //@keyframesを使ったanimationに関する記述はここに
+
+@include paraparaAnimation(-3040,"default"); //mixin.scssに記述
+@include paraparaAnimation(-2280,"small"); //mixin.scssに記述
+
+@keyframes scaling {
+    to {
+        transform: scale(1.18);
+    }
+}
+
+@keyframes fadeUp {
+    100% {
+        opacity: 1;
+        transform: translate3d(0, -5px, 0);
+    }
+}
+
+@keyframes fadeInScaleX {
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+@keyframes scaleIn {
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes fadeInSlide {
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInSlideSub {
+    100% {
+        opacity: .2;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeContent {
+    1%  {
+        transform: scale(1);
+        position: relative;
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        position: relative;
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

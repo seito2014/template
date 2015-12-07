@@ -15,37 +15,12 @@ _tag.scss
 */
 
 .tag {
-    @include rem(12);
     display: inline-block;
-    min-width: 30px;
-    height: 20px;
-    line-height: 20px;
-    color: #fff;
-    background: #000;
-    text-align: center;
-    padding: 0 5px;
-
-    &-a {
-        background: $category-a;
-    }
-
-    &-b {
-        background: $category-b;
-    }
-
-    &-c {
-        background: $category-c;
-    }
-
-    &.small {
-        height: 15px;
-        line-height: 15px;
-        @include rem(10);
-    }
-
-    &.large {
-        height: 25px;
-        line-height: 25px;
-        @include rem(14);
-    }
+    text-decoration: none;
+    font-size: 14px;
+    padding: 4px 8px 5px;
+    line-height: 1;
+    border: 1px solid $color-border;
+    color: $color-border;
+    background-color: #fff;
 }

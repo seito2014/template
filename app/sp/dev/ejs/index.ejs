@@ -1,17 +1,130 @@
-<% var title = "",
+<% var
+    id = "index",
+    title = "",
     description = "sample text,sample text",
     keywords = "word1,word2,word3",
-    type = "website",
-    page_class = "page-index";
+    type = "website";
 %>
 <% include layout/_head %>
 <% include layout/_header %>
 
-            <!--contents ここから-->
-            <main class="l-contents">
+        <main>
+            <div class="hero" id="js-hero">
+                <a class="hero-link" href="about.html"></a>
+                <div class="hero-mark">
+                    <div class="hero-mark-inner">
+                        <img class="hero-mark-copy" src="image/top/catch-copy.png" width="268" height="125" alt="迷ったら、お客様のために。" />
+                        <div class="hero-mark-object1"></div>
+                        <div class="hero-mark-object2"></div>
+                    </div>
+                </div>
+                <div class="hero-image" id="js-hero-image">
+                    <div class="hero-image-object is-active" style="background-image: url(image/top/main/main1.jpg);"></div>
+                    <div class="hero-image-object" style="background-image: url(image/top/main/main2.jpg);"></div>
+                    <div class="hero-image-object" style="background-image: url(image/top/main/main3.jpg);"></div>
+                    <div class="hero-image-object" style="background-image: url(image/top/main/main4.jpg);"></div>
+                </div>
+            </div>
+            <aside class="hero-news news-container">
+                <div class="news-container-contents">
+                    <ul class="news-container-list">
+                        <li>
+                            <article class="news-line">
+                                <a class="news-line-inner" href="news-detail.html">
+                                    <time datetime="2015-12-10">2015.12.10</time>
+                                    <h1 class="news-line-body">ウィンドウサイズに合わせて自動で文字省略します。ウィンドウサイズに合わせて自動で文字省略します。ウィンドウサイズに合わせて自動で文字省略します。ウィンドウサイズに合わせて自動で文字省略します。ウィンドウサイズに合わせて自動で文字省略します。</h1>
+                                    <i class="news-line-arrow arrow"></i>
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="news-line">
+                                <a class="news-line-inner" href="news-detail.html">
+                                    <time datetime="2015-12-10">2015.12.10</time>
+                                    <h1 class="news-line-body">年末年始のお知らせ</h1>
+                                    <i class="news-line-arrow arrow"></i>
+                                </a>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="news-line">
+                                <a class="news-line-inner" href="news-detail.html">
+                                    <time datetime="2015-12-10">2015.12.10</time>
+                                    <h1 class="news-line-body">年末年始のお知らせ</h1>
+                                    <i class="news-line-arrow arrow"></i>
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <div class="news-container-footer">
+                    <a class="button-minor" href="news.html">
+                        ニュース一覧へ<i class="button-minor-arrow arrow"></i>
+                    </a>
+                </div>
+            </aside>
 
-            </main>
+            <!--contents ここから-->
+            <section class="section section-waiting-effect" id="js-section-service">
+                <div class="l-container">
+                    <div class="section-header headline headline-narrow">
+                        <h1>アミューズメントから、<br>不動産まで。</h1>
+                        <div class="headline-line"></div>
+                    </div>
+                    <p class="section-description">
+                        私たちは愛媛県を中心に、<br>
+                        総合レジャーや不動産事業を行っています。
+                    </p>
+                    <div class="section-contents">
+                        <% var animationNavi = "top"; %>
+                        <% include module/_animation-navi %>
+                    </div>
+                    <a class="section-button button" href="service.html">
+                        <span class="button-text">事業一覧へ</span>
+                        <i class="button-arrow arrow"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="section section-recruit section-waiting-effect" id="js-section-recruit">
+                <div class="section-inner l-container">
+                    <div class="section-header headline">
+                        <h1>全員で<span>、</span>お客様のために。</h1>
+                        <div class="headline-line"></div>
+                    </div>
+                    <p class="section-description">
+                        キスケの社会貢献を、<br>
+                        いっしょに実現してくれる仲間を<br>
+                        募集しています。
+                    </p>
+                    <a class="section-button button" href="recruit.html">
+                        <span class="button-text">採用情報へ</span>
+                        <i class="button-arrow arrow"></i>
+                    </a>
+                </div>
+                <div class="section-back"></div>
+                <i class="section-main-arrow sprite sprite-mark"></i>
+            </section>
+
+            <section class="section section-contact section-waiting-effect" id="js-section-contact">
+                <div class="section-inner l-container">
+                    <div class="section-header headline">
+                        <h1>お問い合わせ</h1>
+                        <div class="headline-line"></div>
+                    </div>
+                    <p class="section-description">
+                        会社、事業、採用について、<br>
+                        ご不明な点はお気軽にお問い合わせください。
+                    </p>
+                    <a class="section-button button" href="contact.html">
+                        <span class="button-text">お問い合わせへ</span>
+                        <i class="button-arrow arrow"></i>
+                    </a>
+                </div>
+                <div class="section-back"></div>
+            </section>
             <!--contents ここまで-->
+        </main>
 
 <% include layout/_footer %>
 <% include layout/_script %>

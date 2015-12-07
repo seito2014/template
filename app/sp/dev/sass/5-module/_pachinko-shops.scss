@@ -1,0 +1,21 @@
+.pachinko-shops {
+    background-color: #fff;
+    .pachinko-shops-header {
+        margin-bottom: 12px;
+    }
+    .pachinko-shops-list {
+        padding: 0 15px;
+        > li {
+            text-align: left;
+            margin-bottom: 34px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    //margin
+    &.pachinko-shops-position {
+        padding-bottom: 32px;
+    }
+}

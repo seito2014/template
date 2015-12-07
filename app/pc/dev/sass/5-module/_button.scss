@@ -16,15 +16,148 @@ _button.scss
 
 .button {
     display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    text-decoration: none;
     cursor: pointer;
-    background: #000;
+    text-decoration: none;
+    background-color: $color-main;
     color: #fff;
-    padding: 0 20px;
+    padding: 11px 80px;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    perspective: 1px; //ホバー時に角丸にならないバグのハック
 
-    > span {
+    //text
+    .button-text {
+        position: relative;
+        z-index: 2;
+    }
+    //effect
+    .button-effect {
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 58%;
+        background-color: $color-sub;
+        transform: translate3d(-50%, 0, 0);
+        transition: width .35s ease-in-out;
+    }
+    .button-effect-object-a {
+        width: 50px;
+        height: 50px;
+        transform: rotate(-45deg);
+        background-color: $color-sub;
+        position: absolute;
+        left: -25px;
+        top: 50%;
+        margin-top: -25px;
+    }
+    .button-effect-object-b {
+        width: 52px;
+        height: 52px;
+        transform: rotate(-45deg);
+        background-color: $color-main;
+        position: absolute;
+        right: -26px;
+        top: 50%;
+        margin-top: -26px;
+    }
+
+    //icon
+    .button-arrow {
+        position: absolute;
+        z-index: 2;
+        right: 10px;
+        top: 18px;
+    }
+    .icon-search {
+        position: absolute;
+        z-index: 2;
+        right: 20px;
+        top: 18px;
+    }
+
+    &:hover {
+        .button-effect {
+            width: 140%;
+        }
+    }
+
+    //size
+    &.button-full {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    &.button-large {
+        padding: 27px 60px;
+        .button-arrow {
+            top: 33px;
+            right: 25px;
+        }
+    }
+
+    //見た目
+    
+    //contact-confirmでバックするボタンリンク
+    &.button-reinput {
+        background-color: #fff;
+        color: $color-sub;
+        .button-arrow {
+            right: auto;
+            left: -25px;
+            top: 6px;
+        }
+        &:hover .button-text {
+            text-decoration: underline;
+        }
+    }
+    
+    //LINE登録
+    &.button-line {
+        background-color: $color-line;
+        .button-effect {
+            background-color: darken($color-line,20%);
+        }
+        .button-effect-object-a {
+            background-color: darken($color-line,20%);
+        }
+        .button-effect-object-b {
+            background-color: $color-line;
+        }
+        .button-arrow {
+            right: 20px;
+            top: 23px;
+        }
+    }
+    
+    //色が白いパターン
+    &.button-light {
+        background-color: #fff;
+        .button-effect {
+            background-color: darken(#fff,20%);
+        }
+        .button-effect-object-a {
+            background-color: darken(#fff,20%);
+        }
+        .button-effect-object-b {
+            background-color: #fff;
+        }
+        .button-text {
+            color: $color-main;
+        }
+        .button-arrow {
+            border-left-color: $color-main;
+        }
+    }
+}
+
+//safari hack
+.safari .button {
+    mask-image: -webkit-radial-gradient(circle, white, black); //上に同じ
+
+    .button-text {
         font-weight: bold;
     }
 }

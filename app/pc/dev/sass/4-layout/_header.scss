@@ -1,1 +1,37 @@
-//.l-header {}
+.l-header {
+    @extend %u-clear;
+    width: 100%;
+    min-width: $size-max;
+    z-index: $max-z;
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color $duration $easing;
+
+    .l-header-logo {
+        float: left;
+    }
+    .l-header-navi {
+        float: right;
+    }
+    .l-header-mega-menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 51px;
+    }
+
+    //追従時のスタイル
+    &.is-scrolling {
+        background-color: #fff;
+        box-shadow: 0 1px 0 #e5e5e5;
+
+        .navi-link {
+            color: $color-default;
+        }
+        .navi-sns-icon > path {
+            fill: $color-default;
+        }
+    }
+}

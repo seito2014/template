@@ -1,0 +1,13 @@
+//header,footerなど大枠に指定する
+.l-container {
+    width: $size-max;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+    position: relative;
+
+    &.l-container-small {
+        width: 880px;
+    }
+}

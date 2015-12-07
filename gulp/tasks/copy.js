@@ -13,6 +13,14 @@ function copy(pathSrc,pathDest) {
 
 gulp.task('copy-pc', function () {
     copy(
+        configPath.pc.script.src2,
+        configPath.pc.script.dest
+    );
+    copy(
+        configPath.pc.script.srcPages,
+        configPath.pc.script.destPages
+    );
+    copy(
         configPath.pc.lib.src,
         configPath.pc.lib.dest
     );
@@ -23,6 +31,14 @@ gulp.task('copy-pc', function () {
 });
 
 gulp.task('copy-sp', function () {
+    copy(
+        configPath.sp.script.src2,
+        configPath.sp.script.dest
+    );
+    copy(
+        configPath.pc.script.srcPages,
+        configPath.pc.script.destPages
+    );
     copy(
         configPath.sp.lib.src,
         configPath.sp.lib.dest

@@ -1,0 +1,44 @@
+<% var
+    id = "not-found",
+    title = "Not Found｜",
+    description = "sample text,sample text",
+    keywords = "word1,word2,word3",
+    type = "article",
+    copy = "",
+    iconId = "not-found";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+        <!--contents ここから-->
+        <% include module/_page-hero %>
+
+        <main class="l-space l-space-padding-top l-space-padding-bottom">
+
+            <section class="not-found-section" id="js-not-found-content">
+                <div class="not-found-section-header headline headline-small">
+                    <h1>
+                        <span>お探しのページが<br>見つかりませんでした。</span>
+                    </h1>
+                    <div class="headline-line"></div>
+                </div>
+                <div class="not-found-section-body">
+                    申し訳ございません。あなたがアクセスしようとしたページは、一時的に利用できないか、削除または移動されている可能性があります。
+                </div>
+                <div class="not-found-section-footer">
+                    <a class="section-button button" href="index.html">
+                        <span class="button-text">TOPページへ</span>
+                        <i class="button-arrow arrow arrow-large"></i>
+                        <div class="button-effect">
+                            <span class="button-effect-object-a"></span>
+                            <span class="button-effect-object-b"></span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+        <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>

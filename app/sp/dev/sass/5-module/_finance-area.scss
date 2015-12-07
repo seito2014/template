@@ -1,0 +1,45 @@
+/*
+#overview
+finance-area
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+.finance-area {
+
+    .finance-area-header {
+        margin-bottom: 12px;
+    }
+    .finance-area-list {
+        > li {
+            margin-bottom: 43px;
+            opacity: 0;
+            transition: opacity $duration $easing;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            //state
+            &.is-active {
+                opacity: 1;
+            }
+        }
+    }
+    > small {
+        display: block;
+        font-size: 10px;
+        border: 1px solid $color-border;
+        padding: 9px 14px;
+        line-height: 1.75;
+        margin-top: 23px;
+    }
+
+    &.finance-area-position {
+        margin-bottom: 60px;
+    }
+}

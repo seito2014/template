@@ -5,13 +5,14 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     jshint = require('gulp-jshint'),
     changed  = require('gulp-changed');
-var webpack = require("webpack");
-var configPath = require('../config-path');
-var through = require('through2');
-var path = require('path');
 
-function taskScripts(pathSrc,pathDest){
-    return gulp.src(configPath.pc.script.src)
+var configPath = require('../config-path');
+var configWebpack = require('../config-webpack');
+var browser = require("browser-sync");
+var through = require('through2');
+
+function taskScripts(pathSrc,pathDest,pathEntry){
+    return gulp.src(pathSrc)
         .pipe(changed(pathDest))
         .pipe(plumber({
             errorHandler: notify.onError('<%= error.message %>')
@@ -20,30 +21,12 @@ function taskScripts(pathSrc,pathDest){
         .pipe(jshint.reporter('jshint-stylish'))
         .pipe(gulpWebpack({
             entry: {
-                app: pathSrc + '/js/app.js',
-                library: pathSrc + '/js/library.js'
+                app: pathEntry + '/js/app.js',
+                library: pathEntry + '/js/library.js'
             },
-            output: {
-                filename: '[name].js'
-            },
-            resolve: {
-                root: [path.join(__dirname, "../../bower_components")],
-                extensions: ['', '.js', '.html'],
-                alias: {
-                    bower: 'bower_components',
-                    jquery: __dirname + '/../../bower_components/jquery/dist/jquery.js',
-                    lazyload: __dirname + '/../../bower_components/jquery.lazyload/jquery.lazyload.js'
-                }
-            },
-            plugins: [
-                new webpack.ResolverPlugin(
-                    new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-                ),
-                new webpack.optimize.CommonsChunkPlugin({
-                    name: "library",
-                    filename: "library.js"
-                })
-            ]
+            output: configWebpack.output,
+            resolve: configWebpack.resolve,
+            plugins: configWebpack.plugins
         }))
         .pipe(uglify())
         .pipe(gulp.dest(pathDest));
@@ -51,14 +34,16 @@ function taskScripts(pathSrc,pathDest){
 
 gulp.task('script-min-pc', function () {
     taskScripts(
-        configPath.pc.dev,
-        configPath.pc.script.release
+        configPath.pc.script.src,
+        configPath.pc.script.release,
+        configPath.pc.dev
     );
 });
 
 gulp.task('script-min-sp', function () {
     taskScripts(
-        configPath.sp.dev,
-        configPath.sp.script.release
+        configPath.sp.script.src,
+        configPath.sp.script.release,
+        configPath.sp.dev
     );
 });

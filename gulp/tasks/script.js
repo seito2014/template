@@ -5,11 +5,11 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     jshint = require('gulp-jshint'),
     changed  = require('gulp-changed');
-var webpack = require("webpack");
+
 var configPath = require('../config-path');
+var configWebpack = require('../config-webpack');
 var browser = require("browser-sync");
 var through = require('through2');
-var path = require('path');
 
 function taskScripts(pathSrc,pathDest,pathEntry){
     return gulp.src(pathSrc)
@@ -24,29 +24,20 @@ function taskScripts(pathSrc,pathDest,pathEntry){
                 app: pathEntry + '/js/app.js',
                 library: pathEntry + '/js/library.js'
             },
-            output: {
-                filename: '[name].js'
-            },
-            resolve: {
-                root: [path.join(__dirname, "../../bower_components")],
-                extensions: ['', '.js', '.html'],
-                alias: {
-                    bower: 'bower_components',
-                    jquery: __dirname + '/../../bower_components/jquery/dist/jquery.js',
-                    slick: __dirname + '/../../bower_components/slick.js/slick/slick.js',
-                    gsap : __dirname + '/../../bower_components/gsap/src/minified/TweenMax.min.js'
-                }
-            },
-            plugins: [
-                new webpack.ResolverPlugin(
-                    new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-                ),
-                new webpack.optimize.CommonsChunkPlugin({
-                    name: "library",
-                    filename: "library.js"
-                })
-            ]
+            output: configWebpack.output,
+            resolve: configWebpack.resolve,
+            plugins: configWebpack.plugins
         }))
+        .pipe(gulp.dest(pathDest))
+        .pipe(browser.reload({stream:true}));
+}
+function taskPureScripts(pathSrc,pathDest){
+    return gulp.src(pathSrc)
+        .pipe(plumber({
+            errorHandler: notify.onError('<%= error.message %>')
+        }))
+        .pipe(jshint(configPath.jshintrc))
+        .pipe(jshint.reporter('jshint-stylish'))
         .pipe(gulp.dest(pathDest))
         .pipe(browser.reload({stream:true}));
 }
@@ -54,9 +45,12 @@ function taskScripts(pathSrc,pathDest,pathEntry){
 gulp.task('script-pc', function () {
     taskScripts(
         configPath.pc.script.src,
-
         configPath.pc.script.dest,
         configPath.pc.dev
+    );
+    taskPureScripts(
+        configPath.pc.script.srcAll,
+        configPath.pc.script.dest
     );
 });
 
@@ -65,5 +59,9 @@ gulp.task('script-sp', function () {
         configPath.sp.script.src,
         configPath.sp.script.dest,
         configPath.sp.dev
+    );
+    taskPureScripts(
+        configPath.sp.script.srcAll,
+        configPath.sp.script.dest
     );
 });

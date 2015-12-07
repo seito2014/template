@@ -1,0 +1,36 @@
+.not-found-section {
+    text-align: center;
+    .not-found-section-header {
+        margin-bottom: 5px;
+        > h1 {
+            > span {
+                display: inline-block;
+                opacity: 0;
+                clip-path: circle(0% at 50% 50%);
+                transition: all ($duration * 3) $easing, opacity ($duration * 1.5) $easing;
+            }
+        }
+        .headline-line {
+            transform: scale(0);
+            transition: transform $duration $easing;
+        }
+    }
+    .not-found-section-body {
+        line-height: 1.93;
+        margin-bottom: 14px;
+    }
+//    .not-found-section-footer {}
+
+    //アニメーション
+    &.is-active {
+        .not-found-section-header {
+            > h1 > span {
+                opacity: 1;
+                clip-path: circle(100% at 50% 50%);
+            }
+            .headline-line {
+                transform: scale(1);
+            }
+        }
+    }
+}

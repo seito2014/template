@@ -1,0 +1,46 @@
+/*
+#overview
+arrow
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+
+.arrow {
+    display: inline-block;
+    border: 5px solid transparent;
+    border-left-color: #fff;
+
+    //color
+    &.arrow-primary {
+        border-left-color: $color-main;
+    }
+    &.arrow-sub {
+        border-left-color: #000;
+    }
+    &.arrow-white {
+        border-left-color: #fff;
+    }
+
+    //size
+    &.arrow-xlarge {
+        border-width: 16px;
+    }
+
+    //見ため
+    &.arrow-reverse {
+        transform: scaleX(-1);
+    }
+    &.arrow-bottom {
+        transform: rotate(90deg);
+    }
+    &.arrow-top {
+        transform: rotate(-90deg);
+    }
+}

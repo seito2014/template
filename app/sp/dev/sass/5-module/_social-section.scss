@@ -1,0 +1,25 @@
+.social-section {
+    background-color: #fff;
+    padding: 35px 0 40px;
+    .social-section-header {
+        margin-bottom: 13px;
+    }
+    .social-section-list {
+        text-align: center;
+        padding: 0 15px;
+        > li{
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    //Modifier
+    &.social-section-light {
+        background-color: #fff;
+        .social-mail-magazine-description {
+            margin-bottom: 35px;
+        }
+    }
+}

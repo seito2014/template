@@ -1,1 +1,22 @@
-//.l-footer {}
+.l-footer {
+    transform: translate3d(0, 0, 0); //safariでチカチカするバグのハック
+    background-color: #e6e6e6;
+
+    //.l-footer-inner {}
+
+    //    最下部の赤いところ
+    .l-footer-bottom {
+        margin-top: 15px;
+        background-color: $color-main;
+        color: #fff;
+        padding: 7px 50px;
+        overflow: hidden;
+        text-align: center;
+
+        > small {
+            color:  rgba(255, 255, 255, 0.5);
+            font-size: 9px;
+            font-weight: 400;
+        }
+    }
+}

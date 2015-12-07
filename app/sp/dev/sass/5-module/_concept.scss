@@ -1,0 +1,82 @@
+.concept {
+    background-color: #fff;
+    .concept-slider {
+        visibility: hidden;
+        width: 100%;
+        min-height: 215px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20px;
+        > img {
+            width: 100%;
+            height: auto;
+        }
+        .slick-arrow {
+            display: none !important;
+        }
+        .slick-list {
+            position: relative;
+            z-index: 1;
+            img {
+                height: auto;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        .slick-dots {
+            width: 100%;
+            text-align: center;
+            font-size: 0;
+            position: absolute;
+            z-index: 2;
+            bottom: 10px;
+            > li {
+                display: inline-block;
+                margin: 0 3px;
+                > button {
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: #fff;
+                    opacity: .5;
+                    font-size: 0;
+                    transition: opacity $duration $easing;
+                }
+                &.slick-active > button {
+                    opacity: 1;
+                }
+            }
+        }
+
+        //JS発火するまで隠しておく
+        &.is-active {
+            visibility: visible;
+        }
+
+        //margin
+        &.concept-slider-margin-large {
+            margin-bottom: 40px;
+        }
+        &.concept-slider-margin-small {
+            margin-bottom: 8px;
+        }
+    }
+    .concept-description {
+        line-height: 1.93;
+    }
+    .concept-contents {
+        margin-bottom: 35px;
+    }
+    .concept-contents-small {
+        margin-bottom: 32px;
+    }
+
+    //margin
+    &.concept-padding-bottom {
+        padding-bottom: 40px;
+    }
+    &.concept-padding-bottom-small {
+        padding-bottom: 32px;
+    }
+}

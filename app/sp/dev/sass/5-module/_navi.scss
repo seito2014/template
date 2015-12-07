@@ -1,0 +1,115 @@
+/*
+#overview
+navi
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.navi {
+    display: none;
+    padding-top: 50px;
+    background-color: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    z-index: $max-z - 1;
+    left: 0;
+    top: 0;
+    //.navi-list {}
+    //.navi-item {}
+    .navi-link {
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+        position: relative;
+        padding: 10px 14px;
+        border-bottom: 1px solid $color-default;
+
+        //物件募集
+        &.navi-link-primary {
+            background-color: $color-default;
+            padding: 21px 14px;
+            .sprite {
+                position: relative;
+                top: 3px;
+                margin-right: 8px;
+            }
+        }
+
+        //state
+        &.is-active .navi-link-arrow-inner {
+            transform: translate3d(0, -20px, 0);
+        }
+    }
+    .navi-link-arrow {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        width: 10px;
+        height: 10px;
+        overflow: hidden;
+    }
+    .navi-link-arrow-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform $duration $easing;
+    }
+    
+    //アコーディオン
+    .navi-children {
+        height: 0;
+        overflow: hidden;
+        transition: height $duration $easing;
+    }
+    .navi-children-list {
+        > li {
+            border-bottom: 1px solid $color-navi-border;
+            &:last-child {
+                border-bottom: 0;
+            }
+            > a {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                font-size: 13px;
+                padding: 12px 30px;
+                background-color: #1a1a1a;
+            }
+        }
+    }
+
+    //SNS
+    .navi-sns {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+    .navi-sns-item {
+        display: table-cell;
+        width: 50%;
+        height: 50px;
+        vertical-align: middle;
+        text-align: center;
+        border-bottom: 1px solid $color-navi-border;;
+        &:first-child {
+            border-right: 1px solid $color-navi-border;
+        }
+
+        > a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+        }
+        .svg {
+            vertical-align: middle;
+        }
+    }
+}

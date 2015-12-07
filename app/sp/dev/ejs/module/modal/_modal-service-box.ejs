@@ -1,0 +1,487 @@
+<% var outsideData = [
+    {
+        title: "屋上緑化",
+        description: "キスケBOXの屋上緑化活動が、「第5回 三浦保環境賞 特別賞」に選定されました。<br>「人も地球もハッピーにしたい」を合言葉に、CO2削減と地球温暖化に貢献しております。"
+    },{
+        title: "太陽熱温水パネル",
+        description: "私たちは自然エネルギーの活用に取り組んでいます。<br>日本最大級の太陽熱パネルの数は、なんと335枚。<br>事実、「キスケのゆ」で使われているお湯は、太陽熱を利用しています。"
+    }
+];%>
+
+<!--modal 屋外 ここから-->
+<div class="modal modal-figure modal-scrolable" id="js-modal-box-outdoor">
+    <div class="modal-inner">
+        <div class="modal-list-wrapper">
+            <ul class="modal-list">
+                <% for(var i=0; i< outsideData.length; i++) { %>
+                <li class="modal-item">
+                    <figure class="spa-figure">
+                        <img class="spa-figure-image" src="image/service/service-box/view/outdoor/box<%= [i + 1] %>.jpg" alt=""/>
+                        <figcaption class="spa-figure-body">
+                            <p class="spa-figure-title"><%= outsideData[i].title %></p>
+                            <div class="spa-figure-description"><%- outsideData[i].description %></div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <a class="modal-navigation modal-navigation-prev" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge arrow-reverse"></i>
+        </a>
+        <a class="modal-navigation modal-navigation-next" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge"></i>
+        </a>
+        <a class="modal-close" href="javascript:void(0);"></a>
+    </div>
+    <div class="modal-back"></div>
+</div>
+<!--modal 屋外 ここまで-->
+
+<% var gfData = [
+    {
+        title: "天然温泉キスケのゆ　松山店",
+        description: "地下1,700mから湧き出た源泉かけ流しの大浴槽をはじめ、17種以上のお風呂をご用意しました。<br>広々とした休憩スペースで多彩な日替わりイベントも楽しめます。清潔さには地域一番の自信あり。",
+        table: {
+            tel: "089-998-3300",
+            time: "（月～金）10:00~深夜2:00（受付1:00まで）<br>（土・日・祝）6:00~深夜2:00（受付1:00まで）"
+        },
+        link: ""
+    },{
+        title: "キスケPAO　JR松山駅前店",
+        description: "中四国一の最大ホールで最新機種が楽しめる、充実のパチンコ＆スロット。<br>お客様のあらゆるご要望にお応えすることを目指して、専属コンシェルジュを設置。人気店とコラボしたオリジナルスイーツの開発もしています。",
+        table: {
+            tel: "089-998-4000",
+            time: "9:00~23:30"
+        },
+        link: ""
+    },{
+        title: "グランドシティMG INN キスケ",
+        description: "オンライン対戦可能な最新ゲーム機やプリクラ、幅広い世代の方に楽しんでいただけるメダルゲーム・プライズゲームまで、アミューズメントマシンを豊富にご用意しております。",
+        table: {
+            tel: "089-933-2737",
+            time: "（月～土）10:00~24:00<br>（日・祝）8:00~24:00"
+        },
+        link: ""
+    },{
+        title: "salon de POO",
+        description: "キスケのゆ併設のリラクゼーションサロン。<br>ボディケア（ほぐし）、リフレクソロジー、アロマリンパトリートメント等、身体と心を深部から癒します。キスケのゆ外の出入口からもご入店いただけます。",
+        table: {
+            tel: "089-934-2311",
+            time: "11:00~24:00（受付23:00まで）"
+        },
+        link: ""
+    },{
+        title: "うどん　かめや　キスケBOX店",
+        description: "愛媛県民に長年愛されてきた、懐かしい味わいのうどん店。<br>麺類以外のメニューもバリエーション豊かにご用意しております。食券制のため、お急ぎの方にもおすすめ。",
+        table: {
+            tel: "089-998-3300（温泉）",
+            time: "11:00~23:30"
+        },
+        link: ""
+    },{
+        title: "らーめん　おが多　キスケBOX店",
+        description: "根強いファンを持つこだわりのラーメン店は、キスケBOXの隠れた人気スポット。<br>自慢の鶏ガラスープと醤油を使用したすっきりとした味わいは、ランチタイムやプレイ後にもぴったり。",
+        table: {
+            tel: "089-921-0003",
+            time: "営業時間：11:00~23:30"
+        },
+        link: ""
+    },{
+        title: "マクドナルド　キスケBOX店",
+        description: "「マクドナルドに行けば何か楽しいことがある」<br>もはや説明不要の、世界的定番のファースト・フード店。<br>テイクアウト商品は、キスケカラオケWAO・キスケボウルなど店内持ち込みOKです。",
+        table: {
+            tel: "089-941-1109",
+            time: "10:00~23:00"
+        },
+        link: ""
+    },{
+        title: "湯けむり亭（キスケのゆ内）",
+        description: "キスケのゆ併設の人情溢れるお食事処。<br>お風呂上がりに恋しくなる生ビールや、ひと手間かけたおつまみ、その他のお食事メニューも充実しています。<br>※入店には入浴料が必要です。",
+        table: {
+            tel: "089-934-5884",
+            time: "10:00~深夜2:00（オーダーストップ1:00）"
+        },
+        link: ""
+    },{
+        title: "STARS　COFFEE松山駅前店（キスケPAO　JR松山駅前店内）",
+        description: "パチンコPAO併設の、カジュアルに楽しめるコーヒー・スタンド。<br>プレイ中のお席までスタッフが商品をお持ちします。本格コーヒーやスイーツ系ドリンクで、頭を休めてほっとひと息。",
+        table: {
+            tel: "",
+            time: "9:30~20:00"
+        },
+        link: ""
+    }
+];%>
+
+<!--modal 1F ここから-->
+<div class="modal modal-figure modal-scrolable" id="js-modal-box-floor1">
+    <div class="modal-inner">
+        <div class="modal-list-wrapper">
+            <ul class="modal-list">
+                <% for(var i=0; i< gfData.length; i++){ %>
+                <li class="modal-item">
+                    <figure class="spa-figure">
+                        <img class="spa-figure-image" src="image/service/service-box/view/floor1/box<%= [i + 1] %>.jpg" alt=""/>
+                        <figcaption class="spa-figure-body">
+                            <p class="spa-figure-title"><%= gfData[i].title %></p>
+                            <% if(gfData[i].link !== ""){ %>
+                            <a class="spa-figure-link " href="<%= gfData[i].link.url %>">
+                                <i class="arrow arrow-large arrow-primary"></i>
+                                <%= gfData[i].link.text %>　ページヘ
+                            </a>
+                            <% } %>
+                            <div class="spa-figure-description"><%- gfData[i].description %></div>
+                            <% if(gfData[i].table !== ""){ %>
+                            <table class="spa-figure-table table">
+                                <% if(gfData[i].table.tel !== ""){ %>
+                                <tr>
+                                    <th class="table-th table-th-small">TEL</th>
+                                    <td class="table-td"><%- gfData[i].table.tel %></td>
+                                </tr>
+                                <% } %>
+                                <% if(gfData[i].table.time !== ""){ %>
+                                <tr>
+                                    <th class="table-th table-th-small">営業時間</th>
+                                    <td class="table-td"><%- gfData[i].table.time %></td>
+                                </tr>
+                                <% } %>
+                            </table>
+                            <% } %>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <a class="modal-navigation modal-navigation-prev" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge arrow-reverse"></i>
+        </a>
+        <a class="modal-navigation modal-navigation-next" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge"></i>
+        </a>
+        <a class="modal-close" href="javascript:void(0);"></a>
+    </div>
+    <div class="modal-back"></div>
+</div>
+<!--modal 1F ここまで-->
+
+<% var floor2Data = [
+    {
+        title: "キスケ麻雀JAO",
+        description: "完全個室制、日本でも有数の大型マージャン店です。<br>「町の雀荘」のイメージとは一線を画す、高級感と安心感をお届け。サークルやシニア向け教室も充実し、フレンドリーなコミュニケーションを図れます。",
+        table: {
+            tel: "089-998-3200",
+            time: "12:00〜"
+        },
+        link: ""
+    },{
+        title: "リビングカルチャーセンター",
+        description: "えひめリビング新聞社が運営するカルチャースクール。<br>音楽や絵画・手芸などの講座に加え、外国語やビジネスマナーレッスンまで、様々なジャンルをご用意しております。事前予約により見学も可能。",
+        table: {
+            tel: "089-947-1158",
+            time: "（月～金）9:30~20:00<br>（土）9:30~17:30　／　（日・祝を除く）"
+        },
+        link: ""
+    }
+]; %>
+<!--modal 2F ここから-->
+<div class="modal modal-figure modal-scrolable" id="js-modal-box-floor2">
+    <div class="modal-inner">
+        <div class="modal-list-wrapper">
+            <ul class="modal-list">
+                <% for(var i=0; i< floor2Data.length; i++) { %>
+                <li class="modal-item">
+                    <figure class="spa-figure">
+                        <img class="spa-figure-image" src="image/service/service-box/view/floor2/box<%= [i + 1] %>.jpg" alt=""/>
+                        <figcaption class="spa-figure-body">
+                            <p class="spa-figure-title"><%= floor2Data[i].title %></p>
+                            <% if(floor2Data[i].link !== ""){ %>
+                            <a class="spa-figure-link " href="<%= floor2Data[i].link.url %>">
+                                <i class="arrow arrow-large arrow-primary"></i>
+                                <%= floor2Data[i].link.text %>　ページヘ
+                            </a>
+                            <% } %>
+                            <div class="spa-figure-description"><%- floor2Data[i].description %></div>
+                            <% if(floor2Data[i].table !== ""){ %>
+                            <table class="spa-figure-table table">
+                                <% if(floor2Data[i].table.tel !== ""){ %>
+                                <tr>
+                                    <th class="table-th table-th-small">TEL</th>
+                                    <td class="table-td"><%- floor2Data[i].table.tel %></td>
+                                </tr>
+                                <% } %>
+                                <% if(floor2Data[i].table.time !== ""){ %>
+                                <tr>
+                                    <th class="table-th table-th-small">営業時間</th>
+                                    <td class="table-td"><%- floor2Data[i].table.time %></td>
+                                </tr>
+                                <% } %>
+                            </table>
+                            <% } %>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <a class="modal-navigation modal-navigation-prev" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge arrow-reverse"></i>
+        </a>
+        <a class="modal-navigation modal-navigation-next" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge"></i>
+        </a>
+        <a class="modal-close" href="javascript:void(0);"></a>
+    </div>
+    <div class="modal-back"></div>
+</div>
+<!--modal 2F ここまで-->
+
+<% var floor3Data = [
+    {
+        title: "キスケボウル",
+        description: "四国最大級のレーン数を誇るボウリング場。<br>大型モニターと最新鋭のシステムで、快適なプレイをお約束します。<br>週末の夜はディスコ空間へ変身。ブラックライトと音楽の中でのボウリングは、場内誰もがVery High！",
+        table: {
+            tel: "089-998-3000",
+            time: "（月～木）10:00~深夜1:00<br>（金・祝前日）10:00~深夜2:00<br>（土）9:30~深夜2:00<br>（日・祝）8:00~深夜1:00"
+        },
+        link: ""
+    },{
+        title: "キスケカラオケWAO 駅前本店",
+        description: "ルーム数は四国No.1、最大60名まで収容可能。本格的な料理が楽しめるレストラン・カラオケです。<br>カラオケは最新機種を導入し、全室大型モニター完備。こだわり仕様のお部屋でDVDも楽しめます。",
+        table: {
+            tel: "089-998-3100",
+            time: "（月～木）／（日・祝）10:00~深夜3:00<br>（金・土・祝前日）10:00~翌朝5:00"
+        },
+        link: ""
+    },{
+        title: "Le Tiarre",
+        description: "大人のためのリゾートエステ。フェイシャル、ボディ、岩盤浴など、様々なサービスでトータルビューティーをご提案します。岩盤ヨガは男性の方もご利用いただけます。",
+        table: {
+            tel: "089-986-8787",
+            time: "営業時間：10:00~20:00（受付18:30まで）／（火）定休日　※予約優先"
+        },
+        link: ""
+    },{
+        title: "アイ・カフェ 松山キスケBOX店",
+        description: "全国展開するインターネット＆コミックカフェ。豊富なフードメニューにシャワー設備、1日中滞在しても飽きさせないサービスがあります。時間帯によりフリーフードの提供も。",
+        table: {
+            tel: "089-998-2242",
+            time: "営業時間：24時間"
+        },
+        link: ""
+    },{
+        title: "グラントシティMG INNキスケ(キスケボウル内ゲームコーナー)",
+        description: "オンラインダーツ、ビリヤード、卓球台などを完備。カラオケやボウリング後のもうひと勝負にうってつけです。お子様向けのプライズゲームもご用意しております。",
+        table: {
+            tel: "",
+            time: "ボウリング営業時間"
+        },
+        link: ""
+    }
+]; %>
+<!--modal 3F ここから-->
+<div class="modal modal-figure modal-scrolable" id="js-modal-box-floor3">
+    <div class="modal-inner">
+        <div class="modal-list-wrapper">
+            <ul class="modal-list">
+                <% for(var i=0; i< floor3Data.length; i++) { %>
+                <li class="modal-item">
+                    <figure class="spa-figure">
+                        <img class="spa-figure-image" src="image/service/service-box/view/floor3/box<%= [i + 1] %>.jpg" alt=""/>
+                        <figcaption class="spa-figure-body">
+                            <p class="spa-figure-title"><%= floor3Data[i].title %></p>
+                            <% if(floor3Data[i].link !== ""){ %>
+                            <a class="spa-figure-link " href="<%= floor3Data[i].link.url %>">
+                                <i class="arrow arrow-large arrow-primary"></i>
+                                <%= floor3Data[i].link.text %>　ページヘ
+                            </a>
+                            <% } %>
+                            <div class="spa-figure-description"><%- floor3Data[i].description %></div>
+                            <% if(floor3Data[i].table !== ""){ %>
+                            <table class="spa-figure-table table">
+                                <% if(floor3Data[i].table.tel !== ""){ %>
+                                <tr>
+                                    <th class="table-th table-th-small">TEL</th>
+                                    <td class="table-td"><%- floor3Data[i].table.tel %></td>
+                                </tr>
+                                <% } %>
+                                <% if(floor3Data[i].table.time !== ""){ %>
+                                <tr>
+                                    <th class="table-th table-th-small">営業時間</th>
+                                    <td class="table-td"><%- floor3Data[i].table.time %></td>
+                                </tr>
+                                <% } %>
+                            </table>
+                            <% } %>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <a class="modal-navigation modal-navigation-prev" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge arrow-reverse"></i>
+        </a>
+        <a class="modal-navigation modal-navigation-next" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge"></i>
+        </a>
+        <a class="modal-close" href="javascript:void(0);"></a>
+    </div>
+    <div class="modal-back"></div>
+</div>
+<!--modal 3F ここまで-->
+
+<% var otherData = [
+    {
+        title: "駐輪場横Hipsダンススクール　キスケBOXスタジオ",
+        description: "幼児から大人まで、幅広く踊る楽しさを伝えるダンススクール。<br>有名校に負けない良質なレッスンとリーズナブルな料金で大人気。無料体験レッスンもあります。",
+        table: {
+            tel: "089-906-8323",
+            time: "（月・水・木）17:00~22:30<br>（火・金）18:00～22:30<br>（土）10:00~18:30　／　（日）定休日"
+        },
+        link: ""
+    }
+]; %>
+<!--modal other ここから-->
+<div class="modal modal-figure modal-scrolable" id="js-modal-box-other">
+    <div class="modal-inner">
+        <div class="modal-list-wrapper">
+            <ul class="modal-list">
+                <% for(var i=0; i< otherData.length; i++) { %>
+                <li class="modal-item">
+                    <figure class="spa-figure">
+                        <img class="spa-figure-image" src="image/service/service-box/view/other/box<%= [i + 1] %>.jpg" alt=""/>
+                        <figcaption class="spa-figure-body">
+                            <p class="spa-figure-title"><%= otherData[i].title %></p>
+                            <% if(otherData[i].link !== ""){ %>
+                            <a class="spa-figure-link " href="<%= otherData[i].link.url %>">
+                                <i class="arrow arrow-large arrow-primary"></i>
+                                <%= otherData[i].link.text %>　ページヘ
+                            </a>
+                            <% } %>
+                            <div class="spa-figure-description"><%- otherData[i].description %></div>
+                            <% if(otherData[i].table !== ""){ %>
+                            <table class="spa-figure-table table">
+                                <tr>
+                                    <th class="table-th table-th-small">TEL</th>
+                                    <td class="table-td"><%- otherData[i].table.tel %></td>
+                                </tr>
+                                <tr>
+                                    <th class="table-th table-th-small">営業時間</th>
+                                    <td class="table-td"><%- otherData[i].table.time %></td>
+                                </tr>
+                            </table>
+                            <% } %>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <a class="modal-navigation modal-navigation-prev" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge arrow-reverse"></i>
+        </a>
+        <a class="modal-navigation modal-navigation-next" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge"></i>
+        </a>
+        <a class="modal-close" href="javascript:void(0);"></a>
+    </div>
+    <div class="modal-back"></div>
+</div>
+<!--modal other ここまで-->
+
+<% var other1Data = [
+    {
+        title: "アムーラキッズルーム　あむぱむ",
+        description: "一時預かりと小規模保育所が併設されています。<br>キスケBOXご利用中のひととき、保育士免許有資格者・保育従事者研修受講者のスタッフが責任を持ってお子様をお預かりします（有料）。",
+        table: {
+            tel: "089-986-9534",
+            time: "（月～土）8:15~23:30（一時預かりは8:30～）<br>（日・祝）9:30~23:30"
+        },
+        link: ""
+    },{
+        title: "アクトスWill松山店",
+        description: "プールとジャグジー施設を備えた本格スポーツクラブ。地域最安値で気軽に利用できます。<br>スタジオでは多数のレッスンをホットに開講中。マシンの使い方やトレーニング方法など、初めての方にもスタッフが丁寧にサポートします。",
+        table: {
+            tel: "089-915-2120",
+            time: "（月～金）10:00~23:00（スポーツゾーン利用22:30まで）　／（木）定休日<br>（土）10:00~21:00（スポーツゾーン利用20:30まで）<br>（日・祝）10:00~18:00（スポーツゾーン利用17:30まで）"
+        },
+        link: ""
+    },{
+        title: "食彩館エルベ24　キスケBOX店",
+        description: "旬な食材を取り揃えたスーパーマーケット。<br>お手頃価格のお惣菜や季節を感じさせるフルーツなど、お客様に喜んでいただけるラインナップを心がけております。特価セールも随時開催中。",
+        table: {
+            tel: "089-915-0024",
+            time: "8:00～深夜1:00"
+        },
+        link: ""
+    },{
+        title: "洗濯館　コインランドリーエルベ24",
+        description: "普段のお洗濯から毛布などの大物まで、気軽にご利用いただけるコインランドリー。<br>明るく見通しの良い店内は安心・安全。キスケBOXご利用中のお時間を、ぜひ有効活用してください。",
+        table: {
+            tel: "なし（隣接の食彩館エルベ24営業中は089-915-0024まで）",
+            time: "6:00～深夜2:00"
+        },
+        link: ""
+    },{
+        title: "ごはんとお酒　なが坂",
+        description: "人気の炭火焼料理のほか、探し歩いた上物地魚と本物地菜で愛媛の味を堪能できる居酒屋。<br>ランチタイムには新鮮なお魚の定食や郷土料理も味わえます。最大40名までの宴会にも対応可能です。",
+        table: {
+            tel: "089-968-2601",
+            time: "11:00～15:00（オーダーストップ14:00）、17:00～23:00（オーダーストップ22:15）"
+        },
+        link: ""
+    }
+]; %>
+<!--mod other1 ここから-->
+<div class="modal modal-figure modal-scrolable" id="js-modal-box-other1">
+    <div class="modal-inner">
+        <div class="modal-list-wrapper">
+            <ul class="modal-list">
+                <% for(var i=0; i< other1Data.length; i++) { %>
+                <li class="modal-item">
+                    <figure class="spa-figure">
+                        <img class="spa-figure-image" src="image/service/service-box/view/other1/box<%= [i + 1] %>.jpg" alt=""/>
+                        <figcaption class="spa-figure-body">
+                            <p class="spa-figure-title"><%= other1Data[i].title %></p>
+                            <% if(other1Data[i].link !== ""){ %>
+                            <a class="spa-figure-link " href="<%= other1Data[i].link.url %>">
+                                <i class="arrow arrow-large arrow-primary"></i>
+                                <%= other1Data[i].link.text %>　ページヘ
+                            </a>
+                            <% } %>
+                            <div class="spa-figure-description"><%- other1Data[i].description %></div>
+                            <% if(other1Data[i].table !== ""){ %>
+                            <table class="spa-figure-table table">
+                                <% if(other1Data[i].table.tel !== ""){ %>
+                                <tr>
+                                    <th class="table-th table-th-small">TEL</th>
+                                    <td class="table-td"><%- other1Data[i].table.tel %></td>
+                                </tr>
+                                <% } %>
+                                <% if(other1Data[i].table.time !== ""){ %>
+                                <tr>
+                                    <th class="table-th table-th-small">営業時間</th>
+                                    <td class="table-td"><%- other1Data[i].table.time %></td>
+                                </tr>
+                                <% } %>
+                            </table>
+                            <% } %>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <a class="modal-navigation modal-navigation-prev" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge arrow-reverse"></i>
+        </a>
+        <a class="modal-navigation modal-navigation-next" href="javascript:void(0);">
+            <i class="arrow arrow-primary arrow-xlarge"></i>
+        </a>
+        <a class="modal-close" href="javascript:void(0);"></a>
+    </div>
+    <div class="modal-back"></div>
+</div>
+<!--modal other1 ここまで-->

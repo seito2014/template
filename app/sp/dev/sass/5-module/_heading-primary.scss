@@ -1,0 +1,40 @@
+/*
+#overview
+heading-primary
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.heading-primary {
+    font-size: 19px;
+    line-height: 1.45;
+    font-weight: 700;
+    position: relative;
+    padding: 2px 5px 9px 13px;
+    &:before {
+        content: "";
+        display: block;
+        background-color: $color-main;
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &:after {
+        content: "";
+        display: block;
+        background-color: $color-main;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}

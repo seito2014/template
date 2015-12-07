@@ -15,37 +15,29 @@ _tag.scss
 */
 
 .tag {
-    @include rem(12);
     display: inline-block;
-    min-width: 30px;
-    height: 20px;
-    line-height: 20px;
-    color: #fff;
-    background: #000;
-    text-align: center;
-    padding: 0 5px;
-
-    &-a {
-        background: $category-a;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 4px 5px 4px;
+    line-height: 1;
+    border: 1px solid $color-border;
+    color: $color-dark;
+    background-color: #fff;
+    //営業案内
+    &.tag-sales {
+        border-color: $color-main;
+        background-color: $color-main;
+        color: #fff;
     }
-
-    &-b {
-        background: $category-b;
+    //お知らせ
+    &.tag-news {
+        border-color: $color-sub;
+        background-color: $color-sub;
+        color: #fff;
     }
-
-    &-c {
-        background: $category-c;
-    }
-
-    &.small {
-        height: 15px;
-        line-height: 15px;
-        @include rem(10);
-    }
-
-    &.large {
-        height: 25px;
-        line-height: 25px;
-        @include rem(14);
+    //社内活動
+    &.tag-activity {
+        border-color: #f2f2f2;
+        background-color: #f2f2f2;
     }
 }

@@ -1,0 +1,31 @@
+.spa-figure {
+    width: 100%;
+    height: 290px;
+    background: #fff;
+    .spa-figure-image {
+        width: 100%;
+        height: 185px;
+        object-fit: cover;
+    }
+    .spa-figure-body {
+        padding: 9px 15px;
+    }
+    .spa-figure-title {
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 3px;
+    }
+    .spa-figure-description {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+    .spa-figure-table {
+        font-size: 13px;
+        margin-top: 12px;
+    }
+
+    //size large
+    &.spa-figure-large {
+        height: 744px;
+    }
+}

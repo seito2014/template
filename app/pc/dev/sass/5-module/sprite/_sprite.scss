@@ -3,25 +3,240 @@
 
 
 ```
-<i class="sprite sprite-bikkuri"></i>
-<i class="sprite sprite-blank"></i>
-<i class="sprite sprite-home"></i>
+<i class="sprite about-clear"></i>
+<i class="sprite blank-hover"></i>
+<i class="sprite blank-small"></i>
+<i class="sprite blank"></i>
+<i class="sprite bowl-clear"></i>
+<i class="sprite bowl"></i>
+<i class="sprite box-clear"></i>
+<i class="sprite box"></i>
+<i class="sprite contact-clear"></i>
+<i class="sprite facebook"></i>
+<i class="sprite finance-clear"></i>
+<i class="sprite finance"></i>
+<i class="sprite instagram"></i>
+<i class="sprite karaoke-clear"></i>
+<i class="sprite karaoke"></i>
+<i class="sprite line"></i>
+<i class="sprite local-clear"></i>
+<i class="sprite local"></i>
+<i class="sprite mah-jong-clear"></i>
+<i class="sprite mah-jong"></i>
+<i class="sprite mail-magazine-clear"></i>
+<i class="sprite mail-magazine"></i>
+<i class="sprite news-clear"></i>
+<i class="sprite not-found-clear"></i>
+<i class="sprite pachinko-clear"></i>
+<i class="sprite pachinko"></i>
+<i class="sprite parking-clear"></i>
+<i class="sprite parking"></i>
+<i class="sprite philosophy-clear"></i>
+<i class="sprite philosophy"></i>
+<i class="sprite plus"></i>
+<i class="sprite privacy-clear"></i>
+<i class="sprite profile-clear"></i>
+<i class="sprite profile"></i>
+<i class="sprite quote"></i>
+<i class="sprite real-estate-clear"></i>
+<i class="sprite real-estate"></i>
+<i class="sprite recruit-clear"></i>
+<i class="sprite resource-clear"></i>
+<i class="sprite resource"></i>
+<i class="sprite service-clear"></i>
+<i class="sprite service-real-estate-clear"></i>
+<i class="sprite spa-clear"></i>
+<i class="sprite spa"></i>
+<i class="sprite tel"></i>
+<i class="sprite twitter"></i>
 ```
 */
-$sprite-bikkuri: 33px 0px -33px 0px 5px 16px 38px 16px "sprite.png";
-$sprite-blank: 20px 0px -20px 0px 11px 11px 38px 16px "sprite.png";
-$sprite-home: 0px 0px 0px 0px 18px 16px 38px 16px "sprite.png";
+$about-clear: 582px 66px -582px -66px 64px 64px 708px 626px "sprite.png";
+$blank-hover: 648px 536px -648px -536px 44px 44px 708px 626px "sprite.png";
+$blank-small: 528px 468px -528px -468px 28px 28px 708px 626px "sprite.png";
+$blank: 648px 490px -648px -490px 44px 44px 708px 626px "sprite.png";
+$bowl-clear: 582px 132px -582px -132px 60px 63px 708px 626px "sprite.png";
+$bowl: 194px 0px -194px 0px 192px 120px 708px 626px "sprite.png";
+$box-clear: 582px 380px -582px -380px 64px 56px 708px 626px "sprite.png";
+$box: 194px 122px -194px -122px 192px 120px 708px 626px "sprite.png";
+$contact-clear: 648px 0px -648px 0px 60px 54px 708px 626px "sprite.png";
+$facebook: 240px 468px -240px -468px 72px 72px 708px 626px "sprite.png";
+$finance-clear: 648px 230px -648px -230px 50px 54px 708px 626px "sprite.png";
+$finance: 0px 366px 0px -366px 164px 100px 708px 626px "sprite.png";
+$instagram: 166px 468px -166px -468px 72px 72px 708px 626px "sprite.png";
+$karaoke-clear: 582px 438px -582px -438px 62px 56px 708px 626px "sprite.png";
+$karaoke: 388px 122px -388px -122px 192px 120px 708px 626px "sprite.png";
+$line: 498px 366px -498px -366px 80px 76px 708px 626px "sprite.png";
+$local-clear: 648px 56px -648px -56px 54px 54px 708px 626px "sprite.png";
+$local: 0px 468px 0px -468px 164px 100px 708px 626px "sprite.png";
+$mah-jong-clear: 194px 570px -194px -570px 64px 46px 708px 626px "sprite.png";
+$mah-jong: 0px 0px 0px 0px 192px 120px 708px 626px "sprite.png";
+$mail-magazine-clear: 648px 448px -648px -448px 56px 40px 708px 626px "sprite.png";
+$mail-magazine: 388px 468px -388px -468px 72px 52px 708px 626px "sprite.png";
+$news-clear: 648px 348px -648px -348px 58px 42px 708px 626px "sprite.png";
+$not-found-clear: 582px 318px -582px -318px 60px 60px 708px 626px "sprite.png";
+$pachinko-clear: 582px 197px -582px -197px 64px 57px 708px 626px "sprite.png";
+$pachinko: 194px 244px -194px -244px 192px 120px 708px 626px "sprite.png";
+$parking-clear: 582px 256px -582px -256px 60px 60px 708px 626px "sprite.png";
+$parking: 388px 0px -388px 0px 192px 120px 708px 626px "sprite.png";
+$philosophy-clear: 648px 112px -648px -112px 44px 64px 708px 626px "sprite.png";
+$philosophy: 166px 366px -166px -366px 164px 100px 708px 626px "sprite.png";
+$plus: 648px 582px -648px -582px 44px 44px 708px 626px "sprite.png";
+$privacy-clear: 648px 286px -648px -286px 44px 60px 708px 626px "sprite.png";
+$profile-clear: 648px 392px -648px -392px 44px 54px 708px 626px "sprite.png";
+$profile: 332px 366px -332px -366px 164px 100px 708px 626px "sprite.png";
+$quote: 648px 178px -648px -178px 56px 50px 708px 626px "sprite.png";
+$real-estate-clear: 128px 570px -128px -570px 64px 50px 708px 626px "sprite.png";
+$real-estate: 0px 122px 0px -122px 192px 120px 708px 626px "sprite.png";
+$recruit-clear: 62px 570px -62px -570px 64px 52px 708px 626px "sprite.png";
+$resource-clear: 462px 468px -462px -468px 64px 52px 708px 626px "sprite.png";
+$resource: 388px 244px -388px -244px 164px 100px 708px 626px "sprite.png";
+$service-clear: 582px 0px -582px 0px 64px 64px 708px 626px "sprite.png";
+$service-real-estate-clear: 582px 496px -582px -496px 64px 54px 708px 626px "sprite.png";
+$spa-clear: 0px 570px 0px -570px 60px 56px 708px 626px "sprite.png";
+$spa: 0px 244px 0px -244px 192px 120px 708px 626px "sprite.png";
+$tel: 166px 542px -166px -542px 30px 26px 708px 626px "sprite.png";
+$twitter: 314px 468px -314px -468px 72px 58px 708px 626px "sprite.png";
 
 .sprite{
     display: inline-block;
 
-    &.sprite-bikkuri {
-        @include sprite($sprite-bikkuri);
+    &.sprite-about-clear {
+        @include sprite($about-clear);
+    }
+    &.sprite-blank-hover {
+        @include sprite($blank-hover);
+    }
+    &.sprite-blank-small {
+        @include sprite($blank-small);
     }
     &.sprite-blank {
-        @include sprite($sprite-blank);
+        @include sprite($blank);
     }
-    &.sprite-home {
-        @include sprite($sprite-home);
+    &.sprite-bowl-clear {
+        @include sprite($bowl-clear);
+    }
+    &.sprite-bowl {
+        @include sprite($bowl);
+    }
+    &.sprite-box-clear {
+        @include sprite($box-clear);
+    }
+    &.sprite-box {
+        @include sprite($box);
+    }
+    &.sprite-contact-clear {
+        @include sprite($contact-clear);
+    }
+    &.sprite-facebook {
+        @include sprite($facebook);
+    }
+    &.sprite-finance-clear {
+        @include sprite($finance-clear);
+    }
+    &.sprite-finance {
+        @include sprite($finance);
+    }
+    &.sprite-instagram {
+        @include sprite($instagram);
+    }
+    &.sprite-karaoke-clear {
+        @include sprite($karaoke-clear);
+    }
+    &.sprite-karaoke {
+        @include sprite($karaoke);
+    }
+    &.sprite-line {
+        @include sprite($line);
+    }
+    &.sprite-local-clear {
+        @include sprite($local-clear);
+    }
+    &.sprite-local {
+        @include sprite($local);
+    }
+    &.sprite-mah-jong-clear {
+        @include sprite($mah-jong-clear);
+    }
+    &.sprite-mah-jong {
+        @include sprite($mah-jong);
+    }
+    &.sprite-mail-magazine-clear {
+        @include sprite($mail-magazine-clear);
+    }
+    &.sprite-mail-magazine {
+        @include sprite($mail-magazine);
+    }
+    &.sprite-news-clear {
+        @include sprite($news-clear);
+    }
+    &.sprite-not-found-clear {
+        @include sprite($not-found-clear);
+    }
+    &.sprite-pachinko-clear {
+        @include sprite($pachinko-clear);
+    }
+    &.sprite-pachinko {
+        @include sprite($pachinko);
+    }
+    &.sprite-parking-clear {
+        @include sprite($parking-clear);
+    }
+    &.sprite-parking {
+        @include sprite($parking);
+    }
+    &.sprite-philosophy-clear {
+        @include sprite($philosophy-clear);
+    }
+    &.sprite-philosophy {
+        @include sprite($philosophy);
+    }
+    &.sprite-plus {
+        @include sprite($plus);
+    }
+    &.sprite-privacy-clear {
+        @include sprite($privacy-clear);
+    }
+    &.sprite-profile-clear {
+        @include sprite($profile-clear);
+    }
+    &.sprite-profile {
+        @include sprite($profile);
+    }
+    &.sprite-quote {
+        @include sprite($quote);
+    }
+    &.sprite-real-estate-clear {
+        @include sprite($real-estate-clear);
+    }
+    &.sprite-real-estate {
+        @include sprite($real-estate);
+    }
+    &.sprite-recruit-clear {
+        @include sprite($recruit-clear);
+    }
+    &.sprite-resource-clear {
+        @include sprite($resource-clear);
+    }
+    &.sprite-resource {
+        @include sprite($resource);
+    }
+    &.sprite-service-clear {
+        @include sprite($service-clear);
+    }
+    &.sprite-service-real-estate-clear {
+        @include sprite($service-real-estate-clear);
+    }
+    &.sprite-spa-clear {
+        @include sprite($spa-clear);
+    }
+    &.sprite-spa {
+        @include sprite($spa);
+    }
+    &.sprite-tel {
+        @include sprite($tel);
+    }
+    &.sprite-twitter {
+        @include sprite($twitter);
     }
 }

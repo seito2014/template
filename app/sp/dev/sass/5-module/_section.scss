@@ -1,0 +1,172 @@
+/*
+#overview
+section
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+
+.section {
+    text-align: center;
+    padding: 33px 0 40px;
+    position: relative;
+
+    .section-header {
+        margin-bottom: 5px;
+        > h1 {
+            padding-left: 8px;
+        }
+        //headline-narrowの場合はline-heightが小さめなのでmariginを多めに
+        &.headline-narrow {
+            margin-bottom: 9px;
+        }
+    }
+    .section-description {
+        line-height: 1.65;
+        padding-left: 9px;
+        margin-top: -6px;
+        margin-bottom: 11px;
+    }
+    .section-contents {
+        margin-bottom: 15px;
+    }
+    .section-contents-list {
+        margin: 0 -5px;
+        > li {
+            padding: 5px;
+        }
+    }
+    .section-inner {
+        position: relative;
+        z-index: 3;
+    }
+    .section-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+    }
+
+    //アニメーションあり
+    &.section-waiting-effect {
+
+        .section-header > h1 {
+            opacity: 0;
+            clip-path: circle(0% at 50% 50%);
+            transition: all ($duration * 2) $easing, opacity $duration $easing;
+        }
+        .headline-line {
+            transform: scale(0);
+            transition: transform $duration $easing;
+        }
+        .section-description,
+        .section-item1 {
+            opacity: 0;
+            transition: opacity $duration $easing;
+        }
+        .section-item2 {
+            opacity: 0;
+            transition: opacity $duration .25s $easing;
+        }
+        //アニメーション
+        &.is-active {
+            .section-description,
+            .section-item1,
+            .section-item2 {
+                opacity: 1;
+            }
+            .section-header > h1{
+                opacity: 1;
+                clip-path: circle(100% at 50% 50%);
+            }
+            .headline-line {
+                transform: scale(1);
+            }
+        }
+    }
+
+    //採用情報
+    &.section-recruit {
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 16.5%;
+        .section-header {
+            margin-bottom: 8px;
+            > h1 > span {
+                margin-right: -6px;
+            }
+        }
+        .section-description {
+            padding-left: 0;
+            margin-bottom: 37%;
+        }
+        .section-back {
+            background: url(#{$path-image}top/section-recruit.png) center bottom no-repeat;
+            background-size: contain;
+        }
+        .section-main-arrow {
+            position: absolute;
+            z-index: 1;
+            right: -1px;
+            top: 36px;
+        }
+        .section-button {
+            margin-top: -4px;
+        }
+    }
+    //お問い合わせ
+    &.section-contact {
+        padding-top: 34px;
+        position: relative;
+        .section-header {
+            margin-bottom: 8px;
+        }
+        .section-description {
+            letter-spacing: 0;
+            margin-bottom: 9px;
+        }
+        .section-back {
+            background: url(#{$path-image}top/section-contact.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .section-button {
+            margin-top: 7px;
+        }
+    }
+    //KISUKE WAY
+    &.section-way {
+        background: url(#{$path-image}about/about-resource/about-resource2.jpg) center top repeat-y;
+        background-size: contain;
+        .section-header {
+            margin-bottom: 0;
+        }
+        .section-description {
+            line-height: 1.93;
+            margin-bottom: 9px;
+
+            //カーニング調整
+            &.section-description-kisyke-way {
+                > span {
+                    &:nth-of-type(1) {
+                        margin-left: -6px;
+                    }
+                    &:nth-of-type(2) {
+                        margin-right: -6px;
+                    }
+                    &:nth-of-type(3) {
+                        margin-right: -6px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+/*
+#overview
+animation-navi
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.animation-navi {
+    margin: -3px;
+    > li {
+        padding: 3px;
+    }
+
+    &.animation-navi-box {
+        text-align: center;
+        > li {
+            display: inline-block;
+        }
+    }
+}

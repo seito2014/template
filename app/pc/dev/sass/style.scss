@@ -21,23 +21,36 @@
 * layout
 */
 @import "4-layout/header";
-@import "4-layout/contents";
-@import "4-layout/main";
-@import "4-layout/sidebar";
+@import "4-layout/container";
+@import "4-layout/grid";
 @import "4-layout/footer";
 
 /*
 * module
 */
 @import "5-module/sprite/sprite"; //sprite
-@import "5-module/iconfont/iconfont"; //iconfont
-@import "5-module/bread";
-@import "5-module/heading";
-@import "5-module/button";
-@import "5-module/tag";
-@import "5-module/article-style";
+@import "5-module/loading";
+@import "5-module/arrow.scss";
+@import "5-module/heading-addition.scss";
+@import "5-module/heading-primary.scss";
+@import "5-module/heading-sub.scss";
+@import "5-module/hero.scss";
+@import "5-module/label.scss";
+@import "5-module/logo.scss";
+@import "5-module/svg.scss";
+@import "5-module/table.scss";
+@import "5-module/button.scss";
+@import "5-module/tag.scss";
+@import "5-module/wp-pagenavi.scss";
+@import "5-module/input.scss";
+@import "5-module/textarea.scss";
+@import "5-module/select.scss";
+@import "5-module/form.scss";
+@import "5-module/tab.scss";
+
 
 /*
 * utility
 */
 @import "6-utility/utility";
+@import "6-utility/margin";

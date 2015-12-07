@@ -1,0 +1,108 @@
+/*
+#overview
+label
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.label {
+    cursor: pointer;
+    display: block;
+    padding: 9px 10px;
+    position: relative;
+    overflow: hidden;
+    .label-input {
+        opacity: 0;
+    }
+    //TODO
+//    .label-radio-face {
+//        display: inline-block;
+//        vertical-align: middle;
+//        width: 18px;
+//        height: 18px;
+//        border-radius: 50%;
+//        background: #fff;
+//        border: 1px solid $color-dark;
+//        transition: color $duration $easing;
+//        margin-right: 3px;
+//
+//        .label-radio-face-inner {
+//            opacity: 0;
+//            display: block;
+//            position: absolute;
+//            background-color: $color-main;
+//            height: 8px;
+//            width: 8px;
+//            border-radius: 50%;
+//            transform: translate3d(4px,4px,0);
+//            transition: opacity $duration $easing;
+//        }
+//    }
+    .label-checkbox-face {
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        background: #fff;
+        border-radius: 2px;
+        border: 1px solid $color-dark;
+        transition: color $duration $easing;
+        margin-right: 2px;
+        position: relative;
+        top: -2px;
+        .label-checkbox-face-inner {
+            opacity: 0;
+            display: block;
+            position: absolute;
+            border-bottom: 2px solid $color-main;
+            border-left: 2px solid $color-main;
+            height: 5px;
+            width: 10px;
+            transform: translate3d(3px, 4px, 0) rotate(-42deg);
+            transition: opacity $duration $easing;
+        }
+    }
+    .label-input {
+        position: absolute;
+        top: -100%;
+    }
+
+    .label-text {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.15;
+        font-size: 12px;
+        letter-spacing: 0;
+        position: relative;
+        top: -2px;
+    }
+
+    //チェック状態
+    .label-input:checked {
+
+        &+.label-radio-face {
+            border-color: $color-main;
+            .label-radio-face-inner {
+                opacity: 1;
+            }
+            &+.label-text {
+                color: $color-main;
+            }
+        }
+        &+.label-checkbox-face {
+            border-color: $color-main;
+            .label-checkbox-face-inner {
+                opacity: 1;
+            }
+            &+.label-text {
+                color: $color-main;
+            }
+        }
+    }
+}

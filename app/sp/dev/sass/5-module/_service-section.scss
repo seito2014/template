@@ -1,0 +1,22 @@
+.service-section {
+    .service-section-header {
+        margin-bottom: 4px;
+    }
+    .service-section-body {
+        margin-bottom: 15px;
+        > p {
+            line-height: 1.93;
+            > span {
+                margin-right: -4px;
+            }
+            > i {
+                margin-left: -4px;
+            }
+        }
+    }
+
+    //margin
+    &.service-section-margin {
+        margin-bottom: 47px;
+    }
+}

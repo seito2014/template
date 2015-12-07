@@ -1,0 +1,29 @@
+.parking-data {
+    > h1 {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    .parking-data-body {
+        position: relative;
+    }
+    .parking-data-image {
+        margin-bottom: 10px;
+        > img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .parking-data-table {
+        position: relative;
+        z-index: 1;
+    }
+
+    //margin
+    &.parking-data-margin {
+        margin-bottom: 22px;
+    }
+    &.parking-data-margin-small {
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,102 @@
+<% var
+    id = "service-real-estate",
+    title = "不動産｜",
+    description = "sample text,sample text",
+    keywords = "word1,word2,word3",
+    type = "article",
+    copy = '一人ひとりの人生を<span class="page-hero-font-a">、</span>より良く。',
+    iconId = "service-real-estate";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+        <!--contents ここから-->
+        <% include module/_page-hero %>
+
+        <main>
+
+            <div class="l-space l-space-padding-top-middle l-space-padding-bottom-xsmall">
+                <div class="first-description">
+                    豊かな人生を送るためには、充実したライフスタイルの提供こそが重要だと考えています。キスケはマンションで「生活空間」を、オフィスで「労働環境」を、ロードサイド・店舗で「余暇時間」を提供し、お客様のライフスタイルを総合的にサポートしております。また、継続的な賃料収入はキスケの財務基盤をつくり、お客様や取引先・従業員の安心にも繋がっていくのです。
+                </div>
+            </div>
+
+            <div class="l-space l-space-foundation">
+
+                <section class="real-estate-items real-estate-items-position">
+                    <div class="real-estate-items-header headline headline-small">
+                        <h1>所有物件</h1>
+                        <div class="headline-line"></div>
+                    </div>
+
+                    <section class="contents contents-margin-small">
+                        <div class="contents-image">
+                            <img src="image/service/service-real-estate/service-real-estate1.jpg" alt="不動産　イメージ1"/>
+                        </div>
+                        <div class="contents-body">
+                            <h1 class="contents-header-sub">KBコートシリーズ</h1>
+                            <p>松山市と今治市に14棟の「KBコート」を管理運営しています。常日頃から設備の改修、清掃に力を入れ、お客様のライフスタイルを向上させるよう努力しています。また、地元愛媛県の河原デザイン・アート専門学校とコラボレートし、学生デザインによるオシャレな貸室を提供するなど、独自の価値を生み出すための取り組みも欠かしません。</p>
+                        </div>
+                    </section>
+                    <section class="contents contents-margin-small">
+                        <div class="contents-image">
+                            <img src="image/service/service-real-estate/service-real-estate2.jpg" alt="不動産　イメージ2"/>
+                        </div>
+                        <div class="contents-body">
+                            <h1 class="contents-header-sub">キスケビル</h1>
+                            <p>愛媛県の繁華街一番町にて、多数の店舗物件を所有しています。いずれも好立地で利用価値の高いスペースを創出することにより地域社会の発展に貢献しています。<br>
+                                東京では、神田を中心としてオフィスビルを所有し、テナントが快適に働ける場を提供しています。</p>
+                        </div>
+                    </section>
+                    <section class="contents">
+                        <div class="contents-image">
+                            <img src="image/service/service-real-estate/service-real-estate3.jpg" alt="不動産　イメージ1"/>
+                        </div>
+                        <div class="contents-body">
+                            <h1 class="contents-header-sub">ロードサイド物件</h1>
+                            <p>愛媛県を中心とした、生活主要道路に多数の土地を所有しています。<br>
+                                本来その土地が持つ付加価値を創出し、地域の特性に合ったテナントを誘致。土地を賃貸することにより、修繕費等のコストがかからず継続的に、安定した収入を得ることができます。</p>
+                        </div>
+                    </section>
+                </section>
+            </div>
+
+            <div class="l-space l-space-padding-top-large l-space-padding-bottom-large">
+
+                <div class="service-link service-link-no-border service-link-margin-bottom-small">
+                    <p>住居やオフィス・店舗物件や<br>パチンコ出店情報を募集しています</p>
+
+                    <a class="section-button button button-large button-line1 button-full" href="real-estate.html">
+                        <span class="button-text">物件募集について</span>
+                        <i class="button-arrow arrow arrow-large"></i>
+                        <div class="button-effect">
+                            <span class="button-effect-object-a"></span>
+                            <span class="button-effect-object-b"></span>
+                        </div>
+                    </a>
+                </div>
+
+                <ul class="service-links">
+                    <li>
+                        <a class="real-estate-link" href="http://ehime-kisuke.com/" target="_blank">
+                            <img src="image/service/service-real-estate/service-real-estate-ehime.png" width="490" height="280" alt="キスケ愛媛不動産 愛媛のマンション・店舗をお探しの方"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="real-estate-link" href="http://tokyo-kisuke.com/" target="_blank">
+                            <img src="image/service/service-real-estate/service-real-estate-tokyo.png" width="490" height="280" alt="キスケ東京不動産 東京のオフィス・ビルをお探しの方"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="service-menu service-menu-padding-top-xlarge service-menu-padding-bottom">
+                <% var animationNavi = "service"; %>
+                <% include module/_animation-navi %>
+            </div>
+
+        </main>
+        <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>

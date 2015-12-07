@@ -1,0 +1,58 @@
+.wp-pagenavi{
+    text-align: center;
+    font-size: 0;
+    position: relative;
+    padding: 0 50px;
+
+    > a,
+    > span {
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 5px;
+        background-color: #fff;
+        width: 50px;
+        height: 50px;
+        line-height: 48px;
+        text-align: center;
+        letter-spacing: .15em;
+        text-decoration: none;
+        color: $color-main;
+        border: 1px solid $color-main;
+        margin: 0 12px;
+        font-size: 16px;
+    }
+    > span.current{
+        border-color: $color-sub;
+        background-color: $color-sub;
+        color: #fff;
+    }
+    > a {
+        transition: border-color $duration $easing, color $duration $easing, background-color $duration $easing;
+
+        &:hover {
+            border-color: $color-main;
+            background-color: $color-main;
+            color: #fff;
+        }
+
+        &.nextpostslink,
+        &.prevpostslink {
+            width: 100px;
+            background-color: $color-sub;
+            border-color: $color-sub;
+            color: #fff;
+            &:hover {
+                background-color: $color-main;
+                border-color: $color-main;
+            }
+            &[disabled] {
+                opacity: .5;
+                cursor: default;
+                &:hover {
+                    background-color: $color-sub;
+                    border-color: $color-sub;
+                }
+            }
+        }
+    }
+}

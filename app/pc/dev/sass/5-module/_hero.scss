@@ -1,0 +1,110 @@
+/*
+#overview
+hero
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.hero {
+    width: 100%;
+    height: 100%;
+    min-width: $size-max + 80;
+    position: relative;
+    overflow: hidden;
+    visibility: hidden;
+    .hero-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+    }
+    .hero-news {
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        bottom: 0;
+    }
+    .hero-mark {
+        width: 100%;
+        height: 100%;
+        min-width: 1300px;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        .hero-mark-copy {
+            position: absolute;
+            z-index: 3;
+            top: 46%;
+            margin-top: -125px;
+            left: 200px;
+            transform: translateX(30px);
+            opacity: 0;
+        }
+        .hero-mark-object1 {
+            position: absolute;
+            z-index: 2;
+            top: 43.15%;
+            left: 150px;
+            margin-top: -(1347px/2);
+            transform: translateX(60px);
+            opacity: 0;
+        }
+        .hero-mark-object2 {
+            position: absolute;
+            z-index: 2;
+            top: 43.15%;
+            left: 0;
+            margin-top: -(1347px/2);
+            transform: translateX(60px);
+            opacity: 0;
+        }
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .hero-image-object {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        &.is-active {
+            display: block;
+            animation: scaling 10s;
+        }
+    }
+
+    //state
+    &.is-active {
+        visibility: visible;
+        .hero-mark-copy {
+            animation: fadeInSlide 1s .5s $easing both;
+        }
+        .hero-mark-object1 {
+            animation: fadeInSlide .85s .25s $easing both;
+        }
+        .hero-mark-object2 {
+            animation: fadeInSlideSub 1s 0s $easing both;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+<% var
+    id = "about-local",
+    title = "キスケの地域貢献｜",
+    description = "sample text,sample text",
+    keywords = "word1,word2,word3",
+    type = "article",
+    copy = "愛媛のためにできること。",
+    iconId = "local";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+<% var localData = [
+    {
+        title: "水不足時のトイレ・温泉の供給",
+        text: "数年に一度の間隔で水不足が起こる街、松山。水不足時や災害時には、地域の方がトイレやお風呂に困ることがないよう、天然温泉 キスケのゆの施設を一部開放して無料でご利用いただいています。"
+    },
+    {
+        title: "地元スポーツチームとのつながり",
+        text: "地域のスポーツチームに温泉利用を無料で提供したり、企業バスを貸し出したりするなどサポート活動を行っています。 大切にしているのは、スポンサーになることだけではなく、選手にも気軽に利用してもらえる環境づくりです。"
+    },
+    {
+        title: "地域イベント時の駐車場の貸出し",
+        text: "地域イベントには、キスケの店舗併設駐車場を開放します。パチンコWAOは地方祭時に神輿イベント会場に提供し、 JR松山駅前本社は近隣のイベント会場と提携しています。 私たちがメインでなくても、地域のイベントに少しでも関わりたい。そんな思いから、駐車場を提供させていただいています。"
+    },
+    {
+        title: "社会見学の場として施設を開放",
+        text: "キスケボウルやカラオケWAOでは、たびたび子供会のイベントが行われています。その際は、社会見学として設備の裏側が見学可能。 また、地元小学校の社会見学の場としても公開しています。<br>※写真はボウリング設備の裏側です。"
+    },
+    {
+        title: "パーク・アンド・ライドへの<br>駐車場の貸出し",
+        text: "パーク・アンド・ライドを推進するための取り組みのひとつとして、キスケBOXバイク駐車場を無料で開放しています。JR松山駅前に本社を構えるキスケとしては、渋滞緩和へ少しでも手助けをしたい思いなのです。"
+    },
+    {
+        title: "日本最大級の屋上緑化",
+        text: "キスケBOXの屋上緑化活動が、「第5回 三浦保環境賞 特別賞」に選定されました。「人も地球もハッピーにしたい」を合言葉に、CO2削減と地球温暖化に貢献しています。 そのほかにも、地域イベントへの協賛、清掃活動、エコキャップ運動、壁面緑化（CO2削減）、義援金 屋上緑化、太陽熱温水器の設置、LED照明など、環境に対しての貢献活動に特に力を入れています。"
+    }
+]; %>
+        <!--contents ここから-->
+        <% include module/_page-hero %>
+
+        <main>
+
+            <section class="contents l-space l-space-padding-top-small l-space-padding-bottom-xsmall">
+                <div class="contents-header headline headline-xsmall">
+                    <h1>
+                        愛媛と歩んで100年以上。<br>
+                        今後もともに、育っていきたいのです。
+                    </h1>
+                    <div class="headline-line"></div>
+                </div>
+                <div class="contents-image contents-image-top">
+                    <img src="image/about/about-local/about-local1.jpg" alt="地域貢献　イメージ図"/>
+                </div>
+                <div class="contents-body">
+                    <p>キスケは、創業者の父である日野喜助の時代から、愛媛を拠点に事業を続けてきました。<br>
+                        地域への社会的責任を果たして初めて、企業は利益を得ることを許されます。地方都市において、企業だけが発展をする、あるいは地域だけが発展をすることはあり得ません。ですから私たちは、キスケの発展とともに愛媛も発展する、そんな思いで事業を行っていきたいと考えています。<br>
+                        愛媛と歩んで、まもなく130年になります。これからも愛媛とともに育ち、発展していく意志が揺らぐことはありません。</p>
+                </div>
+            </section>
+
+            <section class="l-space l-space-foundation l-space-padding-top l-space-padding-bottom-xsmall">
+                <div class="headline headline-xsmall">
+                    <h1>地域のためにしてきたこと</h1>
+                    <div class="headline-line"></div>
+                </div>
+                <ul class="local-sections local-sections-position">
+                    <% for(var i=0; i< localData.length; i++) { %>
+                    <li>
+                        <section class="local-section">
+                            <img src="image/about/about-local/about-local<%= [i + 2] %>.jpg" alt=""/>
+                            <h1><%- localData[i].title %></h1>
+                            <p><%- localData[i].text %></p>
+                        </section>
+                    </li>
+                    <% } %>
+                    <li>
+                        <section class="local-section">
+                            <div class="local-section-video">
+                                <iframe width="480" height="270" src="http://www.ustream.tv/embed/10591640?html5ui" allowfullscreen webkitallowfullscreen scrolling="no" frameborder="0" style="border: 0 none transparent;"></iframe>
+                            </div>
+                            <h1>自然エネルギーの活用</h1>
+                            <p>太陽熱パネルの数は、日本最大級の335枚。重油使用量は「300リットル/日」、CO2は「300トン/年」の削減に成功しています。<br>
+                                なお、キスケのゆ 松山店では、太陽光でお湯を作っており、発熱量をリアルタイム中継でご覧いただくこともできます。</p>
+                        </section>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="l-space l-space-padding-top-large l-space-padding-bottom-little">
+                <% var animationNavi = "about"; %>
+                <% include module/_animation-navi %>
+            </div>
+
+        </main>
+        <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>

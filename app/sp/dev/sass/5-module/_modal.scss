@@ -1,0 +1,193 @@
+/*
+#overview
+modal
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $max-z;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $duration $easing;
+    .modal-inner {
+        width: 100%;
+        height: 290px;
+        position: absolute;
+        top: 50%;
+        margin-top: -145px;
+        z-index: 6;
+    }
+    .modal-list-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transform: rotateY(-90deg) scale(.8);
+        transition: all $duration $easing;
+        padding: 0 15px;
+    }
+    .modal-list {
+        font-size: 0;
+        position: relative;
+    }
+    .modal-item {
+        display: inline-block;
+        padding: 0 15px;
+        opacity: 0;
+        vertical-align: top;
+        transition: opacity $duration $easing;
+        &.is-current {
+            opacity: 1;
+        }
+    }
+    .modal-back {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .7);
+        position: absolute;
+        top: 0;
+        z-index: 5;
+        cursor: pointer;
+    }
+    .modal-navigation {
+        padding: 10px;
+        position: absolute;
+        z-index: 6;
+        bottom: -60px;
+
+        .arrow {
+            transition: border-color $duration $easing;
+            border-left-color: $color-border;
+        }
+
+        &.modal-navigation-prev {
+            left: -12px;
+        }
+        &.modal-navigation-next {
+            right: -12px;
+        }
+        &.is-disable .arrow {
+            border-left-color: $color-border;
+            opacity: .2;
+        }
+    }
+    .modal-close {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 15px;
+        top: -40px;
+
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 28px;
+            background-color: #fff;
+            position: absolute;
+            top: 3px;
+        }
+        &:before {
+            transform: rotate(-45deg);
+            left: 22px;
+            top: 1px;
+        }
+        &:after {
+            transform: rotate(45deg);
+            right: 8px;
+            top: 1px;
+        }
+    }
+
+    //state
+    &.is-active {
+        visibility: visible;
+        opacity: 1;
+        .modal-list-wrapper {
+            transform: rotateY(0) scale(1);
+        }
+    }
+
+    //スクロールできるタイプ
+    &.modal-scrolable {
+        .modal-list-wrapper {
+            backface-visibility: hidden;
+        }
+        .modal-inner {
+            position: relative;
+            backface-visibility: hidden;
+        }
+        .spa-figure {
+            position: relative;
+            backface-visibility: hidden;
+        }
+        .board {
+            display: block;
+            backface-visibility: hidden;
+            position: relative;
+        }
+        .ps-scrollbar-y-rail {
+            background: none !important;
+        }
+        .ps-scrollbar-y {
+            background-color: #000 !important;
+            width: 3px !important;
+            opacity: 1 !important;
+            border-radius: 0 !important;
+            left: 3px;
+        }
+        .ps-scrollbar-y-rail {
+            opacity: 1 !important;
+        }
+        .modal-board-inner {
+            position: relative;
+            overflow: hidden;
+        }
+    }
+
+    //ゆページ、BOXページのモーダル
+    &.modal-figure {
+        .modal-list-wrapper {
+            padding: 0;
+        }
+    }
+}
+
+//横向き
+.is-horizon .modal-inner {
+    * {
+        visibility: hidden;
+    }
+    &:before {
+        content: "この機能を使用するには\Aデバイスを縦向きの状態にしてください。";
+        display: block;
+        width: 100%;
+        white-space: pre;
+        visibility: visible;
+        color: #fff;
+        position: absolute;
+        z-index: $max-z + 1;
+        text-align: center;
+        line-height: 1.93;
+        top: 50%;
+        margin-top: -25px;
+        letter-spacing: .1em;
+    }
+    .modal-close {
+        visibility: visible;
+        top: 0;
+        z-index: $max-z + 1;
+    }
+}

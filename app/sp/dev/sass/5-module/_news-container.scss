@@ -1,0 +1,106 @@
+/*
+#overview
+news-container
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.news-container {
+    width: 100%;
+    padding: 0 15px;
+    background: #000;
+    //    .news-container-contents { }
+    .news-container-list {
+        padding-top: 6px;
+        > li {
+            padding: 8px 0 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .news-container-footer {
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    //ニュース記事詳細の下部に入るModifier
+    &.news-container-sub,
+    &.news-container-service {
+        padding: 0;
+        display: block;
+        background-color: #fff;
+        color: $color-default;
+
+        .news-container-header {
+            display: block;
+            width: 100%;
+            padding: 0;
+            border-right: 0;
+            > h1 {
+                letter-spacing: .05em;
+                color: $color-default;
+                font-weight: 700;
+                border: none;
+                margin-bottom: 4px;
+            }
+        }
+        .news-container-contents {
+            display: block;
+            padding: 0;
+        }
+        .news-container-list {
+            padding-top: 0;
+            border-top: 1px solid $color-border-light;
+            > li {
+                padding: 0;
+                margin-bottom: 0;
+                border-bottom: 1px solid $color-border-light;
+            }
+            //borderなし
+            &.news-container-list-without-border {
+                border-top: 0;
+            }
+        }
+        .news-container-title {
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 40px;
+        }
+    }
+
+    //service page
+    &.news-container-service {
+        padding: 36px 0 40px;
+        .news-container-header-sub {
+            margin-bottom: 14px;
+        }
+        .news-container-botton {
+            text-align: center;
+            width: 100%;
+            margin: 20px auto 0;
+        }
+    }
+
+    //margin
+    &.news-container-position {
+        margin-bottom: 40px;
+    }
+    &.news-container-position-small {
+        margin-bottom: 20px;
+    }
+    
+    //背景
+    &.news-container-foundation {
+        background-color: $color-foundation;
+    }
+}

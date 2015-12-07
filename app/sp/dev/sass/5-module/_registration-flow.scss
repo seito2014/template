@@ -1,0 +1,8 @@
+.registration-flow {
+    > li {
+        margin-bottom: 33px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

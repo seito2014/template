@@ -1,0 +1,54 @@
+//白背景で余白をもたせるコンテンツエリア
+
+.l-space {
+    width: 100%;
+    padding: 0 15px;
+    background-color: #fff;
+
+    //背景がグレー
+    &.l-space-foundation {
+        background-color: $color-foundation;
+    }
+    //左右のpaddingなし
+    &.l-space-no-paddig {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    //padding-top
+    &.l-space-padding-top-xlarge {
+        padding-top: 60px;
+    }
+    &.l-space-padding-top-large {
+        padding-top: 40px;
+    }
+    &.l-space-padding-top {
+        padding-top: 35px;
+    }
+    &.l-space-padding-top-middle {
+        padding-top: 30px;
+    }
+    &.l-space-padding-top-small {
+        padding-top: 27px;
+    }
+    &.l-space-padding-top-little {
+        padding-top: 20px;
+    }
+
+    //padding-bottom
+    &.l-space-padding-bottom {
+        padding-bottom: 60px;
+    }
+    &.l-space-padding-bottom-medium {
+        padding-bottom: 40px;
+    }
+    &.l-space-padding-bottom-small {
+        padding-bottom: 54px;
+    }
+    &.l-space-padding-bottom-xsmall {
+        padding-bottom: 33px;
+    }
+    &.l-space-padding-bottom-little {
+        padding-bottom: 20px;
+    }
+}

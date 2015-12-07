@@ -1,0 +1,42 @@
+/*
+#overview
+news-header
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.news-header {
+    background-color: $color-foundation;
+    padding: 78px 0 24px;
+    .news-header-tags {
+        font-size: 0;
+        margin: 0 -2px 3px;
+        > li {
+            display: inline-block;
+            margin: 2px;
+        }
+    }
+
+    .news-header-inner {
+        > time {
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            margin-bottom: 2px;
+        }
+        > h1 {
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.45;
+            &:first-letter {
+                color: $color-main;
+            }
+        }
+    }
+}

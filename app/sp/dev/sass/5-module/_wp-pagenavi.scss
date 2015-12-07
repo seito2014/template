@@ -1,0 +1,63 @@
+.wp-pagenavi{
+    text-align: center;
+    font-size: 0;
+    position: relative;
+
+    > a,
+    > span {
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 2px;
+        background-color: #fff;
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        text-align: center;
+        letter-spacing: .15em;
+        text-decoration: none;
+        color: $color-dark;
+        border: 1px solid $color-border;
+        margin: 0 2px;
+        font-size: 13px;
+    }
+    > span {
+        &.current {
+            border-color: $color-main;
+            color: $color-main;
+        }
+        &.page {
+            border: none;
+            width: 22px;
+        }
+    }
+    > a {
+        &.nextpostslink,
+        &.prevpostslink {
+            background-color: $color-main;
+            border-color: $color-main;
+            color: #fff;
+            &:hover {
+                background-color: $color-main;
+                border-color: $color-main;
+            }
+            &[disabled] {
+                opacity: .5;
+                cursor: default;
+                &:hover {
+                    background-color: $color-sub;
+                    border-color: $color-sub;
+                }
+            }
+        }
+    }
+    .arrow-reverse {
+        position: relative;
+        top: 0;
+        left: -3px;
+    }
+    .arrow {
+        position: relative;
+        top: 0;
+        right: -3px;
+    }
+}

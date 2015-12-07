@@ -14,23 +14,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!--viewport widthの値は、サイトの横幅 or device-width　を設定-->
-        <meta name="viewport" content="width=1000,minimum-scale=0,maximum-scale=10">
+        <meta name="viewport" content="width=1080,minimum-scale=0,maximum-scale=10">
 
         <!--SNS関連 ここから-->
         <meta property="fb:app_id" content="">
         <meta property="og:locale" content="ja_JP">
         <meta property="og:title" content="Title">
         <meta property="og:description" content="sample text,sample text">
-        <meta property="og:url" content="Title">
-        <meta property="og:site_name" content="">
+        <meta property="og:url" content="URL">
+        <meta property="og:site_name" content="SITE NAME">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="./images/ogp.png">
+        <meta property="og:image" content="./image/common/ogp.png">
         <!--SNS関連 ここまで-->
 
         <!--favicon,webclip ここから-->
-        <meta name="apple-mobile-web-app-title" content="">
-        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
-        <link rel="shortcut icon" href="images/favicon.ico">
+        <meta name="apple-mobile-web-app-title" content="SITE NAME">
+        <link rel="apple-touch-icon-precomposed" href="image/common/apple-touch-icon-precomposed.png">
+        <link rel="shortcut icon" href="image/common/favicon.ico">
         <!--favicon,webclip ここまで-->
 
         <!--css ここから-->
@@ -42,7 +42,7 @@
         <!--初めに読み込ませたいjs ここまで-->
     </head>
 
-    <body class="page-index">
+    <body>
         <div id="fb-root"></div>
 
         <!--
@@ -53,39 +53,41 @@
         <div class="for-old">お使いのOS・ブラウザでは、本サイトを適切に閲覧できない可能性があります。最新のブラウザをご利用ください。</div>
 
         <!--jsでパスの値が必要な場合に使うタグ-->
-        <input type="hidden" value="./" id="base-url">
+        <input type="hidden" value="./" id="js-base-url">
+
+        <div class="loading" id="js-loading">
+            <div class="loading-object"></div>
+        </div>
 
         <!--wrapper ここから-->
-        <div class="wrapper">
+        <div class="wrapper" id="wrapper">
             <!--header ここから-->
-            <header class="l-header"></header>
+            <header class="l-header " id="js-header">
+            </header>
             <!--header ここまで-->
 
+        <main>
             <!--contents ここから-->
-            <div class="l-contents">
-                <div class="l-contents-inner">
-                    <main class="l-main">
-
-                    </main>
-
-                                        <!--side ここから-->
-                    <aside class="l-sidebar"></aside>
-                    <!--side ここまで-->
-                </div>
-            </div>
             <!--contents ここまで-->
+        </main>
 
             <!--footer ここから-->
             <footer class="l-footer">
-                <small>Copyright &copy;</small>
             </footer>
             <!--footer ここまで-->
 
         </div>
         <!--wrapper ここまで-->
+
         <!--javascript ここから-->
         <script src="js/library.js"></script>
+
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
         <script src="js/app.js"></script>
+
+        
+        <script src="js/pages/index.js"></script>
+        
         <!--javascript ここまで-->
     </body>
 </html>

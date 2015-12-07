@@ -1,0 +1,121 @@
+<% var
+    id = "service-pachinko-mail-magazine",
+    title = "メールマガジン｜",
+    description = "sample text,sample text",
+    keywords = "word1,word2,word3",
+    type = "article",
+    copy = "",
+    iconId = "mail-magazine";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+        <!--contents ここから-->
+        <% include module/_page-hero %>
+
+        <main>
+
+            <div class="l-space l-space-padding-top l-space-padding-bottom-xsmall">
+                <section class="mail-magazine-section">
+                    <div class="mail-magazine-section-header headline headline-small">
+                        <h1>キスケPAO 小泉店 メールマガジン</h1>
+                        <div class="headline-line"></div>
+                    </div>
+                    <div class="mail-magazine-section-body">
+                        <p>メールマガジンでは、店舗ならではのお得な情報を定期的に配信しております。ぜひ、ご活用ください。</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="l-space l-space-foundation l-space-padding-top l-space-padding-bottom-xsmall">
+                <section class="mail-magazine-section">
+                    <div class="mail-magazine-section-header headline headline-small">
+                        <h1>登録方法</h1>
+                        <div class="headline-line"></div>
+                    </div>
+                    <ol class="registration-flow">
+                        <li>
+                            <dl class="flow-item">
+                                <dt>1.空メールを送信して仮登録をする</dt>
+                                <dd>下記メールアドレスまで、空メール(件名・本文とも未入力でOK)を送信してください。</dd>
+                                <dd>
+                                    <div class="mail-box">
+                                        <p class="mail-box-link">
+                                            <a href="mailto:reg19@kisuke-mm.com">
+                                                <i class="arrow arrow-primary arrow-large"></i>
+                                                <span>reg19@kisuke-mm.com</span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="flow-item">
+                                <dt>2.正式登録をする</dt>
+                                <dd>しばらくすると、送信したアドレスに｢登録のご案内｣メールが届きます。｢登録のご案内｣メールの手順に従って、正式登録を行って下さい。<br>
+                                    「登録のご案内」メールが届かない場合は、下記の「迷惑メール防止設定をされている方はこちら」をご確認下さい。</dd>
+                            </dl>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+
+            <div class="l-space l-space-padding-top l-space-padding-bottom-medium">
+                <section class="mail-magazine-section">
+                    <div class="mail-magazine-section-header-large headline headline-small">
+                        <h1>迷惑メール防止設定を<br>されている方はこちら</h1>
+                        <div class="headline-line"></div>
+                    </div>
+                    <div class="mail-magazine-section-body">
+                        <p>メールマガジン発行元のE-mailアドレスまたは、発行元ドメインからのメールを受信できるように設定をお願いします。</p>
+                    </div>
+                    <ul class="mail-magazine-section-list">
+                        <li>
+                            <div class="mail-box mail-box-no-border-bottom">
+                                <p class="mail-box-title">指定ドメイン許可設定</p>
+                                <p>kisuke-mm.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mail-box">
+                                <p class="mail-box-title">指定メールアドレス許可設定</p>
+                                <p>koizumi@kisuke-mm.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="l-space l-space-foundation l-space-padding-top l-space-padding-bottom-xsmall">
+                <section class="mail-magazine-section">
+                    <div class="mail-magazine-section-header headline headline-small">
+                        <h1>登録解除方法</h1>
+                        <div class="headline-line"></div>
+                    </div>
+                    <div class="mail-magazine-section-body">
+                        <p>下記メールアドレスまで、空メール(件名・本文とも未入力でOK)を送信してください。</p>
+                    </div>
+                    <div class="mail-magazine-section-list">
+                        <div class="mail-box">
+                            <p>
+                                <a href="mailto:can19@kisuke-mm.com">
+                                    <i class="arrow arrow-primary arrow-large"></i>
+                                    <span>can19@kisuke-mm.com</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="service-menu service-menu-padding-top-xlarge service-menu-padding-bottom">
+                <% var animationNavi = "service"; %>
+                <% include module/_animation-navi %>
+            </div>
+
+        </main>
+        <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>

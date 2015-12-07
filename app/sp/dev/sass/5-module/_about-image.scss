@@ -1,0 +1,98 @@
+/*
+#overview
+about-image
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.about-image {
+    display: inline-block;
+    position: relative;
+    .about-image-object {
+        background-image: url(#{$path-image}about/about-image.png);
+        background-repeat: no-repeat;
+        background-size: (730px/2) (300px/2);
+        display: block;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+
+        &.about-image-object1 {
+            width: 19px;
+            height: 24px;
+            background-position: -223px 0;
+            top: 35px;
+            left: -6px;
+            animation-delay: .1s;
+        }
+
+        &.about-image-object2 {
+            width: 19px;
+            height: 23px;
+            background-position: -247px 0;
+            top: 42px;
+            left: 44px;
+            animation-delay: .4s;
+        }
+
+        &.about-image-object3 {
+            width: 20px;
+            height: 25px;
+            background-position: -271px 0;
+            top: 30px;
+            left: 73px;
+            animation-delay: .2s;
+        }
+
+        &.about-image-object4 {
+            width: 19px;
+            height: 25px;
+            background-position: -295px 0;
+            top: 29px;
+            right: 78px;
+            animation-delay: .5s;
+        }
+
+        &.about-image-object5 {
+            width: 22px;
+            height: 22px;
+            background-position: -319px 0;
+            top: 41px;
+            right: 58px;
+            animation-delay: .3s;
+        }
+
+        &.about-image-object6 {
+            width: 21px;
+            height: 23px;
+            background-position: -345px 0;
+            top: 35px;
+            right: -2px;
+            animation-delay: .6s;
+        }
+
+        &.about-image-object-base {
+            width: 223px;
+            height: 150px;
+            background-position: 0 0;
+            position: relative;
+            z-index: 1;
+            opacity: 1;
+            animation: none !important;
+        }
+    }
+
+    //animation
+    &.is-active .about-image-object {
+        animation-name: fadeUp;
+        animation-duration: $duration;
+        animation-timing-function: $easing;
+        animation-fill-mode: both;
+    }
+}

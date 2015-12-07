@@ -1,0 +1,20 @@
+.contact-description {
+    line-height: 1.93;
+    padding: 0 15px;
+    background-color: #fff;
+
+    //error
+    &.contact-description-error {
+        color: $color-error;
+    }
+
+    //margin
+    &.contact-description-position {
+        padding-top: 33px;
+        padding-bottom: 14px;
+    }
+    &.contact-description-position-large {
+        padding-top: 33px;
+        padding-bottom: 33px;
+    }
+}

@@ -1,0 +1,13 @@
+.local-sections {
+    > li {
+        margin-top: 43px;
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+    }
+
+    //margin
+    &.local-sections-position {
+        margin-top: 13px;
+    }
+}

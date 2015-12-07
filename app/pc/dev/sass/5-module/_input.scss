@@ -1,0 +1,22 @@
+.input {
+    border: 1px solid $color-gray;
+    background-color: #ffffff;
+    font-weight: normal;
+    width: 500px;
+    height: 45px;
+    line-height: 43px;
+    padding: 7px 15px 8px;
+    &::placeholder {
+        font-family: $font-jp;
+        color: #b2b2b2;
+    }
+}
+
+//ie hack
+.ie .input {
+    line-height: 1;
+}
+
+.ie10 .input {
+    line-height: normal;
+}

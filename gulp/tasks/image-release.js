@@ -15,15 +15,28 @@ function taskImage(pathSrc,pathDest) {
         }))
         .pipe(gulp.dest(pathDest));
 }
+function taskCopy(pathSrc,pathDest) {
+    return gulp.src(pathSrc)
+        .pipe(plumber({
+            errorHandler: notify.onError('<%= error.message %>')
+        }))
+        .pipe(gulp.dest(pathDest));
+}
 
 gulp.task('image-min-pc', function () {
     taskImage(
         configPath.pc.image.src,
-        configPath.pc.image.release);
+        configPath.pc.image.release
+    );
 });
 
 gulp.task('image-min-sp', function () {
     taskImage(
-        configPath.sp.image.src,
-        configPath.sp.image.release);
+        [configPath.sp.image.src, '!' + configPath.sp.image + '/image/top/main/*'],
+        configPath.sp.image.release
+    );
+    taskCopy(
+        configPath.sp.image + '/image/top/main/*',
+        configPath.sp.image.release
+    );
 });

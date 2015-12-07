@@ -1,0 +1,30 @@
+/*
+#overview
+heading-sub
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.heading-sub {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.45;
+    position: relative;
+    padding: 0 5px 10px 14px;
+    &:before {
+        content: "";
+        display: block;
+        background-color: $color-default;
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}

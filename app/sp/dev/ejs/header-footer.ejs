@@ -1,0 +1,79 @@
+<% var
+    id = "header-footer",
+    title = "",
+    description = "sample text,sample text",
+    keywords = "word1,word2,word3",
+    type = "website";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+        <main>
+
+            <div style="height: 1000px; padding-top: 300px; text-align: center;">
+                サンプルのコンテンツエリア
+            </div>
+
+        </main>
+
+<% include layout/_footer %>
+
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script>
+            //メガメニュー
+            (function () {
+
+                'use strict';
+
+                var DURATION = 250;
+
+                var $menu;
+
+                $('.js-mega-trigger').on('mouseover mouseenter',function(){
+                    $menu = $(this);
+                    $menu.find('.js-mega-target').stop().fadeIn(DURATION);
+                })
+                    .on('mouseout mouseleave',function(){
+                        $menu.find('.js-mega-target').stop().fadeOut(DURATION);
+                    });
+
+            })();
+
+            //スムーススクロール
+            (function () {
+
+                'use strict';
+
+                var HEADER_HEIGHT = 200;
+                var $document = $(document);
+
+                $('a.js-scroll').click(function(event) {
+                    if(!$(this).hasClass('nolink')){
+                        var id = $(this).attr('href'),
+                            target = $(id).offset().top;
+                        mStopOn();
+                        $('html, body').animate({scrollTop:target - HEADER_HEIGHT}, 500 , mStopOff);
+                        event.preventDefault();
+                        return false;
+                    }
+                });
+
+                function mStopOn(){
+                    $document.on('DOMMouseScroll', preventDefault);
+                    $document.on('mousewheel', preventDefault);
+                }
+
+                function mStopOff(){
+                    $document.off('DOMMouseScroll', preventDefault);
+                    $document.off('mousewheel', preventDefault);
+                }
+
+                function preventDefault(event){
+                    event.preventDefault();
+                }
+
+            })();
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,145 @@
+                        <!--駅前店コンテンツ ここから-->
+                        <div class="tab-content-inner">
+                            <div class="l-space l-space-padding-top-large l-space-padding-bottom-medium">
+                                <div class="concept">
+
+                                    <% var spaData = [
+                                    { title: "大浴" },
+                                    { title: "ジェットバス" },
+                                    { title: "露天炭酸泉" },
+                                    { title: "脱衣所" },
+                                    { title: "休憩コーナー" },
+                                    { title: "無料マッサージ機" },
+                                    { title: "軽食コーナー" },
+                                    { title: "イベント" }
+                                    ];%>
+
+
+                                    <ul class="thumbnails thumbnails-margin grid grid-col2" id="js-modal-triggers-spa-matsuyama">
+                                        <% for(var i=0; i< spaData.length; i++) { %>
+                                        <li class="grid-item">
+                                            <a class="thumbnail" href="javascript:void(0);" data-index="<%= [i] %>">
+                                                <div class="thumbnail-image">
+                                                    <i class="thumbnail-icon sprite sprite-plus"></i>
+                                                    <img src="image/service/service-spa/matsuyama/thumbnail/spa<%= [i + 1] %>.jpg" alt=""/>
+                                                </div>
+                                                <p class="thumbnail-title"><%= spaData[i].title %></p>
+                                            </a>
+                                        </li>
+                                        <% } %>
+                                    </ul>
+
+                                    <section class="concept-contents contents">
+                                        <div class="contents-image">
+                                            <img src="image/service/service-spa/matsuyama/service-spa-matsuyama1.jpg" alt="天然温泉 キスケのゆ　イメージ1"/>
+                                        </div>
+                                        <div class="contents-body">
+                                            <h1 class="contents-header-sub">
+                                                愛媛最深1,700メートルの源泉です。
+                                            </h1>
+                                            <p>硫黄の香りと滑らかな肌触りを楽しめる泉質は『アルカリ性単純弱放射能泉』で、PH9.4という数値は、美人の湯であることを示しています。「ツルツル＆美白」の美肌効果がある天然温泉です。その源泉が贅沢に掛け流しで投入されている大浴層は、キスケのゆ松山店の、最大の魅力となっています。</p>
+                                        </div>
+                                    </section>
+                                    <section class="concept-contents contents">
+                                        <div class="contents-image">
+                                            <img src="image/service/service-spa/matsuyama/service-spa-matsuyama2.jpg" alt="天然温泉 キスケのゆ　イメージ2"/>
+                                        </div>
+                                        <div class="contents-body">
+                                            <h1 class="contents-header-sub">
+                                                露天炭酸泉のプチプチが<span>、</span>やみつきになります<span>。</span></h1>
+                                            <p>露天風呂の開放感を感じながらゆったりと浸かることのできる「高濃度炭酸泉」。炭酸が血液循環を良くし、動脈硬化の改善や皮膚疾患の緩和など多くの効果を期待できます。何より、肌に吸いつくプチプチの泡の感触が楽しく、やみつきになること間違いなしです。</p>
+                                        </div>
+
+                                    </section>
+                                    <section class="concept-contents contents">
+                                        <div class="contents-image">
+                                            <img src="image/service/service-spa/matsuyama/service-spa-matsuyama3.jpg" alt="天然温泉 キスケのゆ　イメージ3"/>
+                                        </div>
+                                        <div class="contents-body">
+                                            <h1 class="contents-header-sub">
+                                                朝風呂で、1日を快適に。
+                                            </h1>
+                                            <p>土日祝は、火曜日から日曜日まで連日、朝5時より朝風呂営業を行っています（月曜日のみ朝10時開店）。夜勤明けで疲れを取りたい方、早朝の運動後に汗を流したい方、出勤前にリフレッシュしたい方など、様々なお客様にご好評をいただいているサービスです。キスケのゆで朝からさっぱりすれば、1日を快適に過ごしていただけます。</p>
+                                        </div>
+                                    </section>
+
+                                    <section class="service-data">
+                                        <div class="service-data-header-small headline headline-small">
+                                            <h1>店舗概要</h1>
+                                            <div class="headline-line"></div>
+                                        </div>
+                                        <table class="table">
+                                            <tr>
+                                                <th class="table-th">所在地</th>
+                                                <td class="table-td">
+                                                    <div class="google-map">
+                                                        <address>愛媛県松山市宮田町4 ( JR 松山駅前)<br>キスケBOX1F</address>
+                                                        <div class="google-map-object" id="js-map-matsuyama"
+                                                             data-lat="33.8412833"
+                                                             data-lng="132.7529339"
+                                                             data-pin="default"
+                                                            ></div>
+                                                        <p class="google-map-link">
+                                                            <a class="button button-dark" href="http://maps.google.com/maps?q=33.8412833,132.7529339" target="_blank">
+                                                                <span>Googleマップを開く</span>
+                                                                <i class="button-dark-blank sprite sprite-blank-small"></i>
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="table-th">営業時間</th>
+                                                <td class="table-td">【火～日、祝】<br>
+                                                    5:00～翌2:00（受付終了1:00）<br>
+                                                    ※月曜が祝日の場合は火曜日が10:00～翌2:00（受付終了1:00）<br>
+                                                    【月曜日】（朝風呂休み）<br>
+                                                    10:00～翌2:00（受付終了1:00）</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="table-th">休日</th>
+                                                <td class="table-td">年中無休</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="table-th">TEL</th>
+                                                <td class="table-td">089-998-3300</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="table-th">駐車場</th>
+                                                <td class="table-td">1,109台(24時間営業)</td>
+                                            </tr>
+                                        </table>
+                                        <div class="service-link">
+                                            <p>ご利用料金やイベント情報など、<br>店舗の詳しい情報はこちらから</p>
+
+                                            <a class="section-button button button-large button-full" href="#">
+                                                <span class="button-text">天然温泉 キスケのゆ 松山店<br>サービスページへ</span>
+                                                <i class="button-arrow arrow arrow-large"></i>
+                                                <div class="button-effect">
+                                                    <span class="button-effect-object-a"></span>
+                                                    <span class="button-effect-object-b"></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </section>
+
+                                </div>
+                            </div>
+
+                            <% var newsContainerServiceData = {
+                            newsContainerServiceClass: "news-container-foundation",
+                            title: "天然温泉 キスケのゆニュース"
+                            };%>
+                            <% include ./_news-container-service %>
+
+                            <% var socialSectionData = {
+                            socialSectionClass: "social-section-light",
+                            facebook: true,
+                            twitter: false,
+                            mailMagazine: true,
+                            line: false,
+                            instagram: false
+                            };%>
+                            <% include ./_social-section %>
+                        </div>
+                        <!--駅前店コンテンツ ここまで-->

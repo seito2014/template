@@ -1,0 +1,73 @@
+<% var
+    id = "service-karaoke",
+    title = "カラオケWAO｜",
+    description = "sample text,sample text",
+    keywords = "word1,word2,word3",
+    type = "article",
+    copy = '大きくて<span class="page-hero-font-a">、</span>おいしくて<span class="page-hero-font-a">、</span>あたらしい。',
+    iconId = "karaoke";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+        <!--contents ここから-->
+        <% include module/_page-hero %>
+
+        <main>
+
+            <div class="tab" id="js-big-tab-karaoke">
+                <!--tab-triggers ここから-->
+                <ul class="tab-triggers grid grid-col2">
+                    <li class="tab-trigger grid-item">
+                        <a class="tab-trigger-link js-tab-ekimae is-active" data-group="js-tab-ekimae" href="#js-ekimae">
+                            <span>駅前店<span>キスケBOX内</span></span>
+                            <i class="tab-trigger-line"></i>
+                        </a>
+                    </li>
+                    <li class="tab-trigger grid-item">
+                        <a class="tab-trigger-link js-tab-imabari" data-group="js-tab-imabari" href="#js-imabari">
+                            <span>今治店</span>
+                            <i class="tab-trigger-line"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!--tab-triggers ここまで-->
+
+                <!--tab-contents ここから-->
+                <div class="tab-contents">
+                    <div class="tab-content is-active" id="js-ekimae">
+                        <% include module/_service-karaoke-ekimae %>
+                    </div>
+                    <div class="tab-content" id="js-imabari">
+                        <% include module/_service-karaoke-imabari %>
+                    </div>
+                </div>
+                <!--tab-contents ここまで-->
+
+                <!--tab-triggers ここから-->
+                <ul class="tab-triggers grid grid-col2">
+                    <li class="tab-trigger grid-item">
+                        <a class="tab-trigger-link js-tab-ekimae is-active" data-group="js-tab-ekimae" href="#js-ekimae">
+                            <span>駅前店<span>キスケBOX内</span></span>
+                            <i class="tab-trigger-line"></i>
+                        </a>
+                    </li>
+                    <li class="tab-trigger grid-item">
+                        <a class="tab-trigger-link js-tab-imabari" data-group="js-tab-imabari" href="#js-imabari">
+                            <span>今治店</span>
+                            <i class="tab-trigger-line"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!--tab-triggers ここまで-->
+            </div>
+
+            <div class="service-menu service-menu-padding-top service-menu-padding-bottom">
+                <% var animationNavi = "service"; %>
+                <% include module/_animation-navi %>
+            </div>
+        </main>
+        <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>

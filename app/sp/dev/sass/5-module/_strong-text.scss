@@ -1,0 +1,9 @@
+.strong-text {
+    color: $color-main;
+    font-size: 15px;
+    font-weight: 700;
+    //size
+    &.strong-text-small {
+        font-size: 13px;
+    }
+}

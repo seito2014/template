@@ -1,0 +1,61 @@
+/*
+#overview
+recruit-link
+
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+
+.recruit-link {
+    .recruit-link-list {
+        > li {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .recruit-link-item {
+        display: block;
+        position: relative;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+    .recruit-link-overlay {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        > p {
+            color: #fff;
+            font-size: 15px;
+            line-height: 1.75;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 44.82%;
+            margin-top: -29px;
+        }
+    }
+    .recruit-link-image {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 1;
+    }
+    .recruit-link-icon {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        z-index: 2;
+        bottom: 8px;
+        right: 10px;
+    }
+}

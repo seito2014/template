@@ -1,0 +1,63 @@
+.card {
+    .card-image {
+        width: 100%;
+        margin-bottom: 9px;
+    }
+    .card-title {
+        > a {
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 700;
+            color: $color-default;
+            text-decoration: none;
+            position: relative;
+            padding: 10px 14px;
+            //state
+            &.is-active .card-title-arrow-inner {
+                transform: translate3d(0, -22px, 0);
+            }
+            .card-title-arrow {
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                width: 10px;
+                height: 10px;
+                overflow: hidden;
+            }
+            .card-title-arrow-inner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: transform $duration $easing;
+            }
+        }
+    }
+    .card-title-arrow {
+        position: absolute;
+        right: 17px;
+        top: 17px;
+    }
+    .card-body {
+        overflow: hidden;
+        height: 0;
+        transition: height $duration $easing;
+    }
+    .card-body-inner {
+        border-top: 1px solid $color-border;
+        padding: 15px;
+    }
+    .card-description {
+        > p {
+            font-size: 13px;
+        }
+        > small {
+            display: block;
+            font-size: 10px;
+            margin: 4px 0 0;
+        }
+    }
+    .card-description-link {
+        margin-top: 5px;
+    }
+}

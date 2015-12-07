@@ -49,6 +49,7 @@
     "gulp-iconfont": "^1.0.0",
     "gulp-consolidate": "^0.1.2",
     "underscore": "^1.8.3",
-    "gulp-frontnote": "^1.0.1"
+    "gulp-frontnote": "^1.0.1",
+    "gulp-prettify": "~0.3.0"
   }
 }

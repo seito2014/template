@@ -1,0 +1,52 @@
+<% var
+    id = "about-philosophy",
+    title = "キスケの企業理念｜",
+    description = "sample text,sample text",
+    keywords = "word1,word2,word3",
+    type = "article",
+    copy = "",
+    iconId = "philosophy";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+        <!--contents ここから-->
+        <% include module/_page-hero %>
+
+        <main class="l-space l-space-padding-top-middle l-space-padding-bottom-little">
+
+            <section class="philosophy-section">
+
+                <img class="philosophy-section-image" src="image/about/about-philosophy/about-philosophy1.jpg" alt="キスケの企業理念 イメージ"/>
+                <div class="philosophy-section-header headline headline-large" id="js-philosophy-headline">
+                    <h1>
+                        <img src="image/about/about-philosophy/about-philosophy-heading.png" width="261" height="21" alt="迷ったら、お客様のために。"/>
+                    </h1>
+                    <div class="headline-line"></div>
+                </div>
+
+                <div class="philosophy-section-body">
+                    <p id="js-philosophy-text0">「地域余暇の創造」という言葉をよく使うのですが、余暇とは「楽しいこと」と言えるかもしれません。<br>
+                        楽しいことには、その瞬間を彩り、明日への活力になっていく力がある。私はそう信じています。
+                    </p>
+                    <p id="js-philosophy-text1">
+                        地域の「楽しい」を生み出すことは、目の前のお客様の「楽しい」を生み出し、その総和を広げていくことでしか成し得ません。ですから、私を含めた一人ひとりが、常にお客様の気持ちを想像し、察し、行動していくことが大切です。「常に」です。<br>
+                        お客様の考えや興味関心は、時代の流れとともに日々変化をしていきます。昨日は通用したことが、明日通用するとは限らない。<br>
+                        そんな危機感を抱きながら、お客様の気持ちに向き合っていきたいのです。
+                    </p>
+                    <p id="js-philosophy-text2">
+                        とても地道で、極めてシンプルなことですが、昭和27年の設立より、ずっと守られてきた伝統。これからも守り続けていくことが、私の使命です。
+                    </p>
+                    <p id="js-philosophy-text3">迷ったら、お客様のために。</p>
+                    <p id="js-philosophy-text4">これからも、キスケから生み出される「楽しいこと」に、どうぞご期待ください。</p>
+                </div>
+            </section>
+
+            <% var animationNavi = "about"; %>
+            <% include module/_animation-navi %>
+
+        </main>
+        <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>

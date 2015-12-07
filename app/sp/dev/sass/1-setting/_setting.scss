@@ -8,11 +8,18 @@ $default-scale: 1;
 //path
 $path-image: "../image/";
 $path-sprite: "../image/sprite/dest/";
+$path-font: "../font/";
 
 // clum width
 $gutter: 0;
-$size-max: 100%;
+$size-max: 1000px + (40*2);
 $size-min: 320px;
+$base-font-size: 13;
+$base-line-height: 1.95;
+
+$duration: .35s;
+$easing: ease-in-out;
+$delay: .35s;
 
 //speed
 $speed: 0.35s;

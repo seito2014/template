@@ -9,6 +9,7 @@
     "modernizer": "~2.8.2"
   },
   "devDependencies": {
-    "jquery": "1"
+    "jquery": "1",
+    "slick": "*"
   }
 }

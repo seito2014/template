@@ -1,0 +1,16 @@
+.flow-item {
+    > dt {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 700;
+        &:first-letter {
+            color: $color-main;
+        }
+    }
+    > dd {
+        margin-top: 11px;
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+}

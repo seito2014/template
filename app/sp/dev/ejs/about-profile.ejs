@@ -1,0 +1,241 @@
+<% var
+    id = "about-profile",
+    title = "キスケの企業情報｜",
+    description = "sample text,sample text",
+    keywords = "word1,word2,word3",
+    type = "article",
+    copy = "",
+    iconId = "profile";
+%>
+<% include layout/_head %>
+<% include layout/_header %>
+
+        <!--contents ここから-->
+        <% include module/_page-hero %>
+
+        <main>
+
+            <section class="accordion js-accordion">
+                <a class="accordion-parent js-accordion-trigger" href="javascript:void(0);" data-target="js-head">
+                    <h1>キスケ本社</h1>
+                    <div class="accordion-arrow">
+                        <div class="accordion-arrow-inner">
+                            <i class="arrow arrow-sub arrow-bottom"></i>
+                            <i class="arrow arrow-sub arrow-top"></i>
+                        </div>
+                    </div>
+                </a>
+                <div class="accordion-children is-loading" id="js-head">
+                    <div class="accordion-children-inner">
+                        <table class="table">
+                            <tr>
+                                <th class="table-th">会社名</th>
+                                <td class="table-td">キスケ株式会社</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">事業内容</th>
+                                <td class="table-td">
+                                    ＜アミューズメント事業＞<br>
+                                    ■キスケボウル<br>
+                                    ■キスケカラオケWAO<br>
+                                    松山、今治<br>
+                                    ■キスケのゆ（天然温泉）<br>
+                                    ■キスケ麻雀クラブJAO<br>
+                                    ■キスケPAO（パチンコ）<br>
+                                    PAO JR松山駅前店、PAO東雲店、PAO松前店、PAO小坂店、PAO今治本店、PAO小泉店、PAO鳥生店、<br>
+                                    PAO中寺店<br>
+                                    <br>
+                                    ＜不動産事業＞<br>
+                                    ■マンションKBコート<br>
+                                    ■キスケビル<br>
+                                    ■東京オフィスビル<br>
+                                    ■キスケパーキング<br>
+                                    ■ロードサイド物件<br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">所在地</th>
+                                <td class="table-td">
+                                    <div class="google-map">
+                                        <address>〒790-0066<br>愛媛県松山市宮田町4（JR松山駅前）<br>キスケボックス 2F</address>
+                                        <div class="google-map-object" id="js-map-head"
+                                             data-lat="33.8412833"
+                                             data-lng="132.7529339"
+                                             data-pin="default"
+                                            ></div>
+                                        <a class="button button-dark" href="http://maps.google.com/maps?q=33.8412833,132.7529339" target="_blank">
+                                            <span>Googleマップを開く</span>
+                                            <i class="button-dark-blank sprite sprite-blank-small"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">アクセス</th>
+                                <td class="table-td">JR「松山駅」徒歩1分</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">TEL／FAX</th>
+                                <td class="table-td">TEL：089-921-0133 ／ FAX：089-921-0135</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">営業時間</th>
+                                <td class="table-td">9:00〜18:00　※不動産部は 〜19:00</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">定休日</th>
+                                <td class="table-td">土、日、祭日</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">創立</th>
+                                <td class="table-td">昭和27年</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">設立</th>
+                                <td class="table-td">昭和45年</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">代表者</th>
+                                <td class="table-td">代表取締役　山路義則</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">資本金</th>
+                                <td class="table-td">2,005万円</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">売上高</th>
+                                <td class="table-td">598億円(平成26年3月末)</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">従業員数</th>
+                                <td class="table-td">249名</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="accordion js-accordion">
+                <a class="accordion-parent js-accordion-trigger" href="javascript:void(0);" data-target="js-tokyo">
+                    <h1>東京営業所</h1>
+                    <div class="accordion-arrow">
+                        <div class="accordion-arrow-inner">
+                            <i class="arrow arrow-sub arrow-bottom"></i>
+                            <i class="arrow arrow-sub arrow-top"></i>
+                        </div>
+                    </div>
+                </a>
+                <div class="accordion-children is-loading" id="js-tokyo">
+                    <div class="accordion-children-inner">
+                        <table class="table">
+                            <tr>
+                                <th class="table-th">名称</th>
+                                <td class="table-td">キスケ株式会社 東京営業所</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">所在地</th>
+                                <td class="table-td">
+                                    <div class="google-map">
+                                        <address>〒101-0051 東京都千代田区神田神保町3-25-11 九段中央ビル8F</address>
+                                        <div class="google-map-object" id="js-map-tokyo"
+                                             data-lat="35.6946082"
+                                             data-lng="139.7539618"
+                                             data-pin="default"
+                                            ></div>
+                                        <a class="button button-dark" href="http://maps.google.com/maps?q=35.6946082,139.7539618" target="_blank">
+                                            <span>Googleマップを開く</span>
+                                            <i class="button-dark-blank sprite sprite-blank-small"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">アクセス</th>
+                                <td class="table-td">都営新宿線、東西線、半蔵門線「九段下駅」 徒歩3分<br>
+                                    都営三田線、都営新宿線、半蔵門線「神保町駅」 徒歩5分</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">TEL／FAX</th>
+                                <td class="table-td">TEL：03-3239-312 ／ FAX：03-3265-1252</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">営業時間</th>
+                                <td class="table-td">9:00〜18:00</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">定休日</th>
+                                <td class="table-td">土、日、祭日</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">URL</th>
+                                <td class="table-td">
+                                    <a href="http://tokyo-kisuke.com/" target="_blank">
+                                        <i class="arrow arrow-primary arrow-large"></i>http://tokyo-kisuke.com/
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="accordion js-accordion">
+                <a class="accordion-parent js-accordion-trigger" href="javascript:void(0);" data-target="js-etc">
+                    <h1>関連会社</h1>
+                    <div class="accordion-arrow">
+                        <div class="accordion-arrow-inner">
+                            <i class="arrow arrow-sub arrow-bottom"></i>
+                            <i class="arrow arrow-sub arrow-top"></i>
+                        </div>
+                    </div>
+                </a>
+                <div class="accordion-children is-loading" id="js-etc">
+                    <div class="accordion-children-inner">
+                        <table class="table">
+                            <tr>
+                                <th class="table-th">名称</th>
+                                <td class="table-td">株式会社 呑吐樋</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">事業内容</th>
+                                <td class="table-td">不動産事業、労働者派遣事業、有料職業紹介事業</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">所在地</th>
+                                <td class="table-td">
+                                    <address>
+                                        ＜本社＞<br>
+                                        〒794-0026 愛媛県今治市別宮町1-2-4
+                                    </address>
+                                    <br>
+                                    <address>
+                                        ＜松山支店＞<br>
+                                        〒790-0066 愛媛県松山市宮田町4番地
+                                    </address>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">TEL／FAX</th>
+                                <td class="table-td">TEL：089-998-3800／FAX：089-921-0135</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">営業時間</th>
+                                <td class="table-td">9:00〜18:00</td>
+                            </tr>
+                            <tr>
+                                <th class="table-th">定休日</th>
+                                <td class="table-td">土、日、祭日</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <div class="l-space l-space-padding-top-xlarge l-space-padding-bottom-little">
+                <% var animationNavi = "about"; %>
+                <% include module/_animation-navi %>
+            </div>
+
+        </main>
+        <!--contents ここまで-->
+
+<% include layout/_footer %>
+<% include layout/_script %>

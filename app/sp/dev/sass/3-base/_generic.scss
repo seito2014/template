@@ -1,9 +1,15 @@
 * {
     box-sizing: border-box;
+    font-size: $base-font-size + px;
+    line-height: $base-line-height;
+    letter-spacing: 0.05em;
+}
+br {
+    font-size: 0;
 }
 
 ::selection {
-    background: #000;
+    background: $color-border;
     color: #fff;
 }
 
@@ -11,17 +17,15 @@ html {
     font-size: 62.5%;
     min-height: 100%;
     width: 100%;
-    min-width: $size-max;
 }
 
 body {
-    @include rem(15);
-    line-height: 1.6;
+    font-size: $base-font-size + px;
+    line-height: $base-line-height;
     font-family: $font-jp;
     background: $color-foundation;
     color: $color-default;
     width: 100%;
-    min-width: $size-max;
 }
 
 input,
@@ -43,7 +47,33 @@ aside {
     }
 }
 
+a {
+    color: $color-main;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 .wrapper {
     width: 100%;
-    min-width: $size-max;
+}
+
+.for-no-js,
+.for-old {
+    text-align: center;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    z-index: $max-z + 1;
+}
+
+.for-old {
+    display: none;
+
+    .lt-ie9 & {
+        display: block;
+    }
 }
