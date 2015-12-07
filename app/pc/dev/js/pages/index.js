@@ -6,7 +6,7 @@
     var $window = $(window);
     var controller = new ScrollMagic();
     var scene;
-    var NEWS_HEIGHT = 67;
+    var NEWS_HEIGHT = 65;
 
     //scrollMagic設定
     function scrollMagicInit() {

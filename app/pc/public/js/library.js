@@ -101,10 +101,6 @@
 	//外部jsファイルを読み込み
 	window.jQuery = window.$ = __webpack_require__(4);
 
-	var ScrollMagicObject = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"ScrollMagic\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	window.ScrollMagic = ScrollMagicObject.Controller;
-	window.ScrollScene = ScrollMagicObject.Scene;
-
 	var slickObject = __webpack_require__(5);
 	window.slick = slickObject;
 
