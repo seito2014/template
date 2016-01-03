@@ -10,10 +10,7 @@ module.exports = {
         extensions: ['', '.js', '.html'],
         alias: {
             bower: 'bower_components',
-            jquery: __dirname + '/../bower_components/jquery/dist/jquery.js',
-            ScrollMagic: __dirname + '/../bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-            ScrollMagicPlugin: __dirname + '/../bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
-            ScrollMagicDebug: __dirname + '/../bower_components/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js'
+            jquery: __dirname + '/../bower_components/jquery/dist/jquery.js'
         }
     },
     plugins: [

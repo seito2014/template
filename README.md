@@ -1,14 +1,8 @@
-#キスケさん開発データ
-
-##注意事項
-一部の環境でwebpackが上手く動かず、jsエラーを吐くことがあるようです。  
-お手数ですが、その場合はgulpを起動して監視を走らせた状態で、 dev/js/module/ 内のJSファイルをどれでもいいので編集して保存してください。  
-すると上手くコンパイルされます。
+#Template
 
 ##git
 
 + master ... 開発＆納品ブランチ。基本的にはほとんどここで開発
-+ old-formar-diff ... 旧サイトにリニューアル後サイトのheader, footerを移植するための開発用ブランチ
 
 ##まず最初にすること
 1. "npm i"でgulpが動くようにする
@@ -80,43 +74,16 @@ htmlhint(htmlのバリデート)を作動
 + gulp sprite-pc/gulp sprite-sp  
 スプライト画像を生成する。具体的には以下の内容を行います。  
 1./sprite/src　にある画像をスプライト化して、 /sprite/dist　にsprite.pngとして出力  
-2./sass/sprite/　に、1で出力したsprite.pngに対応したsprite.scssを出力  
+2./sass/sprite/　に、1で出力したsprite.pngに対応した_sprite.scssを出力  
 ※このタスクではスプライト画像は1つしか生成できません（sprite.png）。これ以外にも用意したい場合は手動で用意する必要があります。
-
-+ gulp iconfont-pc/gulp iconfont-sp
-Web fontを生成する。具体的には以下の内容を行います。  
-1./iconfont/src　にあるSVG画像をフォント化して、 /iconfont/dist　に各種fontデータとして出力  
-2./sass/iconfont/　に、1で出力したフォントデータに対応したiconfont.scssを出力
-※このタスクではデフォルトではフォントデータは1つしか生成できません。複数用意したい場合はカスタマイズする必要があります。
 
 + gulp style-min-pc/ gulp style-min-sp
 + gulp script-min-pc/ gulp script-min-sp
 + gulp image-min-pc/ gulp image-min-sp
 css,js,画像を圧縮してrelease/に出力する
 
-+ gulp release/ gulp release-sp
++ gulp release-pc/ gulp release-sp
 css,js,画像圧縮を一括で行い、release/に出力する
-
-##アイコン、スプライトについて
-なるべくsprite.png,_sprite.scssにまとめるのが好ましいですが、1枚にまとめるのは限界もあるので、必要があれば別ファイルで用意するようお願いします。  
-ちなみに、以下のデータは分割して運用することが決定しています。  
-
-##JSプラグインについて
-外部のJSプラグインを用いる際は極力bowerで入れ、webpackを使ってください。
-プラグインによってはwebpackが動かないなどの問題があるかもしれません。
-その場合はlib/フォルダに該当のjsプラグインを保存し、普通に読み込ませてください。
-
-##git運用
-
-+ hotfix ... 緊急修正用ブランチ。リリース後に発生してしまった不具合は個々で解消する 
-
-+ master ... 納品用ブランチ。
-
-+ release ... 納品準備ブランチ。納品に含めないデータの削除、データの圧縮などはここで行う
-
-+ develop ... 作業者全員の静的データの開発ブランチ
-
-+ feature/ ... 各機能、部分ごとに作業者が開発を行うブランチ
 
 ##コーディングルール
 
@@ -138,76 +105,23 @@ css,js,画像圧縮を一括で行い、release/に出力する
 Sassのextendは依存関係がややこしくなるため、使わないようお願いします。
 例外として、以下の場合のみ使用許可します。
 
-+ 記事ページ(news-detail.html)の記事内のセレクタにスタイルをあてたい場合
-+ _utill.scss内のパーシャルクラス
+###プレフィックス
 
-####継承クラス
-クラス名は、親クラスの名前を中に含める「継承クラス」を用いて命名していただきたく思います。
-```ex
-<aside class="card">
-	<div class="card-thumbnail">
-		<img class="card-thumbnail-image" src="" alt="">
-	</div>
-	<h1 class="card-heading">Card heading</h1>
-</aside>
-```
-これはクラスのバッティングを防ぐのと、HTML構造を明確にするためです。
-
-また、バリエーション違いをつくるためのクラス（Modifier,スキン, サブモジュールに該当するもの）にもこのルールは適応してください。
-```ex
-<aside class="card card-type-a">...</aside>
-<aside class="card card-type-b">...</aside>
-```
-
-####ステート
-ステートはJavaScriptの操作によって見た目が変わるスタイルのことを指します。
-タブボタンのアクティブ状態のときのクラスや、エラー状態のinputなどに用います。
-
-```ex
-<ul class="tab">
-	<li class="tab-item is-active">
-		<a class="tab-link" href="">Tab1</a>
-	</li>
-	<li class="tab-item">
-		<a class="tab-link" href="">Tab2</a>
-	</li>
-	<li class="tab-item">
-		<a class="tab-link" href="">Tab3</a>
-	</li>
-</ul>
-```
-```ex
-<input class="input is-error" type="text">
-```
-
-このクラスを以下の点に注意して使用してください。
-#####クラス名にはプレフィックス`.is-`を用いる
-#####!importantを使用してもOK
-#####単独では使わず、複数クラスでのみ用いる
-◯ `.tab-link.is-active {...}`  
-☓ `..is-active {...}`
-
-####セレクタの指定
-子孫セレクタの指定は使わないようお願いします。
-（スタイルのバッティングを防ぐため）
-小セレクタなどの使用はOKです。
-☓`.card-thumbnail img`  
-◯`.card-thumbnail > img`
-
-####JSのフック
-JavaScriptのフックにはid,またはプレフィックス`.js-`を含むクラスを用いてください。
-また、これらのid,クラスはJSのフックにのみ用いてください。
-役割を明確に分けるため、スタイルはあてないでください。
++ layout = "l-"
++ utility = "u-"
++ margin = "m-"
++ JSのフックに使うID,クラス = "js-"
++ JSの操作によってスタイルを変える場合のクラス = "is-"
 
 ###CSSのカテゴライズ
-
-####tool
-関数を設定します。
-mixin,animationの@keyframesなど。
 
 ####setting
 変数を設定するCSSです。
 color,font-family,その他数字などを設定します。
+
+####tool
+関数を設定します。
+mixin,animationの@keyframesなど。
 
 ####base
 Webサイト全体の基本となるCSS。
@@ -240,15 +154,20 @@ layout/_sidebar.scss
 その他、サイトを構成する部品となる要素全て。
 
 ####utility
-汎用性があり、使いまわせるCSSおよびクラス。
-ただし、このクラスにはそれとわかるようプレフィックス`.u-`をつけてください。
-また、このutilityのみ、略称OKとします。
++ utility ... 汎用性があり、使いまわせるCSSおよびクラス。
++ margin ... Block間のmarginをとるためのスタイル。本サイトは4の倍数が基本になっているので、4の倍数ごとのクラスが用意されています。
 
-例）
-
+#####例
 ```
-.u-mb10 {margin-bottom: 10px;}
-.u-clearfix {/*clearfixの記述は長いので省略*/}
+.m-top1 {
+    margin-top: 4px;
+}
+.m-top2 {
+    margin-top: 8px;
+}
+.m-top3 {
+    margin-top: 12px;
+}
 ```
 
 ####library
@@ -259,29 +178,29 @@ layout/_sidebar.scss
 ディレクトリ構成はSMACSSやITCSS(https://speakerdeck.com/dafed/managing-css-projects-with-itcss)に影響を受けています。
 
 ```
-+-1-tool/  
- |-_mixin.scss  
- |-_animation.scss  
-+-2-setting/  
++-1-setting/  
  |-_color.scss  
  |-_font.scss  
- |-_config.scss  
+ |-_config.scss 
++-2-tool/  
+ |-_mixin.scss  
+ |-_animation.scss 
 +-3-base/  
  |-_reset.scss  
- |-_generic.scss  
+ |-_generic.scss
 +-4-layout/  
  |-_header.scss  
- |-_footer.scss  
-+-5-module/  
+ |-_footer.scss
++-5-module/
  |-_button.scss  
  |-_card.scss  
  |-_container.scss  
  |-_gallery.scss  
  |-...etc  
-+-6-utility  
- |-_utility.scss  
++-6-utility
+ |-_utility.scss
+ |-_margin.scss
 +-7-library  
- |-_grid.scss  
  |-_bxslider.scss  
   
 style.scss
@@ -291,57 +210,14 @@ style.scss
 
 ###その他
 
-####margin
-module自体にmarginは付けないでください。  
-moduleを他のページでも使いまわそうとした際にmarginが設定されていると意図しない間隔ができてしまいます。  
-module同士の間隔を開けるためのmarginは「utility」またはOOCSSライクな書き方で指定してください。  
-(utilityはキリの良い数字の場合、OOCSSライクな書き方はキリの悪い数字、と分けるといいです。）
+####JSの扱い
+LIGの基本ルールに従い、記述は純粋なJSの書き方をするものとします。  
+TypeScriptなどのAltJSは使用を禁止します。  
+また、JSファイルは以下の3パターンに分けてコーディングします。  
 
-#####例）
-
-```
-<div class="main-slider main-slider-layout">  
-	...  
-</div>
-  
-<section class="section section-layout">  
-    ...  
-</section>  
-  
-<footer class="footer u-mt50">  
-    ...  
-</footer>
-```
-
-_main-slider.scss
-
-```
-.main-slider {
-
-	&.main-slider-layout {
-		margin-bottom: 22px;	
-	}
-}
-```
-
-_section.scss
-
-```
-.section {
-	
-	&.section-layout {
-		margin-bottom: 53px;
-	}
-}
-```
-
-_utility.scss
-
-```
-.u-mt50 {
-	margin-top: 50px;
-}
-```
+app.js ... LIGがコーディングする、複数ページで使うことを前提としたJSをまとめたファイル。 全ページに読み込ませる。  
+library.js ... 複数ページで使うことを前提とした外部ライブラリをまとめたJSファイル。全ページに読み込ませる。
+xxx.js ... (xxxには各ページの名前が入ります。)各ページ固有で使うJSファイル。固有のページにだけ読み込ませる。
 
 ####数字
 line-height,font-size,widthなどはなるべく相対値を使うといいです。
@@ -349,9 +225,37 @@ line-height,font-size,widthなどはなるべく相対値を使うといいで�
 （※これは推奨項目であり、絶対ではありません）
 
 ```
-.card {
+. card {
 	line-height: 1.6;
 	font-size: 1.6rem;
 	width: 100%;
 }
 ```
+
+####extend
+Sassのextendは依存関係がややこしくなるため、使わないようお願いします。
+例外として、以下の場合のみ使用許可します。
+
++ 記事ページ(artice.html)の記事内のセレクタにスタイルをあてたい場合
++ _utill.scss内のクラス
+
+##アイコン、スプライトについて
+なるべくsprite.png,_b-sprite.scssにまとめるのが好ましいですが、1枚にまとめるのは限界もあるので、必要があれば別ファイルで用意するようお願いします。  
+ちなみに、以下のデータは分割して運用することが決定しています。  
+
+##JSプラグインについて
+外部のJSプラグインを用いる際は極力bowerで入れ、webpackを使ってください。
+プラグインによってはwebpackが動かないなどの問題があるかもしれません。  
+その場合はlib/フォルダに該当のjsプラグインを保存し、普通に読み込ませるかCDNを使うなどしてください。
+
+##git運用
+
++ hotfix ... 緊急修正用ブランチ。リリース後に発生してしまった不具合は個々で解消する 
+
++ master ... 納品用ブランチ。
+
++ release ... 納品準備ブランチ。納品に含めないデータの削除、データの圧縮などはここで行う
+
++ develop ... 作業者全員の静的データの開発ブランチ
+
++ feature/ ... 各機能、部分ごとに作業者が開発を行うブランチ
