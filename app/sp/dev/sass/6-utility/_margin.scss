@@ -1,0 +1,15 @@
+//$concept: 4px; _setting.scssに記述
+@for $i from 1 through 20{
+    .m-top#{$i} {
+        margin-top: $concept * $i;
+    }
+    .m-right#{$i} {
+        margin-right: $concept * $i;
+    }
+    .m-bottom#{$i} {
+        margin-bottom: $concept * $i;
+    }
+    .m-left#{$i} {
+        margin-left: $concept * $i;
+    }
+}

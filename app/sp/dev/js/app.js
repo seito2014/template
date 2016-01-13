@@ -1,15 +1,4 @@
 //サイト共通変数
 require('./module/hack');
-require('./module/banner-slider');
-require('./module/smooth-scroll');
-require('./module/menu');
-require('./module/page-top');
-require('./module/page-hero');
-require('./module/select');
-require('./module/set-maps');
-require('./module/set-maps-multiple');
-require('./module/big-tab');
-require('./module/modal-slider');
-require('./module/set-modal-slider');
-require('./module/accordion');
 require('./module/rotate');
+require('./module/smooth-scroll');

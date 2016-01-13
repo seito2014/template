@@ -1,56 +1,15 @@
 
         <!--javascript ここから-->
-
-        <% if(id === "about-profile"){ %>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-        <% } %>
-
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
-        <script src="js/library.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
-
-        <% if(id === "service-pachinko" ||
-            id === "service-bowl" ||
-            id === "service-karaoke" ||
-            id === "service-mah-jong" ||
-            id === "service-parking" ||
-            id === "service-spa" ||
-            id === "service-box"
-        ){ %>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.7/css/perfect-scrollbar.min.css"/>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.7/js/min/perfect-scrollbar.jquery.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-        <script src="js/pages/service.js"></script>
-        <% } %>
+        <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
 
         <script src="js/app.js"></script>
 
         <% if(id === "index"){ %>
         <script src="js/pages/index.js"></script>
         <% } %>
-        <% if(id === "about"){ %>
-        <script src="js/pages/about.js"></script>
-        <% } %>
-        <% if(id === "about-philosophy"){ %>
-        <script src="js/pages/about-philosophy.js"></script>
-        <% } %>
-        <% if(id === "about-finance"){ %>
-        <script src="js/pages/about-finance.js"></script>
-        <% } %>
-        <% if(id === "about-resource"){ %>
-        <script src="js/pages/about-resource.js"></script>
-        <% } %>
-        <% if(id === "service-parking"){ %>
-        <script src="js/pages/service-parking.js"></script>
-        <% } %>
-        <% if(id === "service-box"){ %>
-        <script src="js/pages/service-box.js"></script>
-        <% } %>
         <% if(id === "news"){ %>
         <script src="js/pages/news.js"></script>
-        <% } %>
-        <% if(id === "not-found"){ %>
-        <script src="js/pages/not-found.js"></script>
         <% } %>
         <!--javascript ここまで-->
     </body>
