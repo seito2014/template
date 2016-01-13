@@ -14,12 +14,12 @@ module.exports = {
         }
     },
     plugins: [
-        new webpack.ResolverPlugin(
-            new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-        ),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "library",
-            filename: "library.js"
-        })
+        //new webpack.ResolverPlugin(
+        //    new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+        //),
+        //new webpack.optimize.CommonsChunkPlugin({
+        //    name: "library",
+        //    filename: "library.js"
+        //})
     ]
 };

@@ -21,8 +21,8 @@ function taskScripts(pathSrc,pathDest,pathEntry){
         .pipe(jshint.reporter('jshint-stylish'))
         .pipe(gulpWebpack({
             entry: {
-                app: pathEntry + '/js/app.js',
-                library: pathEntry + '/js/library.js'
+                app: pathEntry + '/js/app.js'
+                //library: pathEntry + '/js/library.js'
             },
             output: configWebpack.output,
             resolve: configWebpack.resolve,

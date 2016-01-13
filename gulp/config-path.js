@@ -24,7 +24,7 @@ module.exports = {
             release: RELEASE_PC + '/css',
             lintExcluding: [
                 '!' + DEV_PC + '/sass/5-module/sprite/*.scss',
-                '!' + DEV_PC + '/sass/library/*.scss'
+                '!' + DEV_PC + '/sass/7-library/*.scss'
             ]
         },
         image: {
@@ -76,7 +76,7 @@ module.exports = {
             script: [
                 '../../app/pc/public/lib/modernizer/modernizr.js',
                 '../../app/pc/public/lib/jquery/jquery.js',
-                '../../app/pc/public/js/library.js',
+                //'../../app/pc/public/js/library.js',
                 '../../app/pc/public/js/app.js'
             ]
         },
@@ -100,7 +100,7 @@ module.exports = {
             release: RELEASE_SP + '/css',
             lintExcluding: [
                 '!' + DEV_SP + '/sass/6-module/sprite/*.scss',
-                '!' + DEV_SP + '/sass/library/*.scss'
+                '!' + DEV_SP + '/sass/7-library/*.scss'
             ]
         },
         image: {
@@ -151,7 +151,7 @@ module.exports = {
             script: [
                 '../../app/pc/public/lib/modernizer/modernizr.js',
                 '../../app/sp/public/lib/jquery/jquery.js',
-                '../../app/sp/public/js/library.js',
+                //'../../app/sp/public/js/library.js',
                 '../../app/sp/public/js/app.js'
             ]
         },

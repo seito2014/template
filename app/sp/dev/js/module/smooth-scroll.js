@@ -31,4 +31,5 @@ var smoothScroll = (function () {
 	}
 
 })();
+
 module.exports = smoothScroll;
