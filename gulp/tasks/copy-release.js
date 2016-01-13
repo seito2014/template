@@ -32,10 +32,6 @@ gulp.task('copy-min-pc', function () {
         configPath.pc.font.src,
         configPath.pc.font.release
     );
-    copy(
-        configPath.pc.xml.src,
-        configPath.pc.xml.release
-    );
 });
 
 gulp.task('copy-min-sp', function () {
@@ -50,9 +46,5 @@ gulp.task('copy-min-sp', function () {
     copy(
         configPath.sp.font.src,
         configPath.sp.font.release
-    );
-    copy(
-        configPath.sp.xml.src,
-        configPath.sp.xml.release
     );
 });

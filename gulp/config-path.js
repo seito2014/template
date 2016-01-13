@@ -28,12 +28,7 @@ module.exports = {
             ]
         },
         image: {
-            src: [
-                DEV_PC + '/image/**/*.png',
-                DEV_PC + '/image/**/*.jpg',
-                DEV_PC + '/image/**/*.gif',
-                DEV_PC + '/image/**/*.svg'
-            ],
+            src: DEV_PC + '/image/**/*',
             dest: PUBLIC_PC + '/image',
             release: RELEASE_PC + '/image'
         },
@@ -66,11 +61,6 @@ module.exports = {
             src: DEV_PC + '/font/**/*',
             dest: PUBLIC_PC + '/font',
             release: PUBLIC_PC + '/font'
-        },
-        xml: {
-            src: DEV_PC + '/xml/**/*.xml',
-            dest: PUBLIC_PC + '/xml',
-            release: RELEASE_PC + '/xml'
         },
         iconfont: {
             src: DEV_PC + '/font/iconfont/src/*.svg',
@@ -109,17 +99,12 @@ module.exports = {
             dest: PUBLIC_SP + '/css',
             release: RELEASE_SP + '/css',
             lintExcluding: [
-                '!' + DEV_SP + '/sass/5-module/sprite/*.scss',
+                '!' + DEV_SP + '/sass/6-module/sprite/*.scss',
                 '!' + DEV_SP + '/sass/library/*.scss'
             ]
         },
         image: {
-            src: [
-                DEV_SP + '/image/**/*.png',
-                DEV_SP + '/image/**/*.jpg',
-                DEV_SP + '/image/**/*.gif',
-                DEV_SP + '/image/**/*.svg'
-            ],
+            src: DEV_SP + '/image/**/*',
             dest: PUBLIC_SP + '/image',
             release: RELEASE_SP + '/image'
         },
@@ -155,11 +140,6 @@ module.exports = {
             dest: PUBLIC_SP + '/font',
             release: RELEASE_SP + '/font'
         },
-        xml: {
-            src: DEV_SP + '/xml/**/*.xml',
-            dest: PUBLIC_SP + '/xml',
-            release: RELEASE_SP + '/xml'
-        },
         iconfont: {
             src: DEV_SP + '/font/iconfont/src/*.svg',
             dest: DEV_SP + '/font/iconfont/dest',
@@ -182,6 +162,6 @@ module.exports = {
     jshintrc: './gulp/js-hint.jshintrc',
     htmlhintrc: './gulp/htmlhintrc.json',
     wp: {
-        //WPディレクトリがある場合はここにパスを追加
+
     }
 };

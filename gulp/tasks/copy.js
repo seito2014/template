@@ -28,10 +28,6 @@ gulp.task('copy-pc', function () {
         configPath.pc.font.src,
         configPath.pc.font.dest
     );
-    copy(
-        configPath.pc.xml.src,
-        configPath.pc.xml.dest
-    );
 });
 
 gulp.task('copy-sp', function () {
@@ -50,9 +46,5 @@ gulp.task('copy-sp', function () {
     copy(
         configPath.sp.font.src,
         configPath.sp.font.dest
-    );
-    copy(
-        configPath.sp.xml.src,
-        configPath.sp.xml.dest
     );
 });
